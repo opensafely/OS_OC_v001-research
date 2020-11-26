@@ -10,6 +10,10 @@ from cohortextractor import (
 
 # Import codelists
 
+transplant_codes = codelist_from_csv(
+    "codelists/opensafely-solid-organ-transplantation.csv", system="ctv3", column="CTV3ID"
+)
+
 chronic_cardiac_disease_codes = codelist_from_csv(
     "codelists/opensafely-chronic-cardiac-disease.csv", system="ctv3", column="CTV3ID"
 )
@@ -165,4 +169,15 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 8, "stddev": 2},
         },
     ),
+
+    # https://docs.opensafely.org/en/stable/onboarding_analysts/
+    organ_transplant=patients.with_these_clinical_events(
+        transplant_codes,
+        returning='binary_flag',
+        return_expectations={
+            "incidence": 0.05
+        },
+    ),
+
+
 )
