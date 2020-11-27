@@ -132,6 +132,10 @@ study = StudyDefinition(
             "category": {"ratios": {"PC": 0.05, "PN": 0.05, "PS": 0.05, "U": 0.85,},},
         },
     ),
+
+
+
+
     ## CONDITIONS
     ##
     # https://codelists.opensafely.org/codelist/opensafely/chronic-cardiac-disease/2020-04-08/
@@ -190,6 +194,7 @@ study = StudyDefinition(
             "float": {"distribution": "normal", "mean": 120, "stddev": 10},
         },
     ),
+
     ## NUTS1 Regions
     region=patients.registered_practice_as_of(
         "2020-02-01",
@@ -221,7 +226,16 @@ study = StudyDefinition(
         },
     ),
     
-    ## GP Practice code??
+    ## GP Practice code
+    practice = patients.registered_practice_as_of(
+         index_date,
+         returning = "pseudo_id",
+         return_expectations={
+             "int": {"distribution": "normal", "mean": 100, "stddev": 20}
+         },
+    ),
+
+
     ## MSOA
     # https://github.com/opensafely/risk-factors-research/issues/44
     msoa=patients.registered_practice_as_of(
