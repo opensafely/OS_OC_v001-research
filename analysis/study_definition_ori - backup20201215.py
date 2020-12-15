@@ -284,14 +284,12 @@ study = StudyDefinition(
     #
     #
     # https://codelists.opensafely.org/codelist/opensafely/chronic-cardiac-disease/2020-04-08/
-    mock_OC=patients.with_these_clinical_events(
-        transplant_codes,
-        returning="number_of_matches_in_period",        
+    chronic_cardiac_disease=patients.with_these_clinical_events(
+        chronic_cardiac_disease_codes,
+        returning="date",
         find_first_match_in_period=True,
         include_month=True,
-        return_expectations={
-            "incidence": 0.2,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+        return_expectations={"incidence": 0.2},
     ),
 
     # https://codelists.opensafely.org/codelist/opensafely/chronic-liver-disease/2020-06-02/
