@@ -29,7 +29,8 @@ df_cleaned <- df_input %>%
          sex = case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ sex),
          ethnicity = case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other"),
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
-         oc_instance_had = ifelse(is.na(mock_OC)|mock_OC==0,0,1)
+         oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
+         livingalone = ifelse(hh_size==1,1,0)
   )
 
 
@@ -43,7 +44,7 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest") {
       gp_consult_covg = sum(gp_consult_had,na.rm=T),
       gp_consult_rate=gp_consult/population,
       gp_consult_covg_rate=gp_consult_covg/population,
-      oc_instance=sum(mock_OC,na.rm=T),
+      oc_instance=sum(OC_instance,na.rm=T),
       oc_instance_covg=sum(oc_instance_had,na.rm=T),
       oc_instance_rate=oc_instance/population,
       oc_instance_covg_rate=oc_instance_covg/population
@@ -79,7 +80,6 @@ tb07_gpcr_care <- df_to_tbrates(df_cleaned,c("care_home_type"),1,"tb07_gpcr_care
 
 ## OC and GP rates by presence of disability
 tb08_gpcr_dis <- df_to_tbrates(df_cleaned,c("has_disability"),1,"tb08_gpcr_dis")
-
 
 
 ## close log connection
