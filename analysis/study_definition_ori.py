@@ -64,7 +64,7 @@ study = StudyDefinition(
 
     # This line defines the study population
     population=patients.registered_with_one_practice_between(
-        "2019-02-01", "2020-02-01"
+        start_date, "today"
     ),
 
     ### SOCIODEMOGRAPHICS
@@ -72,7 +72,7 @@ study = StudyDefinition(
     # Age
     # https://github.com/opensafely/risk-factors-research/issues/49
     age=patients.age_as_of(
-        "2020-02-01",
+        start_date,
         return_expectations={
             "rate": "universal",
             "int": {"distribution": "population_ages"},
@@ -104,7 +104,7 @@ study = StudyDefinition(
     # IMD
     # https://github.com/opensafely/risk-factors-research/issues/45
     imd=patients.address_as_of(
-        "2020-02-01",
+        start_date,
         returning="index_of_multiple_deprivation",
         round_to_nearest=100,
         return_expectations={
@@ -119,7 +119,7 @@ study = StudyDefinition(
     #
     # Carehome status
     care_home_type=patients.care_home_status_as_of(
-        "2020-02-01",
+        start_date,
         categorised_as={
             "PC": """
               IsPotentialCareHome
