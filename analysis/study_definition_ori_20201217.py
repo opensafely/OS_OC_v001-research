@@ -288,8 +288,8 @@ study = StudyDefinition(
     ),
 
     # Episode count - could use for 'repeat' appointment?
-    episode_count=patients.with_these_clinical_events(
-        transplant_codes,
+    oc_episode_count=patients.with_these_clinical_events(
+        oc_local_codes,
         between=[start_date, "today"],
         returning="number_of_episodes",
         episode_defined_as="series of events each <= 14 days apart",
@@ -305,7 +305,7 @@ study = StudyDefinition(
     #
     #
     OC_instance=patients.with_these_clinical_events(
-        transplant_codes,    
+        oc_local_codes,    
         between=[start_date, "today"],
         returning="number_of_matches_in_period",        
         find_first_match_in_period=True,

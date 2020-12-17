@@ -1,0 +1,20 @@
+
+-- Column specification --------------------------------------------------------------------------------------
+cols(
+  .default = col_double(),
+  latest_consultation_date = col_character(),
+  mock_OC_date = col_character(),
+  chronic_liver_disease = col_character(),
+  bmi_date_measured = col_character(),
+  bp_sys_date_measured = col_character(),
+  bp_dias_date_measured = col_character(),
+  a_e_consult_date = col_date(format = ""),
+  sex = col_character(),
+  care_home_type = col_character(),
+  region = col_character(),
+  stp = col_character(),
+  msoa = col_character(),
+  rural_urban = col_character()
+)
+[36mi[39m Use `spec()` for the full column specifications.
+
