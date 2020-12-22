@@ -8,8 +8,8 @@
 # Output to csv files
 # Datasets used:			input_ori.csv
 # Datasets created: 		None
-# Other output: 			
-# Log file: 
+# Other output: tables: 'tb*.csv'			
+# Log file: log-01-createSDtables
 # 
 ## ==============================================================================
 
@@ -17,22 +17,45 @@
 #sink(here::here("logs", "log-01-createSDtables.txt"))
 
 ## library
-library('tidyverse')
+library(tidyverse)
+library(gtsummary)
+library(gt)
 library(here)
+library(webshot)
+webshot::install_phantomjs()
 
-## import cohort data
+## import and pre-process cohort data
 df_input <- read_csv(
   here::here("output", "input_ori.csv"))
 
 df_cleaned <- df_input %>%
-  mutate(age_group = cut(age,breaks = c(0,18,40,50,60,70,80, Inf),dig.lab = 2),
-         sex = case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ sex),
-         ethnicity = case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other"),
+  mutate(age_group = factor(cut(age,breaks = c(0,18,40,50,60,70,80, Inf),dig.lab = 2)),
+         sex = factor(case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ sex)),
+         ethnicity = factor(case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other")),
+         care_home_type=factor(care_home_type),
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
-         livingalone = ifelse(hh_size==1,1,0)
+         livingalone = ifelse(hh_size<=4,1,0),
+         has_disability = ifelse(is.na(has_disability),0,has_disability)
   )
 
+
+## Characteristics of those with any OC consultation, any GP consultation and overall population
+desc_vars=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","oc_instance_had")
+(gt_ocpop <- df_cleaned %>% select(desc_vars) %>% tbl_summary(by=oc_instance_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had OC**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any OC instance**"))
+
+desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","gp_consult_had")
+(gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
+
+# Use function from gt package to save table as neat png
+gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
+gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+
+# Save dta with actual table data
+save(gt_ocpop,file = file.path(here::here("output","tables"), "gt_ocpop.RData"))
+save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData"))
+
+## Rates per characteristic
 
 df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest") {
   mytb=
@@ -50,7 +73,7 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest") {
       oc_instance_covg_rate=oc_instance_covg/population
     )
   if (flag_save){
-    write.csv(mytb,paste0(here::here("output"),"/",tb_name,".csv"))
+    write.csv(mytb,paste0(here::here("output","tables"),"/",tb_name,".csv"))
   }
   return(mytb)
 }
