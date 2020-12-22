@@ -15,6 +15,20 @@ MOCK_oc_codes = codelist_from_csv(
     "codelists/opensafely-solid-organ-transplantation.csv", system="ctv3", column="CTV3ID"
 )
 
+# Local OC codelists, minimal data set (MDS) - ctv3
+oc_local_codes = codelist_from_csv(
+    "codelists-local/onlineconsultation_mds_ctv3.csv", 
+    system = "ctv3", 
+    column = "CTV3Code"
+)
+
+# Local OC codelists, minimal data set (MDS) - snomed
+#oc_local_codes = codelist_from_csv(
+#    "codelists-local/onlineconsultation_mds_snomed.csv", 
+#    system = "snomed", 
+#    column = "SNOMEDCode"
+#)
+
 ethnicity_codes = codelist_from_csv(
     "codelists/opensafely-ethnicity.csv",
     system="ctv3",
@@ -40,12 +54,6 @@ intellectual_disability_codes = codelist_from_csv(
     column="CTV3ID"
 )
 
-# Local codelists
-oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_mds.csv", 
-    system = "snomed", 
-    column = "id"
-)
 
 # Specifiy study definition
 
@@ -232,7 +240,7 @@ study = StudyDefinition(
 
 
     OC_instance=patients.with_these_clinical_events(
-        MOCK_oc_codes,    
+        oc_local_codes,    
         between=[start_date, "today"],
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -242,7 +250,7 @@ study = StudyDefinition(
 
     # Episode count - could use for 'repeat' appointment?
     OC_episode_count=patients.with_these_clinical_events(
-        MOCK_oc_codes,
+        oc_local_codes,
         between=[start_date, "today"],
         returning="number_of_episodes",
         episode_defined_as="series of events each <= 14 days apart",

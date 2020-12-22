@@ -17,12 +17,19 @@ MOCK_oc_codes = codelist_from_csv(
     "codelists/opensafely-solid-organ-transplantation.csv", system="ctv3", column="CTV3ID"
 )
 
-# Local codelists
+# Local codelists, minimal data set (MDS) - ctv3
 oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_mds.csv", 
-    system = "snomed", 
-    column = "id"
+    "codelists-local/onlineconsultation_mds_ctv3.csv", 
+    system = "ctv3", 
+    column = "CTV3Code"
 )
+
+# Local codelists, minimal data set (MDS) - snomed
+#oc_local_codes = codelist_from_csv(
+#    "codelists-local/onlineconsultation_mds_snomed.csv", 
+#    system = "snomed", 
+#    column = "SNOMEDCode"
+#)
 
 # Specifiy study definition
 start_date="2020-04-01"
