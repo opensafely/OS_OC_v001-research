@@ -5,18 +5,29 @@ expectations:
 
 actions:
 
-  generate_cohorts:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition
+  generate_cohorts_main:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_ori
     outputs:
       highly_sensitive:
-        cohort: output/input.csv
+        cohort: output/input_ori.csv
 
   run_model:
-    run: stata-mp:latest analysis/model.do
-    needs: [generate_cohorts]
+    run: r:latest analysis/01-createSDtables.R
+    needs: [generate_cohorts_main]
     outputs:
       moderately_sensitive:
-        log: logs/model.log
+        log: logs/log-01-createSDtables.txt
+        rdata1: outputs/gt_ocpop.RData
+        rdata2: outputs/gt_gpcpop.RData
+        tb01: outputs/tb01_gpcr_region.csv
+        tb02: outputs/tb02_gpcr_stp.csv
+        tb04: outputs/tb04_gpcr_agesex.csv
+        tb05: outputs/tb05_gpcr_ethnicity.csv
+        tb06: outputs/tb06_gpcr_ruc.csv
+        tb07: outputs/tb07_gpcr_care.csv
+        tb08: outputs/tb08_gpcr_dis.csv
+
+
 
   run_all:
     needs:
