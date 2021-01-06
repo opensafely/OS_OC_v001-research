@@ -2,7 +2,35 @@
 
 This is a template repository for making new OpenSAFELY resarch projects.  Eventually it'll become a framework. To get started, create a new repo using this repo as a template, delete this front matter, and edit the text that follows.
 
-# _OpenSafely 101 - for OC evaluation work_
+# _OC evaluation work_
+
+Context: Ongoing NHSE/I evaluation of 'Digital First Primary Care: Evaluation of a digital first approach in response to Covid-19', with key objectives:
+*	To understand the circumstances and models in which total triage and remote consultations work and don’t work, for whom and why
+*	To understand what changes are required to optimise the benefits and mitigate risks for patients and general practices from these new ways of working
+*	To inform changes required at a national, regional and local level going forwards
+
+Aim: NHSx to explore the use of OpenSafely to support analysis of primary care provider clinical data for general practices utilising four online consultation systems in England.
+
+Issues:
+An initial brief was shared with research questions.
+However, difficult to in EHR systems a) define consultations (and sub-modalities) conceptually; b) code consultations consistently (different templates, systems); c) query consultations as units; d) query pathways. Many of the initial asks above require those, as well as further querying capability (incl pathways, concurrent events/codes). Consultation coding is incredibly problematic even with identified codes (SNOMED, ctv3, other pertaining to e.g. "consultation" and "consultation type") because they are not simple consistent physical concepts.
+
+Suggestion to for now restrict analysis to a simple, broad sociodemographic characterisation of cohorts that "have had an OC intance" (according to non-comprehensive but relevant codes) and proceed from there with discussions on further steps.
+
+*	OC instances: for now defined as those where codes eConsultation via online application (procedure) and Consultation via multimedia (procedure) occur.
+*	Period: 2020-03-01 to date 
+*	Outputs:
+*	tbSD: sociodemographics* for cohorts ‘had an OC instance’ vs ‘all registered patients.
+*	tbSD: sociodemographics for cohorts ‘had an OC instance’ vs ‘patients with GP consultation;
+*	tb01: OC instance rate (OCIR) and unique patient coverage (OCC) by region. For context: GP consultation rate (GPCR).
+*	tb02: OCIR and OCC by STP. For context: GP consultation rate (GPCR).
+*	tb04: OCIR and OCC by age and gender
+*	tb05: OCIR and OCC by ethnicity
+*	tb06: OCIR and OCC by region and rurality
+*	tb07: OCIR and OCC by care home status
+*	tb08: OCIR and OCC by presence of disability
+*	tb09: OCIR and OCC by living alone or not (household size=1)
+
 
 This is the code and configuration for our paper, _name goes here_
 
