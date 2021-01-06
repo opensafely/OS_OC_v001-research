@@ -14,15 +14,15 @@
 ## ==============================================================================
 
 ## open log connection to file
-#sink(here::here("logs", "log-01-createSDtables.txt"))
+sink(here::here("logs", "log-01-createSDtables.txt"))
 
 ## library
 library(tidyverse)
 library(gtsummary)
 library(gt)
 library(here)
-library(webshot)
-webshot::install_phantomjs()
+#library(webshot)
+#webshot::install_phantomjs()
 
 ## import and pre-process cohort data
 df_input <- read_csv(
@@ -35,7 +35,7 @@ df_cleaned <- df_input %>%
          care_home_type=factor(care_home_type),
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
-         livingalone = ifelse(hh_size<=4,1,0),
+         livingalone = ifelse(hh_size<=1,1,0),
          has_disability = ifelse(is.na(has_disability),0,has_disability)
   )
 
@@ -48,12 +48,12 @@ desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","rural_u
 (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
 
 # Use function from gt package to save table as neat png
-gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
-gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+#gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
+#gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
 
 # Save dta with actual table data
-save(gt_ocpop,file = file.path(here::here("output","tables"), "gt_ocpop.RData"))
-save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData"))
+save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData"))
+save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData"))
 
 ## Rates per characteristic
 
@@ -73,7 +73,7 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest") {
       oc_instance_covg_rate=oc_instance_covg/population
     )
   if (flag_save){
-    write.csv(mytb,paste0(here::here("output","tables"),"/",tb_name,".csv"))
+    write.csv(mytb,paste0(here::here("output"),"/",tb_name,".csv"))
   }
   return(mytb)
 }
@@ -85,8 +85,8 @@ tb01_gpcr_region <- df_to_tbrates(df_cleaned,c("region"),1,"tb01_gpcr_region")
 ## OC and GP rates per STP
 tb02_gpcr_stp <- df_to_tbrates(df_cleaned,c("stp"),1,"tb02_gpcr_stp")
 
-## OC and GP rates per practice
-tb03_gpcr_practice <- df_to_tbrates(df_cleaned,c("practice"),1,"tb03_gpcr_practice")
+### OC and GP rates per practice
+#tb03_gpcr_practice <- df_to_tbrates(df_cleaned,c("practice"),1,"tb03_gpcr_practice")
 
 
 ## OC and GP rates per age and gender
@@ -96,7 +96,7 @@ tb04_gpcr_agesex <- df_to_tbrates(df_cleaned,c("age_group","sex"),1,"tb04_gpcr_a
 tb05_gpcr_ethnicity <- df_to_tbrates(df_cleaned,c("ethnicity"),1,"tb05_gpcr_ethnicity")
 
 ## OC and GP rates by region and rurality
-tb06_gpcr_care <- df_to_tbrates(df_cleaned,c("region","rural_urban"),1,"tb06_gpcr_ruc")
+tb06_gpcr_ruc <- df_to_tbrates(df_cleaned,c("region","rural_urban"),1,"tb06_gpcr_ruc")
 
 ## OC and GP rates by care home status
 tb07_gpcr_care <- df_to_tbrates(df_cleaned,c("care_home_type"),1,"tb07_gpcr_care")
@@ -106,6 +106,6 @@ tb08_gpcr_dis <- df_to_tbrates(df_cleaned,c("has_disability"),1,"tb08_gpcr_dis")
 
 
 ## close log connection
-#sink()
+sink()
 
 

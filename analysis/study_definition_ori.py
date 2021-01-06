@@ -153,7 +153,7 @@ study = StudyDefinition(
         "2020-02-01",
         returning="household_size",
         return_expectations={
-            "int": {"distribution": "normal", "mean": 8, "stddev": 1},
+            "int": {"distribution": "normal", "mean": 3, "stddev": 1},
             "incidence": 1,
         }
     ),
