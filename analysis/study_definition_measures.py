@@ -17,9 +17,9 @@ MOCK_oc_codes = codelist_from_csv(
     "codelists/opensafely-solid-organ-transplantation.csv", system="ctv3", column="CTV3ID"
 )
 
-# Local codelists, minimal data set (MDS) - ctv3
+# Local OC codelists, query data set (QDS) - ctv3
 oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_mds_ctv3.csv", 
+    "codelists-local/onlineconsultation_qds_ctv3.csv", 
     system = "ctv3", 
     column = "CTV3Code"
 )
@@ -32,13 +32,13 @@ oc_local_codes = codelist_from_csv(
 #)
 
 # Specifiy study definition
-start_date="2020-04-01"
 index_date = "2020-04-01"
+end_date = "2020-12-31"
 
 study = StudyDefinition(
     # Configure the expectations framework
     default_expectations={
-        "date": {"earliest": start_date, "latest": "today"},
+        "date": {"earliest": index_date, "latest": end_date},
         "rate": "exponential_increase",
         "incidence":1
     },
@@ -66,7 +66,7 @@ study = StudyDefinition(
     #
     # NUTS1 Region
     region=patients.registered_practice_as_of(
-        start_date,
+        index_date,
         returning="nuts1_region_name",
         return_expectations={
             "rate": "universal",
@@ -88,7 +88,7 @@ study = StudyDefinition(
     # STP
     # https://github.com/opensafely/risk-factors-research/issues/44
     stp=patients.registered_practice_as_of(
-        start_date,
+        index_date,
         returning="stp_code",
         return_expectations={
             "rate": "universal",
@@ -99,7 +99,7 @@ study = StudyDefinition(
 
     # Practice
     practice = patients.registered_practice_as_of(
-         start_date,
+         index_date,
          returning = "pseudo_id",
          return_expectations={
              "int": {"distribution": "normal", "mean": 100, "stddev": 20}
@@ -115,7 +115,6 @@ study = StudyDefinition(
         returning="number_of_matches_in_period",
         return_expectations={
             "int": {"distribution": "normal", "mean": 4, "stddev": 2},
-            "date": {"earliest": start_date, "latest": "today"},
             "incidence": 0.7,
         },
     ),

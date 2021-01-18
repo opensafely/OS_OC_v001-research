@@ -1,0 +1,12 @@
+ctv3_id,ctv3_name,is_assured
+9N31.,Telephone encounter,True
+9N32.,Third party encounter,True
+9N33.,Letter encounter (& from patient),True
+9N34.,Encounter by computer link,True
+XaBYn,Letter encounter,True
+XaIge,Telephone consultation,True
+XaLQH,E-mail received from consultant,True
+XaMiI,Short message service text message sent to patient,True
+XaMzB,Short message service text message received from patient,True
+XaXcK,Telemedicine consultation,True
+ZV651,[V]Person consulting on behalf of another person,False

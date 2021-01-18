@@ -15,9 +15,9 @@ MOCK_oc_codes = codelist_from_csv(
     "codelists/opensafely-solid-organ-transplantation.csv", system="ctv3", column="CTV3ID"
 )
 
-# Local OC codelists, minimal data set (MDS) - ctv3
+# Local OC codelists, query data set (QDS) - ctv3
 oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_mds_ctv3.csv", 
+    "codelists-local/onlineconsultation_qds_ctv3.csv", 
     system = "ctv3", 
     column = "CTV3Code"
 )
@@ -57,22 +57,21 @@ intellectual_disability_codes = codelist_from_csv(
 
 # Specifiy study definition
 
-index_date = "2020-01-01"
-start_date = "2020-04-01"
+start_date = "2019-07-01"
+end_date = "2020-12-31"
 
 study = StudyDefinition(
     # Configure the expectations framework
     default_expectations={
-        "date": {"earliest": start_date, "latest": "today"},
+        "date": {"earliest": start_date, "latest": end_date},
         "rate": "exponential_increase",
         "incidence":1
     },
 
-    index_date = index_date,
-
+    
     # This line defines the study population
     population=patients.registered_with_one_practice_between(
-        start_date, "today"
+        start_date, end_date
     ),
 
     ### SOCIODEMOGRAPHICS
@@ -235,13 +234,13 @@ study = StudyDefinition(
     ),
 
     has_consultation_history=patients.with_complete_gp_consultation_history_between(
-        "2019-02-01", "2020-01-31", return_expectations={"incidence": 0.9},
+        start_date, end_date, return_expectations={"incidence": 0.9},
     ),
 
 
     OC_instance=patients.with_these_clinical_events(
         oc_local_codes,    
-        between=[start_date, "today"],
+        between=[start_date, end_date],
         returning="number_of_matches_in_period",        
         return_expectations={
             "incidence": 0.5,
@@ -251,7 +250,7 @@ study = StudyDefinition(
     # Episode count - could use for 'repeat' appointment?
     OC_episode_count=patients.with_these_clinical_events(
         oc_local_codes,
-        between=[start_date, "today"],
+        between=[start_date, end_date],
         returning="number_of_episodes",
         episode_defined_as="series of events each <= 14 days apart",
         return_expectations={
@@ -281,11 +280,11 @@ study = StudyDefinition(
 #
 # A&E attendance
     a_e_consult_date=patients.attended_emergency_care(
-        on_or_after="2020-02-01",
+        on_or_after=start_date,
         returning="date_arrived",
         date_format="YYYY-MM-DD",
         find_first_match_in_period=True,
-        return_expectations={"date": {"earliest" : "2020-02-01"},
+        return_expectations={"date": {"earliest" : start_date},
         "rate" : "exponential_increase"},
     ),
 

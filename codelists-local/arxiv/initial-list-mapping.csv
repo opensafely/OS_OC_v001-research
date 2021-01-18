@@ -1,0 +1,12 @@
+snomedct_id,snomedct_name,ctv3_id,ctv3_name,is_assured
+185317003,Telephone encounter (procedure),9N31.,Telephone encounter,True
+185318008,Third party encounter (procedure),9N32.,Third party encounter,True
+185318008,Third party encounter (procedure),ZV651,[V]Person consulting on behalf of another person,False
+185320006,Encounter by computer link (procedure),9N34.,Encounter by computer link,True
+202931000000101,E-mail received from consultant (procedure),XaLQH,E-mail received from consultant,True
+279991000000102,Short message service text message sent to patient (procedure),XaMiI,Short message service text message sent to patient,True
+286261000000101,Short message service text message received from patient (procedure),XaMzB,Short message service text message received from patient,True
+308720009,Letter encounter (procedure),9N33.,Letter encounter (& from patient),True
+308720009,Letter encounter (procedure),XaBYn,Letter encounter,True
+386472008,Telephone consultation (procedure),XaIge,Telephone consultation,True
+448337001,Telemedicine consultation with patient (procedure),XaXcK,Telemedicine consultation,True
