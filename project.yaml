@@ -27,6 +27,22 @@ actions:
         tb07: outputs/tb07_gpcr_care.csv
         tb08: outputs/tb08_gpcr_dis.csv
 
+  # https://docs.opensafely.org/en/latest/measures/
+    generate_cohorts_long:
+      run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_bycode --index-date-range "2019-07-01 to 2020-12-01 by month"
+      outputs:
+        highly_sensitive:
+          cohort: output/input_measures_bycode_*.csv
+
+    run_model_long:
+      run: r:latest analysis/03-createnattrends_codes.R
+      needs: [generate_cohorts_long]
+      outputs:
+        moderately_sensitive:
+          log: logs/log-03-createnattrends.txt
+          tb01: output/sc03_tb01_nattrends.csv
+          fig01: output/sc03_fig01_nattrends.png
+          fig02: output/sc03_fig02_nattrends.png
 
 
   run_all:

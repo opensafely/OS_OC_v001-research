@@ -49,7 +49,7 @@ oc_Y22b4 = codelist_from_csv("codelists-local/onlineconsultation_Y22b4_ctv3.csv"
 #)
 
 # Specifiy study definition
-index_date = "2020-04-01"
+index_date = "2019-07-01"
 end_date = "2020-12-31"
 
 study = StudyDefinition(
