@@ -27,12 +27,12 @@ query_dates <- paste0(query_dates)
 ## import and pre-process cohort data
 
 df_input <- read_csv(
-  here::here("output",paste0("input_measures_bycode_",  query_dates[1], ".csv")))
+  here::here("output","measures",paste0("input_measures_bycode_",  query_dates[1], ".csv")))
 df_input <- df_input %>% mutate(month=query_dates[1])
 
 for (datenow in tail(query_dates,-1)){
   df_input_now <- read_csv(
-    here::here("output",paste0("input_measures_bycode_",  datenow, ".csv")))
+    here::here("output","measures",paste0("input_measures_bycode_",  datenow, ".csv")))
   df_input_now <- df_input_now %>% mutate(month=datenow)
   df_input <- df_input %>% bind_rows(df_input_now)
 }
