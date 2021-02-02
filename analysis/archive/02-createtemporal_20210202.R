@@ -2,14 +2,14 @@
 # Analysis filename:			02-createtemporal.R
 # Project:				OC evaluation
 # Author:					Heavily lifted from W. Hulme Tutorial example 3. Minor adaptations: Martina Fonseca
-# Date: 					17/12/2020 (updated: 02/02/2021)
+# Date: 					17/12/2020
 # Version: 				R 
 # Description:	Produce timeline of of GP consultation and OC instance rates
 # Output to csv files
 # Datasets used:			various 'measures*' files
-# Datasets created:  'measures_gpc_pop.csv'		
-# Other output: 	TBA		
-# Log file:  logs\log-02-createtemporal.txt
+# Datasets created: 		None
+# Other output: 			
+# Log file: 
 # 
 ## ==============================================================================
 
@@ -18,34 +18,66 @@ sink(here::here("logs", "log-02-createtemporal.txt"))
 ## library
 library(tidyverse)
 library(here)
-library(svglite)
 
 
 # create look-up table to iterate over
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
-  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","9N34d","d9N34","XUman","Y22b4"),
-  by = rep("practice",1,11),
-  by_label = rep("by practice",1,11),
+  measure = c("gpc", "gpc", "ocir", "ocir"),
+  measure_label = c("GPconsult", "GPconsult", "OCinstance", "OCinstance"),
+  by = c("practice", "stp", "practice", "stp"),
+  by_label = c("by practice", "by STP", "by practice", "by STP"),
   id = paste0(measure, "_", by),
   numerator = measure,
   denominator = "population",
-  group_by = rep("practice",1,11)
+  group_by = c("practice", "stp", "practice", "stp"),
 )
 
 ## import measures data from look-up
 measures <- md_tbl %>%
   mutate(
-    data = map(id, ~read_csv(here::here("output","measures", glue::glue("measure_{.}.csv")))),
+    data = map(id, ~read_csv(here::here("output", glue::glue("measure_{.}.csv")))),
   )
 
+measures_ocir_pratice <- measures$data[[match("ocir_practice",measures$id)]]
+measures_ocir_stp <- measures$data[[match("ocir_stp",measures$id)]]
 measures_gpc_pratice <- measures$data[[match("gpc_practice",measures$id)]]
+measures_gpc_stp <- measures$data[[match("gpc_stp",measures$id)]]
+
+measures_ocir_pop <- 
+  measures_ocir_pratice %>%
+  group_by(date) %>%
+  summarise(population=sum(population),OC_instance=sum(OC_instance),value=OC_instance/population)
+write.csv(measures_ocir_pop,paste0(here::here("output","tables"),"/measures_ocir_pop.csv"))
 
 measures_gpc_pop <- 
   measures_gpc_pratice %>%
   group_by(date) %>%
   summarise(population=sum(population),gp_consult_count=sum(gp_consult_count),value=gp_consult_count/population)
-write.csv(measures_gpc_pop,paste0(here::here("output"),"/measures_gpc_pop.csv"))
+write.csv(measures_gpc_pop,paste0(here::here("output","tables"),"/measures_gpc_pop.csv"))
+
+
+measures_ocir_pop %>% mutate(value_10000 = value*10000) %>%
+  ggplot()+
+  geom_line(aes_string(x="date", y="value_10000"), alpha=0.2, colour='blue', size=0.25)+
+  scale_x_date(date_breaks = "1 month", labels = scales::date_format("%Y-%m"))+
+  labs(
+    x=NULL, y=NULL, 
+    title="Online consultation instances",
+    subtitle =  glue::glue("OC instance rate per 10,000 patients")
+  )+
+  theme_bw()+
+  theme(
+    panel.border = element_blank(),
+    axis.text.x = element_text(angle = 70, vjust = 1, hjust=1),
+  )
+ggsave(
+  units = "cm",
+  height = 10,
+  #width = 15, 
+  limitsize=FALSE,
+  #filename = str_c("plot_overall_ocir_pop.png"),
+  filename = paste0(here::here("output", "plots"),"/plot_overall_ocir_pop.png" ))
+#ggsave(paste0(here::here("output","plots"),"/test2.png"))
 
 measures_gpc_pop %>% mutate(value_10000 = value*10000) %>%
   ggplot()+
@@ -66,12 +98,12 @@ ggsave(
   height = 10,
   #width = 15, 
   limitsize=FALSE,
-  filename = str_c("plot_overall_gpc_pop.svg"),
+  filename = str_c("plot_overall_gpc_pop.png"),
   path = here::here("output", "plots"))
 
 
 quibble <- function(x, q = c(0.25, 0.5, 0.75)) {
-  ## function that takes a vector and returns a tibble of quantiles - default is quartile
+  ## function that takes a vector and returns a tibble of its quantiles
   tibble("{{ x }}" := quantile(x, q), "{{ x }}_q" := q)
 }
 
@@ -110,7 +142,7 @@ measures_plots <- measures %>%
                               scale_x_date(date_breaks = "1 month", labels = scales::date_format("%Y-%m"))+
                               labs(
                                 x=NULL, y=NULL, 
-                                title=glue::glue("{measure_label} instances per 10,000 patients"),
+                                title=glue::glue("{measure_label} volume per 10,000 patients"),
                                 subtitle = glue::glue("quantiles {by_label}")
                               )+
                               theme_bw()+
@@ -135,7 +167,7 @@ measures_plots %>%
     height = 10,
     width = 15, 
     limitsize=FALSE,
-    filename = str_c("plot_each_", id, ".svg"),
+    filename = str_c("plot_each_", id, ".png"),
     path = here::here("output", "plots"),
   ) %>%
   pwalk(ggsave)
@@ -149,7 +181,7 @@ measures_plots %>%
     height = 10,
     width = 15, 
     limitsize=FALSE,
-    filename = str_c("plot_quantiles_", id, ".svg"),
+    filename = str_c("plot_quantiles_", id, ".png"),
     path = here::here("output", "plots"),
   ) %>%
   pwalk(ggsave)

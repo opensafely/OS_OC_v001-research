@@ -230,3 +230,79 @@ study = StudyDefinition(
 
     
 )
+
+measures = [
+    Measure(
+        id="gpc_practice",
+        numerator="gp_consult_count",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_Y1f3b_practice",
+        numerator="OC_Y1f3b",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_XUkjp_practice",
+        numerator="OC_XUkjp",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_XaXcK_practice",
+        numerator="OC_XaXcK",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_XVCTw_practice",
+        numerator="OC_XVCTw",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_XaXcK_practice",
+        numerator="OC_XaXcK",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_XUuWQ_practice",
+        numerator="OC_XUuWQ",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_XV1pT_practice",
+        numerator="OC_XV1pT",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_9N34d_practice",
+        numerator="OC_9N34d",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_d9N34_practice",
+        numerator="OC_d9N34",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_XUman_practice",
+        numerator="OC_XUman",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_Y22b4_practice",
+        numerator="OC_Y22b4",
+        denominator="population",
+        group_by="practice"
+    ),
+
+]
