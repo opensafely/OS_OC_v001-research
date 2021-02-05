@@ -1,0 +1,13 @@
+﻿1068881000000101,eConsultation via online application (procedure),"snomed ct browser (""online""); Twitter (see 'fmi' tab)"
+978871000000104,Consultation via multimedia (procedure),snomed ct browser (child of consultation (procedure))
+448337001,Telemedicine consultation with patient (procedure),snomed ct browser (child of consultation (procedure))
+868184008,Telemedicine consultation with provider (procedure),snomed ct browser (child of consultation (procedure))
+719407002,Remote non-verbal consultation (procedure),snomed ct browser (child of consultation (procedure))
+763184009,Telepractice consultation (procedure),"snomed ct browser (child of ""indirect encounter"")"
+185320006,Encounter by computer link (procedure),"snomed ct browser (child of ""indirect encounter"")"
+1090371000000106,Referral to remote triage and advice service (procedure),"snomed ct browser (""remote triage"")"
+325951000000102,Remote assessment encounter type (record artifact),"snomed ct browser (""remote"")"
+325871000000103,Remote consultation encounter type (record artifact),"snomed ct browser (""remote"")"
+384131000000101,Remote encounter type (record artifact),"snomed ct browser (""remote"")"
+325911000000101,Consultation via multimedia encounter type,Feedback / SNOMED CT browser
+699249000,Alert received from telehealth monitoring system,Feedback / SNOMED CT browser

@@ -1,0 +1,10 @@
+﻿Y1f3b,eConsultation via online application (procedure),Local TPP code,local-tpp,y,<-in codelists?
+XUkjp,Telemedicine consultation with patient (procedure),SnomedCTbrowser refset,ctv3,n,
+XaXcK,Telemedicine consultation with patient,CTV3 snomed lkp,ctv3,Y,
+XVCTw,Telemedicine consultation with provider (procedure),SnomedCTbrowser refset,ctv3,n,
+XUuWQ,Remote non-verbal consultation (procedure),SnomedCTbrowser refset,ctv3,n,
+XV1pT,Telepractice consultation (procedure),SnomedCTbrowser refset,ctv3,n,
+9N34.,Encounter by computer link,CTV3 snomed lkp,ctv3,Y,
+.9N34,Encounter by computer link,CTV3 snomed lkp,ctv3,n,
+XUman,Alert received from telehealth monitoring system,CTV3 snomed lkp,ctv3,substitute,
+Y22b4,Remote consultation,Local TPP code,local-tpp,y,
