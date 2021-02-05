@@ -75,10 +75,25 @@ quibble <- function(x, q = c(0.25, 0.5, 0.75)) {
   tibble("{{ x }}" := quantile(x, q), "{{ x }}_q" := q)
 }
 
+# v_median <- function(v_quantiles) {
+#   ### function that takes quantiles and extracts median
+#   v_quantiles %>% filter(mvalue_q==0.5) %>% .$mvalue
+# }
+
+v_median <- function(x) {
+  tibble(median := quantile(x,0.5))
+}
+
+v_idr <- function(x){
+  tibble(IDR := quantile(x,0.9)-quantile(x,0.1))
+}
+
 ## generate plots for each measure within the data frame
 measures_plots <- measures %>% 
   mutate(
-    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)))),
+    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)),v_idr(value),v_median(value))),
+    #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
+    data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value),v_median(value))),
     plot_by = pmap(lst( group_by, data, measure_label, by_label), 
                    function(group_by, data, measure_label, by_label){
                      data %>% mutate(value_10000 = value*10000) %>%
