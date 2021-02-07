@@ -24,6 +24,7 @@ library(svglite)
 # create look-up table to iterate over
 md_tbl <- tibble(
   measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
+  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
   measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","9N34d","d9N34","XUman","Y22b4"),
   by = rep("practice",1,11),
   by_label = rep("by practice",1,11),
@@ -38,6 +39,20 @@ measures <- md_tbl %>%
   mutate(
     data = map(id, ~read_csv(here::here("output","measures", glue::glue("measure_{.}.csv")))),
   )
+
+#measures_m <- measures %>% mutate(no_2020_events = map(data, ~ (.) %>% filter(as.numeric(format(date,'%Y'))==2020))  ) 
+
+#measures_m <- measures %>% mutate(no_2020_events = map(data, ~ (.) %>% filter(as.numeric(format(date,'%Y'))==2020) %>% select(value) %>% sum()  )) 
+
+measures <- measures %>% mutate(no_2020_events = pmap(lst( data, measure_col), 
+                                  function(data, measure_col){
+                                    
+                                    data %>% filter(as.numeric(format(date,'%Y'))==2020) %>% select(measure_col) %>% sum()
+                                    }
+                                  )) 
+
+
+#measures_m <- measures %>% mutate(no_2020_events = map(data,  ~ (.) %>% group_by(date)))
 
 measures_gpc_pratice <- measures$data[[match("gpc_practice",measures$id)]]
 
@@ -70,6 +85,25 @@ ggsave(
   path = here::here("output", "plots"))
 
 
+
+#### Excluding practices with no code instances over full tenor of study period
+#mydata <- measures$data[[1]]
+#mydata <- rbind(mydata, mydata %>% group_by(date) %>% summarise(gp_consult_count=0,population=10000,value=0,practice=999) )
+
+#mydata <- mydata %>% group_by(practice) %>% mutate(code_present = ifelse(sum(value,na.rm=T)>0,1,0) ) %>% ungroup()
+
+#mydata <- mydata %>% group_by(practice) %>% filter(sum(value,na.rm=T)>0)
+
+
+measures <- measures %>% mutate(
+  data_ori=data, # data with all practices
+  data = map(data, ~ (.) %>% group_by(practice) %>% filter(sum(value,na.rm=T)>0)), # data with only practices with at least an observation in the study period (affects deciles)
+  no_prac = map(data, ~(.) %>% .$practice %>% n_distinct(na.rm=T) ),
+  no_prac_univ = map(data_ori, ~(.) %>% .$practice %>% n_distinct(na.rm=T))
+)
+
+
+
 quibble <- function(x, q = c(0.25, 0.5, 0.75)) {
   ## function that takes a vector and returns a tibble of quantiles - default is quartile
   tibble("{{ x }}" := quantile(x, q), "{{ x }}_q" := q)
@@ -88,17 +122,40 @@ v_idr <- function(x){
   tibble(IDR := quantile(x,0.9)-quantile(x,0.1))
 }
 
+str_medidrnarrative <- function(mydata_idr){
+  
+  a<- mydata_idr %>%
+    summarise(date,medchange = (median - lag(median,12))/lag(median,12)*100  ) %>% 
+    mutate(classification=case_when(
+      between(medchange,-15,15) ~ "no change",
+      medchange>15 ~ "increase",
+      medchange<(-60) ~ "large drop",
+      medchange<(-15) ~ "drop",
+      TRUE ~ NA_character_,
+    ) )
+
+  
+  paste0("Change in median from 2019: April ",
+         round(as.numeric(a[a$date=="2020-04-01","medchange"]),1),"% (",a[a$date=="2020-04-01","classification"],"); ",
+         "September ",round(as.numeric(a[a$date=="2020-09-01","medchange"]),1),"% (",a[a$date=="2020-09-01","classification"],"); ",
+         "December ", round(as.numeric(a[a$date=="2020-12-01","medchange"]),1),"% (",a[a$date=="2020-12-01","classification"],");")
+  
+}
+
+
+
+
 ## generate plots for each measure within the data frame
 measures_plots <- measures %>% 
   mutate(
     data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)),v_idr(value),v_median(value))),
     #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
-    data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value),v_median(value))),
+    data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value*1000),v_median(value*1000))),
     plot_by = pmap(lst( group_by, data, measure_label, by_label), 
                    function(group_by, data, measure_label, by_label){
-                     data %>% mutate(value_10000 = value*10000) %>%
+                     data %>% mutate(value_1000 = value*1000) %>%
                        ggplot()+
-                       geom_line(aes_string(x="date", y="value_10000", group=group_by), alpha=0.2, colour='blue', size=0.25)+
+                       geom_line(aes_string(x="date", y="value_1000", group=group_by), alpha=0.2, colour='blue', size=0.25)+
                        scale_x_date(date_breaks = "1 month", labels = scales::date_format("%Y-%m"))+
                        labs(
                          x=NULL, y=NULL, 
@@ -117,15 +174,15 @@ measures_plots <- measures %>%
     ),
     plot_quantiles = pmap(lst( group_by, data_quantiles, measure_label, by_label), 
                           function(group_by, data_quantiles, measure_label, by_label){
-                            data_quantiles %>% mutate(value_10000 = value*10000) %>%
+                            data_quantiles %>% mutate(value_1000 = value*1000) %>%
                               ggplot()+
-                              geom_line(aes(x=date, y=value_10000, group=value_q, linetype=value_q==0.5, size=value_q==0.5), colour='blue')+
+                              geom_line(aes(x=date, y=value_1000, group=value_q, linetype=value_q==0.5, size=value_q==0.5), colour='blue')+
                               scale_linetype_manual(breaks=c(TRUE, FALSE), values=c("solid", "dotted"), guide=FALSE)+
                               scale_size_manual(breaks=c(TRUE, FALSE), values=c(1, 0.4), guide=FALSE)+
                               scale_x_date(date_breaks = "1 month", labels = scales::date_format("%Y-%m"))+
                               labs(
                                 x=NULL, y=NULL, 
-                                title=glue::glue("{measure_label} instances per 10,000 patients"),
+                                title=glue::glue("{measure_label} instances per 1000 patients"),
                                 subtitle = glue::glue("quantiles {by_label}")
                               )+
                               theme_bw()+
@@ -136,6 +193,57 @@ measures_plots <- measures %>%
                                 panel.grid.major.x = element_blank(),
                                 panel.grid.minor.x = element_blank(),
                                 #axis.line.y = element_blank(),
+                              )
+                          }
+    ),
+    plot_quantiles2 = pmap(lst( group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ), 
+                          function(group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ){
+                            data_quantiles %>% mutate(value_1000 = value*1000) %>%
+                              ggplot()+
+                              geom_line(aes(x=date, y=value_1000, group=value_q, linetype=value_q==0.5, size=value_q==0.5), colour='blue')+
+                              scale_linetype_manual(breaks=c(TRUE,FALSE), values=c("solid", "dashed"), guide=FALSE,labels=c("median","decile"))+
+                              scale_size_manual(breaks=c(TRUE, FALSE), values=c(1, 0.5), guide=FALSE)+
+                              scale_x_date(date_breaks = "1 month", labels = scales::date_format("%Y-%m"))+
+                              labs(
+                                x=NULL,
+                                y="rate per 1,000",
+                                linetype="metric",
+                                title=glue::glue("{measure_label}"),
+                                subtitle = paste0(
+                                  "Practices included: ",
+                                  no_prac, " (",round(no_prac/no_prac_univ*100,1),"%)",
+                                  "; 2020 events: ",
+                                  paste0(round(no_2020_events/1000,1),"k"),
+                                  "; 2020 patients: ",
+                                  "TBA"
+                                ),
+                                caption=paste0("Feb median: ",
+                                               round(data_idr %>% filter(date=="2020-02-01") %>% .$median ,1),
+                                               " (IDR ",
+                                               round(data_idr %>% filter(date=="2020-02-01") %>% .$IDR ,1),"), ",
+                                               "April median: ",
+                                               round(data_idr %>% filter(date=="2020-04-01") %>% .$median ,1),
+                                               " (IDR ",
+                                               round(data_idr %>% filter(date=="2020-04-01") %>% .$IDR ,1),"), ",
+                                               "September median: ",
+                                               round(data_idr %>% filter(date=="2020-09-01") %>% .$median ,1),
+                                               " (IDR ",
+                                               round(data_idr %>% filter(date=="2020-09-01") %>% .$IDR ,1),"), ",
+                                               "December median: ",
+                                               round(data_idr %>% filter(date=="2020-12-01") %>% .$median ,1),
+                                               " (IDR ",
+                                               round(data_idr %>% filter(date=="2020-12-01") %>% .$IDR ,1),")\n",
+                                               str_medidrnarrative(data_idr)
+                                               )
+                              )+
+                              theme_bw()+
+                              theme(
+                                panel.border = element_blank(), 
+                                axis.line.x = element_line(colour = "black"),
+                                axis.text.x = element_text(angle = 70, vjust = 1, hjust=1),
+                                panel.grid.major.x = element_blank(),
+                                panel.grid.minor.x = element_blank(),
+                                axis.line.y = element_blank(),
                               )
                           }
     )
