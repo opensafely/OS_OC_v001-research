@@ -267,7 +267,7 @@ measures_plots %>%
 ## plot the charts (by quantile)
 measures_plots %>%
   transmute(
-    plot = plot_quantiles,
+    plot = plot_quantiles2,
     units = "cm",
     height = 10,
     width = 15, 
