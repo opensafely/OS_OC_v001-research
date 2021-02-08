@@ -17,24 +17,11 @@ However, difficult to in EHR systems a) define consultations (and sub-modalities
 
 Suggestion to for now restrict analysis to a simple, broad sociodemographic characterisation of cohorts that "have had an OC intance" (according to non-comprehensive but relevant codes) and proceed from there with discussions on further steps.
 
-*	OC instances: for now defined as those where codes eConsultation via online application (procedure) and Consultation via multimedia (procedure) occur.
-*	Period: 2020-03-01 to date 
-*	Outputs:
-*	tbSD: sociodemographics* for cohorts ‘had an OC instance’ vs ‘all registered patients.
-*	tbSD: sociodemographics for cohorts ‘had an OC instance’ vs ‘patients with GP consultation;
-*	tb01: OC instance rate (OCIR) and unique patient coverage (OCC) by region. For context: GP consultation rate (GPCR).
-*	tb02: OCIR and OCC by STP. For context: GP consultation rate (GPCR).
-*	tb04: OCIR and OCC by age and gender
-*	tb05: OCIR and OCC by ethnicity
-*	tb06: OCIR and OCC by region and rurality
-*	tb07: OCIR and OCC by care home status
-*	tb08: OCIR and OCC by presence of disability
-*	tb09: OCIR and OCC by living alone or not (household size=1)
-
+The overview brief is in the [Documentation folder](./docs).
 
 This is the code and configuration for our paper, _name goes here_
 
-* The paper is [here]()
+* The final paper is [here](TBA)
 * Raw model outputs, including charts, crosstabs, etc, are in `released_analysis_results/`
 * If you are interested in how we defined our variables, take a look at the [study definition](analysis/study_definition.py); this is written in `python`, but non-programmers should be able to understand what is going on there
 * If you are interested in how we defined our code lists, look in the [codelists folder](./codelists/).
