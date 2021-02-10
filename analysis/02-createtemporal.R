@@ -21,6 +21,11 @@ library(here)
 library(svglite)
 
 
+# create directory for saving plots, if not existent
+if (!dir.exists(here::here("output", "plots"))){
+  dir.create(here::here("output", "plots"))
+}
+
 # create look-up table to iterate over
 md_tbl <- tibble(
   measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),

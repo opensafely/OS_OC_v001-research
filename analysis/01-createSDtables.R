@@ -16,13 +16,18 @@
 ## open log connection to file
 sink(here::here("logs", "log-01-createSDtables.txt"))
 
+flag_gtsummaryoperational = FALSE
+
 ## library
 library(tidyverse)
-library(gtsummary)
+if (flag_gtsummaryoperational){
+  library(gtsummary)  
+}
 library(gt)
 library(here)
 #library(webshot)
 #webshot::install_phantomjs()
+
 
 ## import and pre-process cohort data
 df_input <- read_csv(
@@ -40,20 +45,23 @@ df_cleaned <- df_input %>%
   )
 
 
-## Characteristics of those with any OC consultation, any GP consultation and overall population
-desc_vars=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","oc_instance_had")
-(gt_ocpop <- df_cleaned %>% select(desc_vars) %>% tbl_summary(by=oc_instance_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had OC**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any OC instance**"))
+if (flag_gtsummaryoperational){
+  ## Characteristics of those with any OC consultation, any GP consultation and overall population
+  desc_vars=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","oc_instance_had")
+  (gt_ocpop <- df_cleaned %>% select(desc_vars) %>% tbl_summary(by=oc_instance_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had OC**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any OC instance**"))
+  
+  desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","gp_consult_had")
+  (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
+  
+  # Use function from gt package to save table as neat png
+  #gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
+  #gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+  
+  # Save dta with actual table data
+  save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData"))
+  save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData")) 
+}
 
-desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","gp_consult_had")
-(gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
-
-# Use function from gt package to save table as neat png
-#gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
-#gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
-
-# Save dta with actual table data
-save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData"))
-save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData"))
 
 ## Rates per characteristic
 
