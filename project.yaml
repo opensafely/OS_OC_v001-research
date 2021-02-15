@@ -51,16 +51,16 @@ actions:
           fig01: output/sc03_fig01_nattrends.svg
           fig02: output/sc03_fig02_nattrends.svg
 
-      run_model_long_RO:
-        run: r:latest analysis/02-createnattrends.R
-        needs: [generate_cohorts_long,generate_measures]
-        outputs:
-          moderately_sensitive:
-            log: logs/log-02-createnattrends.txt
-            tb01: output/measures_gpc_pop.csv
-            fig01: output/plots#plot_overall_gpc_pop.svg
-            figall: output/plots/plot_each_OC_*_practice.svg
-            figquant: output/plots/plot_quantiles_OC_*_practice.svg
+    run_model_measures:
+      run: r:latest analysis/02-createtemporal.R
+      needs: [generate_cohorts_long,generate_measures]
+      outputs:
+        moderately_sensitive:
+          log: logs/log-02-createtemporal.txt
+          tb01: output/measures_gpc_pop.csv
+          fig01: output/plots/plot_overall_gpc_pop.svg
+          figall: output/plots/plot_each_OC_*_practice.svg
+          figquant: output/plots/plot_quantiles_OC_*_practice.svg
 
 
   run_all:
