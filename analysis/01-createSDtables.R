@@ -16,7 +16,7 @@
 ## open log connection to file
 sink(here::here("logs", "log-01-createSDtables.txt"))
 
-flag_gtsummaryoperational = TRUE
+flag_gtsummaryoperational = FALSE
 
 ## library
 library(tidyverse)
