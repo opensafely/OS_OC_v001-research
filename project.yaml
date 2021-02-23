@@ -35,7 +35,7 @@ actions:
         cohort: output/measures/input_measures_bycode_*.csv
 
   generate_measures:
-    run: cohortextractor:latest generate_measures --study-definition study_definition --output-dir=output/measures
+    run: cohortextractor:latest generate_measures --study-definition study_definition_measures_bycode --output-dir=output/measures
     needs: [generate_cohorts_long]
     outputs:
       moderately_sensitive:
