@@ -28,49 +28,36 @@ actions:
         tb08: output/tb08_gpcr_dis.csv
 
   # https://docs.opensafely.org/en/latest/measures/
-    generate_cohorts_long:
-      run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_bycode --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output/measures
-      outputs:
-        highly_sensitive:
-          cohort: output/measures/input_measures_bycode_*.csv
+  generate_cohorts_long:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_bycode --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output/measures
+    outputs:
+      highly_sensitive:
+        cohort: output/measures/input_measures_bycode_*.csv
 
-    generate_measures:
-      run: cohortextractor:latest generate_measures --study-definition study_definition --output-dir=output/measures
-      needs: [generate_cohorts_long]
-      outputs:
-        moderately_sensitive:
-          measure_csv: output/measures/measure_*.csv
-
-    run_model_long:
-      run: r:latest analysis/03-createnattrends_codes.R
-      needs: [generate_cohorts_long]
-      outputs:
-        moderately_sensitive:
-          log: logs/log-03-createnattrends.txt
-          tb01: output/sc03_tb01_nattrends.csv
-          fig01: output/sc03_fig01_nattrends.svg
-          fig02: output/sc03_fig02_nattrends.svg
-
-    run_model_measures:
-      run: r:latest analysis/02-createtemporal.R
-      needs: [generate_cohorts_long,generate_measures]
-      outputs:
-        moderately_sensitive:
-          log: logs/log-02-createtemporal.txt
-          tb01: output/measures_gpc_pop.csv
-          fig01: output/plots/plot_overall_gpc_pop.svg
-          figall: output/plots/plot_each_OC_*_practice.svg
-          figquant: output/plots/plot_quantiles_OC_*_practice.svg
-
-
-  run_all:
-    needs:
-      - run_model
-    # In order to be valid this action needs to define a run commmand and some
-    # output. We don't really care what these are but the below does the trick.
-    # In a future release of the platform, this special action won't need to be
-    # defined at all.
-    run: cohortextractor:latest --version
+  generate_measures:
+    run: cohortextractor:latest generate_measures --study-definition study_definition --output-dir=output/measures
+    needs: [generate_cohorts_long]
     outputs:
       moderately_sensitive:
-        whatever: project.yaml
+        measure_csv: output/measures/measure_*.csv
+
+  run_model_long:
+    run: r:latest analysis/03-createnattrends_codes.R
+    needs: [generate_cohorts_long]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-03-createnattrends.txt
+        tb01: output/sc03_tb01_nattrends.csv
+        fig01: output/sc03_fig01_nattrends.svg
+        fig02: output/sc03_fig02_nattrends.svg
+
+  run_model_measures:
+    run: r:latest analysis/02-createtemporal.R
+    needs: [generate_cohorts_long,generate_measures]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-02-createtemporal.txt
+        tb01: output/measures_gpc_pop.csv
+        fig01: output/plots/plot_overall_gpc_pop.svg
+        figall: output/plots/plot_each_OC_*_practice.svg
+        figquant: output/plots/plot_quantiles_OC_*_practice.svg
