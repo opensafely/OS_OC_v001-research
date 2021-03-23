@@ -81,7 +81,7 @@ measures_gpc_pop <-
   measures_gpc_pratice %>%
   group_by(date) %>%
   summarise(population=sum(population),gp_consult_count=sum(gp_consult_count),value=gp_consult_count/population)
-write.csv(measures_gpc_pop,paste0(here::here("output"),"/measures_gpc_pop.csv"))
+write.csv(measures_gpc_pop,paste0(here::here("output"),"/measures_gpc_pop.csv")) # National monthly GP consultation instances. Suppression not needed.
 
 measures_gpc_pop %>% mutate(value_10000 = value*10000) %>%
   ggplot()+
@@ -103,7 +103,7 @@ ggsave(
   #width = 15, 
   limitsize=FALSE,
   filename = str_c("plot_overall_gpc_pop.svg"),
-  path = here::here("output", "plots"))
+  path = here::here("output", "plots"))  # National monthly GP consultation instances. Suppression not needed.
 
 
 
@@ -245,7 +245,7 @@ measures_plots <- measures %>%
                                                "April median: ",
                                                round(data_idr %>% filter(date=="2020-04-01") %>% .$median ,1),
                                                " (IDR ",
-                                               round(data_idr %>% filter(date=="2020-04-01") %>% .$IDR ,1),"), ",
+                                               round(data_idr %>% filter(date=="2020-04-01") %>% .$IDR ,1),"),\n ",
                                                "September median: ",
                                                round(data_idr %>% filter(date=="2020-09-01") %>% .$median ,1),
                                                " (IDR ",
@@ -265,6 +265,7 @@ measures_plots <- measures %>%
                                 panel.grid.major.x = element_blank(),
                                 panel.grid.minor.x = element_blank(),
                                 axis.line.y = element_blank(),
+                                plot.caption = element_text(color = "gray64", size=7)
                               )
                           }
     )
