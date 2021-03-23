@@ -16,7 +16,7 @@
 ## open log connection to file
 sink(here::here("logs", "log-01-createSDtables.txt"))
 
-flag_gtsummaryoperational = FALSE
+flag_gtsummaryoperational = TRUE
 
 ## library
 library(tidyverse)
@@ -37,7 +37,7 @@ df_cleaned <- df_input %>%
   mutate(age_group = factor(cut(age,breaks = c(0,18,40,50,60,70,80, Inf),dig.lab = 2)),
          sex = factor(case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ sex)),
          ethnicity = factor(case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other")),
-         care_home_type=factor(care_home_type),
+         care_home_type=factor(case_when(care_home_type=="PC" ~ "Care home",care_home_type=="PN" ~ "Care home",care_home_type=="PS" ~ "Care home",TRUE ~ "Non")),
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
          livingalone = ifelse(hh_size<=1,1,0),
@@ -54,12 +54,19 @@ if (flag_gtsummaryoperational){
   (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
   
   # Use function from gt package to save table as neat png
-  #gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
-  #gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+  gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
+  gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+  
+  gt_gpcpop$inputs <- NULL
+  gt_gpcpop$call_list <- NULL
+  gt_gpcpop$meta_data <- NULL
+  gt_ocpop$inputs <- NULL
+  gt_ocpop$call_list <- NULL
+  gt_ocpop$meta_data <- NULL
   
   # Save dta with actual table data
-  save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData"))
-  save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData")) 
+  #save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData")) 
+  #save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData")) 
 }
 
 
