@@ -59,6 +59,7 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/log-02-createtemporal.txt
+        red_measures: output/tables/redacted_*.csv
         tb01: output/measures_gpc_pop.csv
         fig01: output/plots/plot_overall_gpc_pop.svg
         figall: output/plots/plot_each_OC_*_practice.svg

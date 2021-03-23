@@ -45,6 +45,22 @@ measures <- md_tbl %>%
     data = map(id, ~read_csv(here::here("output","measures", glue::glue("measure_{.}.csv")))),
   )
 
+p_saving <- function(id,data) {
+  write.csv(paste0(here::here("output","measures"),"/red_measure_",id,".csv"))
+  return(data)
+}
+
+# Create redacted measures and save
+measures <- measures %>%
+  mutate(
+    redacted_data = pmap(lst(id,data),
+                      function(id,data) {
+                        write.csv(data,paste0(here::here("output","tables"),"/redacted_measure_",id,".csv"))
+                        return(data)
+                      }
+                      )
+  )
+
 #measures_m <- measures %>% mutate(no_2020_events = map(data, ~ (.) %>% filter(as.numeric(format(date,'%Y'))==2020))  ) 
 
 #measures_m <- measures %>% mutate(no_2020_events = map(data, ~ (.) %>% filter(as.numeric(format(date,'%Y'))==2020) %>% select(value) %>% sum()  )) 

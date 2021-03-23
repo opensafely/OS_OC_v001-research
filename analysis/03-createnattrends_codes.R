@@ -20,6 +20,10 @@ sink(here::here("logs", "log-03-createnattrends.txt"))
 if (!dir.exists(here::here("output", "plots"))){
   dir.create(here::here("output", "plots"))
 }
+# create directory for saving plots, if not existent
+if (!dir.exists(here::here("output", "tables"))){
+  dir.create(here::here("output", "tables"))
+}
 
 ## library
 library(tidyverse)
