@@ -28,6 +28,10 @@ library(here)
 #library(webshot)
 #webshot::install_phantomjs()
 
+# create directory for saving tables, if not existent
+if (!dir.exists(here::here("output", "tables"))){
+  dir.create(here::here("output", "tables"))
+}
 
 ## import and pre-process cohort data
 df_input <- read_csv(
@@ -57,6 +61,7 @@ if (flag_gtsummaryoperational){
   gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
   gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
   
+  # steps to remove input data and strip further where possible
   gt_gpcpop$inputs <- NULL
   gt_gpcpop$call_list <- NULL
   gt_gpcpop$meta_data <- NULL
@@ -64,9 +69,9 @@ if (flag_gtsummaryoperational){
   gt_ocpop$call_list <- NULL
   gt_ocpop$meta_data <- NULL
   
-  # Save dta with actual table data
-  #save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData")) 
-  #save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData")) 
+  # Save dta with actual table data, but underlying data removed
+  save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData")) 
+  save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData")) 
 }
 
 

@@ -21,23 +21,26 @@ cols(
   has_disability = col_double()
 )
 
-Note: Using an external vector in selections is ambiguous.
-i Use `all_of(desc_vars)` instead of `desc_vars` to silence this message.
-i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
-This message is displayed once per session.
-Note: Using an external vector in selections is ambiguous.
-i Use `all_of(desc_vars2)` instead of `desc_vars2` to silence this message.
-i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
-This message is displayed once per session.
-NULL
-Warning in View :
-  Unknown or uninitialised column: `inputs`.
 
-[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/analysis"
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` regrouping output by 'age_group' (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` regrouping output by 'region' (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
+-- Column specification -----------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  latest_consultation_date = col_character(),
+  a_e_consult_date = col_date(format = ""),
+  age = col_double(),
+  sex = col_character(),
+  ethnicity = col_double(),
+  imd = col_double(),
+  care_home_type = col_character(),
+  hh_size = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  rural_urban = col_character(),
+  gp_consult_count = col_double(),
+  has_consultation_history = col_double(),
+  OC_instance = col_double(),
+  OC_episode_count = col_double(),
+  has_disability = col_double()
+)
+
