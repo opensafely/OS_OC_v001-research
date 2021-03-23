@@ -23,11 +23,11 @@ oc_local_codes = codelist_from_csv(
 )
 
 # Local OC codelists, minimal data set (MDS) - snomed
-#oc_local_codes = codelist_from_csv(
-#    "codelists-local/onlineconsultation_mds_snomed.csv", 
-#    system = "snomed", 
-#    column = "SNOMEDCode"
-#)
+oc_local_codes_snomed = codelist_from_csv(
+    "codelists-local/onlineconsultation_mds_snomed.csv", 
+    system = "snomed", 
+    column = "SNOMEDCode"
+)
 
 ethnicity_codes = codelist_from_csv(
     "codelists/opensafely-ethnicity.csv",

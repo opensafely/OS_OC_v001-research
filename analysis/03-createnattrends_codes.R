@@ -16,6 +16,11 @@
 ## open log connection to file
 sink(here::here("logs", "log-03-createnattrends.txt"))
 
+# create directory for saving plots, if not existent
+if (!dir.exists(here::here("output", "plots"))){
+  dir.create(here::here("output", "plots"))
+}
+
 ## library
 library(tidyverse)
 library(here)
@@ -24,6 +29,27 @@ library(svglite)
 
 query_dates=seq(as.Date("2019-01-01"),length=24,by="months")
 query_dates <- paste0(query_dates)
+
+## Redactor code (W.Hulme)
+redactor <- function(n, threshold,e_overwrite=NA_integer_){
+  # given a vector of frequencies, this returns a boolean vector that is TRUE if
+  # a) the frequency is <= the redaction threshold and
+  # b) if the sum of redacted frequencies in a) is still <= the threshold, then the
+  # next largest frequency is also redacted
+  n <- as.integer(n)
+  leq_threshold <- dplyr::between(n, 1, threshold)
+  n_sum <- sum(n)
+  # redact if n is less than or equal to redaction threshold
+  redact <- leq_threshold
+  # also redact next smallest n if sum of redacted n is still less than or equal to threshold
+  if((sum(n*leq_threshold) <= threshold) & any(leq_threshold)){
+    redact[which.min(dplyr::if_else(leq_threshold, n_sum+1L, n))] = TRUE
+  }
+  n_redacted <- if_else(redact, e_overwrite, n)
+}
+
+
+
 ## import and pre-process cohort data
 
 df_input <- read_csv(
@@ -52,7 +78,8 @@ rm(df_summary_pop)
 df_summary_long <- df_summary %>% pivot_longer(cols=starts_with("OC"),
                names_to="Code",
                values_to="Count")
-write.csv(df_summary_long,paste0(here::here("output"),"/sc03_tb01_nattrends.csv"))
+df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
+write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 df_summary_long$month <- as.Date(df_summary_long$month)
@@ -62,7 +89,7 @@ ggplot(data=df_summary_long,aes(x=month,y=Count,fill=Code)) +
   scale_x_date(date_breaks = "2 months",expand=c(0,0))  +
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 
-ggsave(paste0(here::here("output"),"/sc03_fig01_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
+ggsave(paste0(here::here("output","plots"),"/sc03_fig01_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
 # Disclosiveness: plot of national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 ggplot(data=df_summary_long %>% filter(Code%!in% c("OC_gp_consult_count","OC_population")),aes(x=month,y=Count,color=Code)) +
@@ -70,7 +97,7 @@ ggplot(data=df_summary_long %>% filter(Code%!in% c("OC_gp_consult_count","OC_pop
   scale_x_date(date_breaks = "2 months",expand=c(0,0))+
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 
-ggsave(paste0(here::here("output"),"/sc03_fig02_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
+ggsave(paste0(here::here("output","plots"),"/sc03_fig02_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
 # Disclosiveness: plot of national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 
