@@ -17,10 +17,10 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/log-01-createSDtables.txt
-        gtpng1: output/tables/gt_ocpop.png
-        gtpng2: output/tables/gt_gpcpop.png
-        #rdata1: output/gt_ocpop.RData
-        #rdata2: output/gt_gpcpop.RData
+        #gtpng1: output/tables/gt_ocpop.png
+        #gtpng2: output/tables/gt_gpcpop.png
+        rdata1: output/gt_ocpop.RData
+        rdata2: output/gt_gpcpop.RData
         tb01: output/tb01_gpcr_region.csv
         tb02: output/tb02_gpcr_stp.csv
         tb04: output/tb04_gpcr_agesex.csv
