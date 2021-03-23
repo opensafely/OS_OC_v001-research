@@ -298,31 +298,31 @@ measures_plots <- measures %>%
 
 
 ## plot the charts (by variable)
-measures_plots %>%
-  transmute(
-    plot = plot_by,
-    units = "cm",
-    height = 10,
-    width = 15, 
-    limitsize=FALSE,
-    filename = str_c("plot_each_", id, ".svg"),
-    path = here::here("output", "plots"),
-  ) %>%
-  pwalk(ggsave)
-
-
-## plot the charts (by quantile)
 # measures_plots %>%
 #   transmute(
-#     plot = plot_quantiles2,
+#     plot = plot_by,
 #     units = "cm",
 #     height = 10,
 #     width = 15, 
 #     limitsize=FALSE,
-#     filename = str_c("plot_quantiles_", id, ".svg"),
+#     filename = str_c("plot_each_", id, ".svg"),
 #     path = here::here("output", "plots"),
 #   ) %>%
 #   pwalk(ggsave)
+
+
+## plot the charts (by quantile)
+measures_plots %>%
+  transmute(
+    plot = plot_quantiles2,
+    units = "cm",
+    height = 10,
+    width = 15,
+    limitsize=FALSE,
+    filename = str_c("plot_quantiles_", id, ".svg"),
+    path = here::here("output", "plots"),
+  ) %>%
+  pwalk(ggsave)
 
 
 ## close log connection

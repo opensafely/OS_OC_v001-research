@@ -53,7 +53,7 @@ actions:
         fig01: output/plots/sc03_fig01_nattrends.svg
         fig02: output/plots/sc03_fig02_nattrends.svg
         fig03: output/plots/sc03_fig03_pracnatcoverage.svg
-        fig04: output/plots/sc03_fig04_practbyregcoverage.svg
+        fig04: output/plots/sc03_fig04_pracbyregcoverage.svg
 
   run_model_measures:
     run: r:latest analysis/02-createtemporal.R
