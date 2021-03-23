@@ -21,38 +21,9 @@ cols(
   has_disability = col_double()
 )
 
-
--- Column specification -----------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  latest_consultation_date = col_character(),
-  a_e_consult_date = col_date(format = ""),
-  age = col_double(),
-  sex = col_character(),
-  ethnicity = col_double(),
-  imd = col_double(),
-  care_home_type = col_character(),
-  hh_size = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  rural_urban = col_character(),
-  gp_consult_count = col_double(),
-  has_consultation_history = col_double(),
-  OC_instance = col_double(),
-  OC_episode_count = col_double(),
-  has_disability = col_double()
-)
-
 `summarise()` ungrouping output (override with `.groups` argument)
-[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+`summarise()` regrouping output by 'age_group' (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
+`summarise()` regrouping output by 'region' (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)

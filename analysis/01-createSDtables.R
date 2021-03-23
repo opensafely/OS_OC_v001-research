@@ -70,8 +70,8 @@ if (flag_gtsummaryoperational){
   gt_ocpop$meta_data <- NULL
   
   # Save dta with actual table data, but underlying data removed
-  save(gt_ocpop,file = file.path(here::here("output"), "gt_ocpop.RData")) 
-  save(gt_gpcpop,file = file.path(here::here("output"), "gt_gpcpop.RData")) 
+  save(gt_ocpop,file = file.path(here::here("output","tables"), "gt_ocpop.RData")) 
+  save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData")) 
 }
 
 
@@ -117,7 +117,7 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest",n_redact=6) {
       oc_instance_covg_rate=oc_instance_covg/population
     )
   if (flag_save){
-    write.csv(mytb,paste0(here::here("output"),"/",tb_name,".csv"))
+    write.csv(mytb,paste0(here::here("output","tables"),"/",tb_name,".csv"))
   }
   return(mytb)
 }

@@ -19,15 +19,15 @@ actions:
         log: logs/log-01-createSDtables.txt
         #gtpng1: output/tables/gt_ocpop.png
         #gtpng2: output/tables/gt_gpcpop.png
-        rdata1: output/gt_ocpop.RData
-        rdata2: output/gt_gpcpop.RData
-        #tb01: output/tb01_gpcr_region.csv
-        tb02: output/tb02_gpcr_stp.csv
-        tb04: output/tb04_gpcr_agesex.csv
-        tb05: output/tb05_gpcr_ethnicity.csv
-        tb06: output/tb06_gpcr_ruc.csv
-        tb07: output/tb07_gpcr_care.csv
-        tb08: output/tb08_gpcr_dis.csv
+        rdata1: output/tables/gt_ocpop.RData
+        rdata2: output/tables/gt_gpcpop.RData
+        #tb01: output/tables/tb01_gpcr_region.csv
+        tb02: output/tables/tb02_gpcr_stp.csv
+        tb04: output/tables/tb04_gpcr_agesex.csv
+        tb05: output/tables/tb05_gpcr_ethnicity.csv
+        tb06: output/tables/tb06_gpcr_ruc.csv
+        tb07: output/tables/tb07_gpcr_care.csv
+        tb08: output/tables/tb08_gpcr_dis.csv
 
   # https://docs.opensafely.org/en/latest/measures/
   generate_cohorts_long:
