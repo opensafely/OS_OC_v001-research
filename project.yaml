@@ -21,7 +21,7 @@ actions:
         #gtpng2: output/tables/gt_gpcpop.png
         rdata1: output/gt_ocpop.RData
         rdata2: output/gt_gpcpop.RData
-        tb01: output/tb01_gpcr_region.csv
+        #tb01: output/tb01_gpcr_region.csv
         tb02: output/tb02_gpcr_stp.csv
         tb04: output/tb04_gpcr_agesex.csv
         tb05: output/tb05_gpcr_ethnicity.csv

@@ -75,9 +75,27 @@ if (flag_gtsummaryoperational){
 }
 
 
-## Rates per characteristic
+## Redactor code (W.Hulme)
+redactor <- function(n, threshold){
+  # given a vector of frequencies, this returns a boolean vector that is TRUE if
+  # a) the frequency is <= the redaction threshold and
+  # b) if the sum of redacted frequencies in a) is still <= the threshold, then the
+  # next largest frequency is also redacted
+  n <- as.integer(n)
+  leq_threshold <- dplyr::between(n, 1, threshold)
+  n_sum <- sum(n)
+  # redact if n is less than or equal to redaction threshold
+  redact <- leq_threshold
+  # also redact next smallest n if sum of redacted n is still less than or equal to threshold
+  if((sum(n*leq_threshold) <= threshold) & any(leq_threshold)){
+    redact[which.min(dplyr::if_else(leq_threshold, n_sum+1L, n))] = TRUE
+  }
+  n_redacted <- if_else(redact, NA_integer_, n)
+}
 
-df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest") {
+
+## Rates per characteristic
+df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest",n_redact=6) {
   mytb=
     mydf %>%
     group_by_at(myvars) %>%
@@ -85,10 +103,16 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest") {
       population=n(),
       gp_consult=sum(gp_consult_count,na.rm=T),
       gp_consult_covg = sum(gp_consult_had,na.rm=T),
-      gp_consult_rate=gp_consult/population,
-      gp_consult_covg_rate=gp_consult_covg/population,
       oc_instance=sum(OC_instance,na.rm=T),
       oc_instance_covg=sum(oc_instance_had,na.rm=T),
+    ) %>%
+    mutate(
+      gp_consult=redactor(gp_consult,n_redact),
+      gp_consult_covg = redactor(gp_consult_covg,n_redact),
+      oc_instance=redactor(oc_instance,n_redact),
+      oc_instance_covg=redactor(oc_instance_covg,n_redact),
+      gp_consult_rate=gp_consult/population,
+      gp_consult_covg_rate=gp_consult_covg/population,
       oc_instance_rate=oc_instance/population,
       oc_instance_covg_rate=oc_instance_covg/population
     )
@@ -97,9 +121,6 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest") {
   }
   return(mytb)
 }
-
-## OC and GP rates per region
-tb01_gpcr_region <- df_to_tbrates(df_cleaned,c("region"),1,"tb01_gpcr_region")
 
 
 ## OC and GP rates per STP
