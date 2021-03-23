@@ -1,1627 +1,1458 @@
 
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-|===================                                                                                                                                | 13%|=============================                                                                                                                      | 19%|=======================================                                                                                                            | 26%|=================================================                                                                                                  | 33%|==========================================================                                                                                         | 39%|====================================================================                                                                               | 46%|==============================================================================                                                                     | 53%|========================================================================================                                                           | 59%|==================================================================================================                                                 | 66%|============================================================================================================                                       | 73%|======================================================================================================================                             | 79%|================================================================================================================================                   | 86%|==========================================================================================================================================         | 93%|===================================================================================================================================================| 100%|===================================================================================================================================================| 100%
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-`summarise()` ungrouping output (override with `.groups` argument)
-Joining, by = "month"
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-`summarise()` ungrouping output (override with `.groups` argument)
-Joining, by = "month"
-Error in View : object 'df_input' not found
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-
--- Column specification ----------------------------------------------------------------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  region = col_character(),
-  stp = col_character(),
-  practice = col_double(),
-  gp_consult_count = col_double(),
-  OC_Y1f3b = col_double(),
-  OC_XUkjp = col_double(),
-  OC_XaXcK = col_double(),
-  OC_XVCTw = col_double(),
-  OC_XUuWQ = col_double(),
-  OC_XV1pT = col_double(),
-  OC_9N34d = col_double(),
-  OC_d9N34 = col_double(),
-  OC_XUman = col_double(),
-  OC_Y22b4 = col_double()
-)
-
-[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_222.csv"
-
 -- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
   practice = col_double(),
   gp_consult_count = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
 )
 
 
 -- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
   practice = col_double(),
+  gp_consult_count = col_double(),
   OC_Y1f3b = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_XUkjp = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_XaXcK = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_XVCTw = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_XUuWQ = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_XV1pT = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_9N34d = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_d9N34 = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_XUman = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
+  OC_Y22b4 = col_double()
 )
 
 
 -- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
   practice = col_double(),
-  OC_Y22b4 = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
 )
 
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_gpc_practice.csv"
-"2","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_Y1f3b_practice.csv"
-"3","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUkjp_practice.csv"
-"4","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XaXcK_practice.csv"
-"5","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XVCTw_practice.csv"
-"6","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUuWQ_practice.csv"
-"7","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XV1pT_practice.csv"
-"8","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_9N34d_practice.csv"
-"9","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_d9N34_practice.csv"
-"10","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUman_practice.csv"
-"11","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_Y22b4_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_gpc_practice.csv"
-"2","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_Y1f3b_practice.csv"
-"3","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUkjp_practice.csv"
-"4","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XaXcK_practice.csv"
-"5","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XVCTw_practice.csv"
-"6","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUuWQ_practice.csv"
-"7","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XV1pT_practice.csv"
-"8","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_9N34d_practice.csv"
-"9","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_d9N34_practice.csv"
-"10","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUman_practice.csv"
-"11","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_Y22b4_practice.csv"
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+[1] "aaa"
 [1] 1
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_gpc_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_Y1f3b_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUkjp_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XaXcK_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XVCTw_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUuWQ_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XV1pT_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_9N34d_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_d9N34_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_XUman_practice.csv"
-"","x"
-"1","C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_OC_Y22b4_practice.csv"
-[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/red_measure_222.csv"
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
+[1] 3
 `summarise()` ungrouping output (override with `.groups` argument)
+`summarise()` regrouping output by 'region' (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
+`summarise()` regrouping output by 'region' (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
+`summarise()` regrouping output by 'region' (override with `.groups` argument)
+ [1] "9N34d"            "d9N34"            "gp_consult_count" "XaXcK"            "XUkjp"            "XUman"            "XUuWQ"            "XV1pT"            "XVCTw"           
+[10] "Y1f3b"            "Y22b4"           
 `summarise()` ungrouping output (override with `.groups` argument)
+Joining, by = "month"
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
 `summarise()` ungrouping output (override with `.groups` argument)
+Joining, by = "month"
+`summarise()` regrouping output by 'region' (override with `.groups` argument)
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  region = col_character(),
+  stp = col_character(),
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  OC_Y1f3b = col_double(),
+  OC_XUkjp = col_double(),
+  OC_XaXcK = col_double(),
+  OC_XVCTw = col_double(),
+  OC_XUuWQ = col_double(),
+  OC_XV1pT = col_double(),
+  OC_9N34d = col_double(),
+  OC_d9N34 = col_double(),
+  OC_XUman = col_double(),
+  OC_Y22b4 = col_double()
+)
+
 `summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
+Joining, by = "month"

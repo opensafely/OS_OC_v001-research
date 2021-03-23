@@ -73,15 +73,61 @@ rm(df_input_now)
 df_summary <- df_input %>%
   group_by(month) %>%
   summarise_at(vars(starts_with("OC")),~sum(.,na.rm=T))
-
 df_summary_pop <- df_input %>% group_by(month) %>% summarise(OC_population=n())
 df_summary <- left_join(df_summary,df_summary_pop,id="month")
-rm(df_input)
+
 rm(df_summary_pop)
+
+## Calculations for practice coverage
+df_practice_flags <- df_input %>% group_by(region,stp,practice) %>% summarise_at(vars(starts_with("OC")),~ifelse(sum(.,na.rm=T)>0,1,0))
+
+tbx_practice_flags_ <- pivot_longer(df_practice_flags,cols=starts_with("OC"),
+                                     names_to="code",
+                                     values_to="had_instance")
+
+tbx_practice_flags_reg <- tbx_practice_flags_ %>%
+  group_by(region,code) %>%
+  summarise(Present=sum(had_instance),Absent=n()-Present) %>%
+  pivot_longer(c("Present","Absent"),names_to="Instance presence",values_to="no_practices") %>%
+  mutate(code=substr(code,4,nchar(code)))
+
+tbx_practice_flags_ <- tbx_practice_flags_ %>%
+  group_by(code) %>%
+  summarise(Present=sum(had_instance),Absent=n()-Present) %>%
+  pivot_longer(c("Present","Absent"),names_to="Instance presence",values_to="no_practices") %>%
+  mutate(code=substr(code,4,nchar(code)))
+
+tbx_practice_flags_$`Instance presence` <- factor(tbx_practice_flags_$`Instance presence`)
+
+ggplot(tbx_practice_flags_, aes(fill=`Instance presence`,x=code, y=no_practices,label=no_practices)) +
+  geom_bar( stat="identity")+
+  geom_text(aes(vjust=-1),position = position_stack(vjust = 0.2))+
+  theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
+  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")
+
+ggsave(paste0(here::here("output","plots"),"/sc03_fig03_pracnatcoverage.svg"),width = 40, height = 20, dpi=300,units ="cm")
+
+
+ggplot(tbx_practice_flags_reg, aes(fill=`Instance presence`,x=code, y=no_practices,label=no_practices)) +
+  geom_bar( stat="identity")+
+  geom_text(aes(vjust=-1),position = position_stack(vjust = 0.0))+
+  theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
+  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+facet_wrap(~region)
+
+ggsave(paste0(here::here("output","plots"),"/sc03_fig04_pracbyregcoverage.svg"),width = 40, height = 20, dpi=300,units ="cm")
+
+
+rm(df_input)
+rm(df_practice_flags)
+rm(tbx_practice_flags_)
+rm(tbx_practice_flags_reg)
+
+
+## National trends
 
 df_summary_long <- df_summary %>% pivot_longer(cols=starts_with("OC"),
                names_to="Code",
-               values_to="Count")
+               values_to="Count") %>% filter(Code %!in% c("OC_population"))
 df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
 write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 

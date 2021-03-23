@@ -52,6 +52,8 @@ actions:
         tb01: output/tables/sc03_tb01_nattrends.csv
         fig01: output/plots/sc03_fig01_nattrends.svg
         fig02: output/plots/sc03_fig02_nattrends.svg
+        fig03: output/plots/sc03_fig03_pracnatcoverage.svg
+        fig04: output/plots/sc03_fig04_practbyregcoverage.svg
 
   run_model_measures:
     run: r:latest analysis/02-createtemporal.R
@@ -62,5 +64,5 @@ actions:
         red_measures: output/tables/redacted_*.csv
         tb01: output/measures_gpc_pop.csv
         fig01: output/plots/plot_overall_gpc_pop.svg
-        figall: output/plots/plot_each_OC_*_practice.svg
+        #figall: output/plots/plot_each_OC_*_practice.svg
         figquant: output/plots/plot_quantiles_OC_*_practice.svg
