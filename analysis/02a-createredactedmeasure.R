@@ -83,7 +83,7 @@ measures <- measures %>%
                       function(id,measure_col,data) {
                         redacted_data <- data %>% mutate_at(vars(measure_col),redactor)
                         redacted_data$value <- ifelse(is.na(redacted_data %>% select(measure_col)),NA,redacted_data$value)
-                        write.csv(redacted_data,paste0(here::here("output","tables"),"/redacted_measure_",id,".csv"))
+                        write.csv(redacted_data,paste0(here::here("output","tables"),"/redacted2a_measure_",id,".csv"))
                         return(redacted_data)
                       }
                       )
