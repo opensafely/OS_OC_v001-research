@@ -136,6 +136,15 @@ study = StudyDefinition(
         },
     ),
 
+    OC_OC10=patients.with_these_clinical_events(
+        oc_local_codes,        
+        between = ["index_date", "index_date + 1 month"],    
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.5,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
     OC_Y1f3b=patients.with_these_clinical_events(
         oc_Y1f3b,        
         between = ["index_date", "index_date + 1 month"],    
