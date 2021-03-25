@@ -209,11 +209,11 @@ measures_plots <- measures %>%
 print("> tibble mapping of deciles")
 
     #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
-measures_plots <- measures_plots %>% 
-  mutate(
-    data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value*1000),v_median(value*1000))))
-
-print("> tibble mapping of median , idr")
+# measures_plots <- measures_plots %>% 
+#   mutate(
+#     data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value*1000),v_median(value*1000))))
+# 
+# print("> tibble mapping of median , idr")
 
 measures_plots <- measures_plots %>% 
   mutate(
