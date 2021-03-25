@@ -116,7 +116,7 @@ measures <- measures %>% mutate(no_2020_events = pmap(lst( data, measure_col),
 print("> 2020 events")
 
 #measures_m <- measures %>% mutate(no_2020_events = map(data,  ~ (.) %>% group_by(date)))
-flag_run=T
+flag_run=F
 
 if(flag_run){
 
