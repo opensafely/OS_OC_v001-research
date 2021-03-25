@@ -145,7 +145,9 @@ print("> General practice plots and data")
 
 #mydata <- mydata %>% group_by(practice) %>% filter(sum(value,na.rm=T)>0)
 
+flag_run=F
 
+if(flag_run){
 measures <- measures %>% mutate(
   data_ori=data, # data with all practices
   data = map(data, ~ (.) %>% group_by(practice) %>% filter(sum(value,na.rm=T)>0)), # data with only practices with at least an observation in the study period (affects deciles)
@@ -200,9 +202,7 @@ str_medidrnarrative <- function(mydata_idr){
 }
 
 
-flag_run=F
 
-if(flag_run){
 
 ## generate plots for each measure within the data frame
 measures_plots <- measures %>% 
