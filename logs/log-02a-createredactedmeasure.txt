@@ -1,0 +1,119 @@
+[1] "dirs creation"
+[1] "redactor function"
+[1] "create tibble"
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  gp_consult_count = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_Y1f3b = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_XUkjp = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_XaXcK = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_XVCTw = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_XUuWQ = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_XV1pT = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_9N34d = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_d9N34 = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_XUman = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_Y22b4 = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+[1] "load data in tibble"
+Note: Using an external vector in selections is ambiguous.
+i Use `all_of(measure_col)` instead of `measure_col` to silence this message.
+i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
+This message is displayed once per session.
+[1] "load redacted data in tibble and save as csv's"

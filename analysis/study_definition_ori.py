@@ -149,7 +149,7 @@ study = StudyDefinition(
 
     # Househould size
     hh_size=patients.household_as_of(
-        "2020-02-01",
+        start_date,
         returning="household_size",
         return_expectations={
             "int": {"distribution": "normal", "mean": 3, "stddev": 1},
