@@ -19,37 +19,14 @@ sink(here::here("logs", "log-02-createtemporal-debug.txt"))
 library(tidyverse)
 library(here)
 library(svglite)
-print("> Libraries")
+
+print("a01")
 
 # create directory for saving plots, if not existent
 if (!dir.exists(here::here("output", "plots"))){
   dir.create(here::here("output", "plots"))
 }
-# create directory for saving plots, if not existent
-if (!dir.exists(here::here("output", "tables"))){
-  dir.create(here::here("output", "tables"))
-}
-print("> Dirs")
-
-## Redactor code (W.Hulme)
-redactor <- function(n, threshold=6,e_overwrite=NA_integer_){
-  # given a vector of frequencies, this returns a boolean vector that is TRUE if
-  # a) the frequency is <= the redaction threshold and
-  # b) if the sum of redacted frequencies in a) is still <= the threshold, then the
-  # next largest frequency is also redacted
-  n <- as.integer(n)
-  leq_threshold <- dplyr::between(n, 1, threshold)
-  n_sum <- sum(n)
-  # redact if n is less than or equal to redaction threshold
-  redact <- leq_threshold
-  # also redact next smallest n if sum of redacted n is still less than or equal to threshold
-  if((sum(n*leq_threshold) <= threshold) & any(leq_threshold)){
-    redact[which.min(dplyr::if_else(leq_threshold, n_sum+1L, n))] = TRUE
-  }
-  n_redacted <- if_else(redact, e_overwrite, n)
-}
-print("> Redactor def")
-
+print("a02")
 # create look-up table to iterate over
 md_tbl <- tibble(
   measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
@@ -62,34 +39,13 @@ md_tbl <- tibble(
   denominator = "population",
   group_by = rep("practice",1,11)
 )
-print("> Tibble creation")
-
+print("a03")
 ## import measures data from look-up
 measures <- md_tbl %>%
   mutate(
     data = map(id, ~read_csv(here::here("output","measures", glue::glue("measure_{.}.csv")))),
   )
-print("> Data load to measures")
-
-p_saving <- function(id,data) {
-  write.csv(paste0(here::here("output","measures"),"/red_measure_",id,".csv"))
-  return(data)
-}
-
-# Create redacted measures and save
-measures <- measures %>%
-  mutate(
-    redacted_data = pmap(lst(id,measure_col,data),
-                      function(id,measure_col,data) {
-                        redacted_data <- data %>% mutate_at(vars(measure_col),redactor)
-                        redacted_data$value <- ifelse(is.na(redacted_data %>% select(measure_col)),NA,redacted_data$value)
-                        write.csv(redacted_data,paste0(here::here("output","tables"),"/redacted_measure_",id,".csv"))
-                        return(redacted_data)
-                      }
-                      )
-  )
-print("> Redacted measures")
-
+print("a04")
 #measures_m <- measures %>% mutate(no_2020_events = map(data, ~ (.) %>% filter(as.numeric(format(date,'%Y'))==2020))  ) 
 
 #measures_m <- measures %>% mutate(no_2020_events = map(data, ~ (.) %>% filter(as.numeric(format(date,'%Y'))==2020) %>% select(value) %>% sum()  )) 
@@ -100,17 +56,19 @@ measures <- measures %>% mutate(no_2020_events = pmap(lst( data, measure_col),
                                     data %>% filter(as.numeric(format(date,'%Y'))==2020) %>% select(measure_col) %>% sum()
                                     }
                                   )) 
-print("> 2020 events")
+print("a05")
 
 #measures_m <- measures %>% mutate(no_2020_events = map(data,  ~ (.) %>% group_by(date)))
 
 measures_gpc_pratice <- measures$data[[match("gpc_practice",measures$id)]]
+print("a06")
 
 measures_gpc_pop <- 
   measures_gpc_pratice %>%
   group_by(date) %>%
   summarise(population=sum(population),gp_consult_count=sum(gp_consult_count),value=gp_consult_count/population)
-write.csv(measures_gpc_pop,paste0(here::here("output"),"/measures_gpc_pop_debug.csv")) # National monthly GP consultation instances. Suppression not needed.
+write.csv(measures_gpc_pop,paste0(here::here("output"),"/measures_gpc_pop.csv"))
+print("a07")
 
 measures_gpc_pop %>% mutate(value_10000 = value*10000) %>%
   ggplot()+
@@ -131,9 +89,9 @@ ggsave(
   height = 10,
   #width = 15, 
   limitsize=FALSE,
-  filename = str_c("plot_overall_gpc_pop_debug.svg"),
-  path = here::here("output", "plots"))  # National monthly GP consultation instances. Suppression not needed.
-print("> General practice plots and data")
+  filename = str_c("plot_overall_gpc_pop.svg"),
+  path = here::here("output", "plots"))
+print("a08")
 
 
 #### Excluding practices with no code instances over full tenor of study period
@@ -151,14 +109,15 @@ measures <- measures %>% mutate(
   no_prac = map(data, ~(.) %>% .$practice %>% n_distinct(na.rm=T) ),
   no_prac_univ = map(data_ori, ~(.) %>% .$practice %>% n_distinct(na.rm=T))
 )
-print("> Summary tallies")
+print("a09")
 
 
 quibble <- function(x, q = c(0.25, 0.5, 0.75)) {
   ## function that takes a vector and returns a tibble of quantiles - default is quartile
-  print("> Quibble in")
+  print("insidequibble")
   tibble("{{ x }}" := quantile(x, q), "{{ x }}_q" := q)
 }
+
 
 # v_median <- function(v_quantiles) {
 #   ### function that takes quantiles and extracts median
@@ -166,18 +125,17 @@ quibble <- function(x, q = c(0.25, 0.5, 0.75)) {
 # }
 
 v_median <- function(x) {
-  print("> Median in")
+  print("insidemedian")
   tibble(median := quantile(x,0.5))
 }
 
 v_idr <- function(x){
-  print("> IDR in")
+  print("insideidr")
   tibble(IDR := quantile(x,0.9)-quantile(x,0.1))
 }
 
 str_medidrnarrative <- function(mydata_idr){
-  print("> medidrnarrative in")
-  
+  print("insidemedidrnarrative")
   a<- mydata_idr %>%
     summarise(date,medchange = (median - lag(median,12))/lag(median,12)*100  ) %>% 
     mutate(classification=case_when(
@@ -187,8 +145,6 @@ str_medidrnarrative <- function(mydata_idr){
       medchange<(-15) ~ "drop",
       TRUE ~ NA_character_,
     ) )
-  
-  print("> medidrnarrative mid")
 
   
   paste0("Change in median from 2019: April ",
@@ -202,21 +158,15 @@ str_medidrnarrative <- function(mydata_idr){
 
 
 ## generate plots for each measure within the data frame
-measures_plots <- measures %>% 
-  mutate(
+measures_plots <- measures %>% mutate(
     data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)),v_idr(value),v_median(value))))
 
-print("> tibble mapping of deciles")
 
-    #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
-measures_plots <- measures %>% 
-  mutate(
+measures_plots <- measures %>% mutate(
     data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value*1000),v_median(value*1000))))
 
-print("> tibble mapping of median , idr")
 
-measures_plots <- measures %>% 
-  mutate(
+measures_plots <- measures %>% mutate(
     plot_by = pmap(lst( group_by, data, measure_label, by_label), 
                    function(group_by, data, measure_label, by_label){
                      data %>% mutate(value_1000 = value*1000) %>%
@@ -239,10 +189,7 @@ measures_plots <- measures %>%
                    }
     ))
 
-print("> tibble mapping of plots")
-
-measures_plots <- measures %>% 
-  mutate(
+measures_plots <- measures %>% mutate(
     plot_quantiles = pmap(lst( group_by, data_quantiles, measure_label, by_label), 
                           function(group_by, data_quantiles, measure_label, by_label){
                             data_quantiles %>% mutate(value_1000 = value*1000) %>%
@@ -266,12 +213,7 @@ measures_plots <- measures %>%
                                 #axis.line.y = element_blank(),
                               )
                           }
-    ))
-
-print("> tibble mapping of decile plots")
-
-measures_plots <- measures %>% 
-  mutate(
+    ),
     plot_quantiles2 = pmap(lst( group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ), 
                           function(group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ){
                             data_quantiles %>% mutate(value_1000 = value*1000) %>%
@@ -300,7 +242,7 @@ measures_plots <- measures %>%
                                                "April median: ",
                                                round(data_idr %>% filter(date=="2020-04-01") %>% .$median ,1),
                                                " (IDR ",
-                                               round(data_idr %>% filter(date=="2020-04-01") %>% .$IDR ,1),"),\n ",
+                                               round(data_idr %>% filter(date=="2020-04-01") %>% .$IDR ,1),"), ",
                                                "September median: ",
                                                round(data_idr %>% filter(date=="2020-09-01") %>% .$median ,1),
                                                " (IDR ",
@@ -320,41 +262,25 @@ measures_plots <- measures %>%
                                 panel.grid.major.x = element_blank(),
                                 panel.grid.minor.x = element_blank(),
                                 axis.line.y = element_blank(),
-                                plot.caption = element_text(color = "gray64", size=7)
                               )
                           }
     )
-  )
+  ))
 
-print("> tibble mapping of decile plots - mfenriched")
 
 ## plot the charts (by variable)
-# measures_plots %>%
-#   transmute(
-#     plot = plot_by,
-#     units = "cm",
-#     height = 10,
-#     width = 15, 
-#     limitsize=FALSE,
-#     filename = str_c("plot_each_debug_", id, ".svg"),
-#     path = here::here("output", "plots"),
-#   ) %>%
-#   pwalk(ggsave)
-print("> measure_plots_saved")
-
-## plot the charts (by quantile)
 measures_plots %>%
   transmute(
-    plot = plot_quantiles,
+    plot = plot_by,
     units = "cm",
     height = 10,
-    width = 15,
+    width = 15, 
     limitsize=FALSE,
-    filename = str_c("plot_quantiles_debug_", id, ".svg"),
+    filename = str_c("plot_each_", id, ".svg"),
     path = here::here("output", "plots"),
   ) %>%
   pwalk(ggsave)
-print("> measure_quantiles_saved")
+
 
 ## plot the charts (by quantile)
 measures_plots %>%
@@ -362,13 +288,13 @@ measures_plots %>%
     plot = plot_quantiles2,
     units = "cm",
     height = 10,
-    width = 15,
+    width = 15, 
     limitsize=FALSE,
-    filename = str_c("plot_quantiles2_debug_", id, ".svg"),
+    filename = str_c("plot_quantiles_", id, ".svg"),
     path = here::here("output", "plots"),
   ) %>%
   pwalk(ggsave)
-print("> measure_quantiles2_saved")
+
 
 ## close log connection
 sink()
