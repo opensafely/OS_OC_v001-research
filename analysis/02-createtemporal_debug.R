@@ -189,12 +189,18 @@ quibble_catch <- function(x, q = c(0.25, 0.5, 0.75)) {
 
 v_median <- function(x) {
   print("> Median in")
-  tibble(median := quantile(x,0.5))
+  #tibble(median := quantile(x,0.5))
+  out <- tryCatch(tibble(median := quantile(x,0.5)),
+                  error=function(e) tibble(median := 0))
+  return(out)
 }
 
 v_idr <- function(x){
   print("> IDR in")
-  tibble(IDR := quantile(x,0.9)-quantile(x,0.1))
+  #tibble(IDR := quantile(x,0.9)-quantile(x,0.1))
+  out <- tryCatch(tibble(IDR := quantile(x,0.9)-quantile(x,0.1)),
+                  error=function(e) tibble(IDR := 0))
+  return(out)
 }
 
 str_medidrnarrative <- function(mydata_idr){
@@ -227,7 +233,7 @@ str_medidrnarrative <- function(mydata_idr){
 ## generate plots for each measure within the data frame
 measures_plots <- measures %>% 
   mutate(
-    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)))))
+    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble_catch(value, seq(0,1,0.1)))))
 
 print("> tibble mapping of deciles")
 flag_run=F
