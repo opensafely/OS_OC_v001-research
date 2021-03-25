@@ -190,7 +190,7 @@ str_medidrnarrative <- function(mydata_idr){
 }
 
 
-flag_run=F
+flag_run=T
 
 if(flag_run){
 
