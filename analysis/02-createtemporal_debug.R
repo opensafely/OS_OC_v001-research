@@ -236,6 +236,16 @@ measures_plots <- measures %>%
     data_quantiles = map(data, ~ (.) %>% group_by(date)))
                          #%>% summarise(quibble_catch(value, seq(0,1,0.1)))))
 
+measures_plots <- measures %>% 
+  mutate(
+    data_quantiles = map(data, 
+                         function(data){
+                           out <- tryCatch(data %>% group_by(date) %>% summarise(quibble_catch(value, seq(0,1,0.1))),
+                                           error=function(e) data %>% group_by(date) %>% summarise(quibble_catch(c(0,0), seq(0,1,0.1))))
+                           return(out)
+                         }))
+#%>% summarise(quibble_catch(value, seq(0,1,0.1)))))
+
 print("> tibble mapping of deciles")
 flag_run=F
 
