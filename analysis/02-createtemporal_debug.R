@@ -212,9 +212,7 @@ str_medidrnarrative <- function(mydata_idr){
 }
 
 
-flag_run=F
 
-if(flag_run){
 
 
 ## generate plots for each measure within the data frame
@@ -223,7 +221,9 @@ measures_plots <- measures %>%
     data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)))))
 
 print("> tibble mapping of deciles")
+flag_run=F
 
+if(flag_run){
     #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
 # measures_plots <- measures_plots %>% 
 #   mutate(
