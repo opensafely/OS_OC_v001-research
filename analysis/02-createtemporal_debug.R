@@ -51,11 +51,23 @@ redactor <- function(n, threshold=6,e_overwrite=NA_integer_){
 print("> Redactor def")
 
 # create look-up table to iterate over
-n_meas=10
+# n_meas=10
+# md_tbl <- tibble(
+#   measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
+#   measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
+#   measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","ComputerLink","AlertReceived","Y22b4"),
+#   by = rep("practice",1,n_meas),
+#   by_label = rep("by practice",1,n_meas),
+#   id = paste0(measure, "_", by),
+#   numerator = measure,
+#   denominator = "population",
+#   group_by = rep("practice",1,n_meas)
+# )
+n_meas=8
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
-  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","ComputerLink","AlertReceived","Y22b4"),
+  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_Y22b4"),
+  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_Y22b4"),
+  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","Y22b4"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
@@ -104,7 +116,7 @@ measures <- measures %>% mutate(no_2020_events = pmap(lst( data, measure_col),
 print("> 2020 events")
 
 #measures_m <- measures %>% mutate(no_2020_events = map(data,  ~ (.) %>% group_by(date)))
-flag_run=F
+flag_run=T
 
 if(flag_run){
 
