@@ -69,7 +69,7 @@ actions:
 
 
   run_model_measuresDEBUG:
-    run: r:latest analysis/02-createtemporal.R
+    run: r:latest analysis/02-createtemporal-debug.R
     needs: [generate_cohorts_long,generate_measures]
     outputs:
       moderately_sensitive:
