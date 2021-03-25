@@ -209,13 +209,13 @@ measures_plots <- measures %>%
 print("> tibble mapping of deciles")
 
     #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
-measures_plots <- measures %>% 
+measures_plots <- measures_plots %>% 
   mutate(
     data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value*1000),v_median(value*1000))))
 
 print("> tibble mapping of median , idr")
 
-measures_plots <- measures %>% 
+measures_plots <- measures_plots %>% 
   mutate(
     plot_by = pmap(lst( group_by, data, measure_label, by_label), 
                    function(group_by, data, measure_label, by_label){
@@ -241,7 +241,7 @@ measures_plots <- measures %>%
 
 print("> tibble mapping of plots")
 
-measures_plots <- measures %>% 
+measures_plots <- measures_plots %>% 
   mutate(
     plot_quantiles = pmap(lst( group_by, data_quantiles, measure_label, by_label), 
                           function(group_by, data_quantiles, measure_label, by_label){
@@ -270,7 +270,7 @@ measures_plots <- measures %>%
 
 print("> tibble mapping of decile plots")
 
-measures_plots <- measures %>% 
+measures_plots <- measures_plots %>% 
   mutate(
     plot_quantiles2 = pmap(lst( group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ), 
                           function(group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ){
@@ -340,7 +340,7 @@ print("> tibble mapping of decile plots - mfenriched")
 #     path = here::here("output", "plots"),
 #   ) %>%
 #   pwalk(ggsave)
-print("> measure_plots_saved")
+#print("> measure_plots_saved")
 
 ## plot the charts (by quantile)
 measures_plots %>%
@@ -357,18 +357,18 @@ measures_plots %>%
 print("> measure_quantiles_saved")
 
 ## plot the charts (by quantile)
-measures_plots %>%
-  transmute(
-    plot = plot_quantiles2,
-    units = "cm",
-    height = 10,
-    width = 15,
-    limitsize=FALSE,
-    filename = str_c("plot_quantiles2_debug_", id, ".svg"),
-    path = here::here("output", "plots"),
-  ) %>%
-  pwalk(ggsave)
-print("> measure_quantiles2_saved")
+# measures_plots %>%
+#   transmute(
+#     plot = plot_quantiles2,
+#     units = "cm",
+#     height = 10,
+#     width = 15,
+#     limitsize=FALSE,
+#     filename = str_c("plot_quantiles2_debug_", id, ".svg"),
+#     path = here::here("output", "plots"),
+#   ) %>%
+#   pwalk(ggsave)
+# print("> measure_quantiles2_saved")
 
 ## close log connection
 sink()
