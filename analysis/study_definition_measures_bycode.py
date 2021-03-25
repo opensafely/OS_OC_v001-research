@@ -36,9 +36,8 @@ oc_XaXcK = codelist_from_csv("codelists-local/onlineconsultation_XaXcK_ctv3.csv"
 oc_XVCTw = codelist_from_csv("codelists-local/onlineconsultation_XVCTw_ctv3.csv", system = "ctv3", column = "CTV3Code")
 oc_XUuWQ = codelist_from_csv("codelists-local/onlineconsultation_XUuWQ_ctv3.csv", system = "ctv3", column = "CTV3Code")
 oc_XV1pT = codelist_from_csv("codelists-local/onlineconsultation_XV1pT_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_9N34d = codelist_from_csv("codelists-local/onlineconsultation_9N34d_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_d9N34 = codelist_from_csv("codelists-local/onlineconsultation_d9N34_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_XUman = codelist_from_csv("codelists-local/onlineconsultation_XUman_ctv3.csv", system = "ctv3", column = "CTV3Code")
+oc_computerlink = codelist_from_csv("codelists-local/onlineconsultation_computerlink_ctv3.csv", system = "ctv3", column = "CTV3Code")
+oc_alertreceived = codelist_from_csv("codelists-local/onlineconsultation_alertreceived_ctv3.csv", system = "ctv3", column = "CTV3Code")
 oc_Y22b4 = codelist_from_csv("codelists-local/onlineconsultation_Y22b4_ctv3.csv", system = "ctv3", column = "CTV3Code")
 
 # Local codelists, minimal data set (MDS) - snomed
@@ -200,8 +199,8 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    OC_9N34d=patients.with_these_clinical_events(
-        oc_9N34d,        
+    OC_computerlink=patients.with_these_clinical_events(
+        oc_computerlink,        
         between = ["index_date", "index_date + 1 month"],    
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -209,17 +208,8 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    OC_d9N34=patients.with_these_clinical_events(
-        oc_d9N34,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    OC_XUman=patients.with_these_clinical_events(
-        oc_XUman,        
+    OC_alertreceived=patients.with_these_clinical_events(
+        oc_alertreceived,        
         between = ["index_date", "index_date + 1 month"],    
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -272,12 +262,6 @@ measures = [
         group_by="practice"
     ),
     Measure(
-        id="OC_XaXcK_practice",
-        numerator="OC_XaXcK",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
         id="OC_XUuWQ_practice",
         numerator="OC_XUuWQ",
         denominator="population",
@@ -290,20 +274,14 @@ measures = [
         group_by="practice"
     ),
     Measure(
-        id="OC_9N34d_practice",
-        numerator="OC_9N34d",
+        id="OC_computerlink_practice",
+        numerator="OC_computerlink",
         denominator="population",
         group_by="practice"
     ),
     Measure(
-        id="OC_d9N34_practice",
-        numerator="OC_d9N34",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XUman_practice",
-        numerator="OC_XUman",
+        id="OC_alertreceived_practice",
+        numerator="OC_alertreceived",
         denominator="population",
         group_by="practice"
     ),

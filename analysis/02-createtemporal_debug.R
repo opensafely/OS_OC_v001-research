@@ -51,16 +51,17 @@ redactor <- function(n, threshold=6,e_overwrite=NA_integer_){
 print("> Redactor def")
 
 # create look-up table to iterate over
+n_meas=10
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
-  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","9N34d","d9N34","XUman","Y22b4"),
-  by = rep("practice",1,11),
-  by_label = rep("by practice",1,11),
+  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
+  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
+  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","ComputerLink","AlertReceived","Y22b4"),
+  by = rep("practice",1,n_meas),
+  by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
   numerator = measure,
   denominator = "population",
-  group_by = rep("practice",1,11)
+  group_by = rep("practice",1,n_meas)
 )
 print("> Tibble creation")
 
@@ -199,12 +200,14 @@ str_medidrnarrative <- function(mydata_idr){
 }
 
 
+flag_run=F
 
+if(flag_run){
 
 ## generate plots for each measure within the data frame
 measures_plots <- measures %>% 
   mutate(
-    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)),v_idr(value),v_median(value))))
+    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)))))
 
 print("> tibble mapping of deciles")
 
@@ -369,6 +372,8 @@ print("> measure_quantiles_saved")
 #   ) %>%
 #   pwalk(ggsave)
 # print("> measure_quantiles2_saved")
+
+}
 
 ## close log connection
 sink()
