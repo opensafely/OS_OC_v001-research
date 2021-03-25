@@ -116,9 +116,7 @@ measures <- measures %>% mutate(no_2020_events = pmap(lst( data, measure_col),
 print("> 2020 events")
 
 #measures_m <- measures %>% mutate(no_2020_events = map(data,  ~ (.) %>% group_by(date)))
-flag_run=F
 
-if(flag_run){
 
 measures_gpc_pratice <- measures$data[[match("gpc_practice",measures$id)]]
 
@@ -151,7 +149,9 @@ ggsave(
   path = here::here("output", "plots"))  # National monthly GP consultation instances. Suppression not needed.
 print("> General practice plots and data")
 
+flag_run=F
 
+if(flag_run){
 #### Excluding practices with no code instances over full tenor of study period
 #mydata <- measures$data[[1]]
 #mydata <- rbind(mydata, mydata %>% group_by(date) %>% summarise(gp_consult_count=0,population=10000,value=0,practice=999) )
