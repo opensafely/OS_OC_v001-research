@@ -63,11 +63,23 @@ print("> Redactor def")
 #   denominator = "population",
 #   group_by = rep("practice",1,n_meas)
 # )
-n_meas=8
+# n_meas=8
+# md_tbl <- tibble(
+#   measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_Y22b4"),
+#   measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_Y22b4"),
+#   measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","Y22b4"),
+#   by = rep("practice",1,n_meas),
+#   by_label = rep("by practice",1,n_meas),
+#   id = paste0(measure, "_", by),
+#   numerator = measure,
+#   denominator = "population",
+#   group_by = rep("practice",1,n_meas)
+# )
+n_meas=1
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_Y22b4"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_Y22b4"),
-  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","Y22b4"),
+  measure = c("gpc"),
+  measure_col=c("gp_consult_count"),
+  measure_label = c("GPconsult"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
