@@ -233,7 +233,8 @@ str_medidrnarrative <- function(mydata_idr){
 ## generate plots for each measure within the data frame
 measures_plots <- measures %>% 
   mutate(
-    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble_catch(value, seq(0,1,0.1)))))
+    data_quantiles = map(data, ~ (.) %>% group_by(date)))
+                         #%>% summarise(quibble_catch(value, seq(0,1,0.1)))))
 
 print("> tibble mapping of deciles")
 flag_run=F
