@@ -57,7 +57,7 @@ intellectual_disability_codes = codelist_from_csv(
 
 # Specifiy study definition
 
-start_date = "2019-07-01"
+start_date = "2019-01-01"
 end_date = "2020-12-31"
 
 study = StudyDefinition(

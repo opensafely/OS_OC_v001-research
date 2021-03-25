@@ -104,6 +104,9 @@ measures <- measures %>% mutate(no_2020_events = pmap(lst( data, measure_col),
 print("> 2020 events")
 
 #measures_m <- measures %>% mutate(no_2020_events = map(data,  ~ (.) %>% group_by(date)))
+flag_run=F
+
+if(flag_run){
 
 measures_gpc_pratice <- measures$data[[match("gpc_practice",measures$id)]]
 
@@ -145,9 +148,7 @@ print("> General practice plots and data")
 
 #mydata <- mydata %>% group_by(practice) %>% filter(sum(value,na.rm=T)>0)
 
-flag_run=F
 
-if(flag_run){
 measures <- measures %>% mutate(
   data_ori=data, # data with all practices
   data = map(data, ~ (.) %>% group_by(practice) %>% filter(sum(value,na.rm=T)>0)), # data with only practices with at least an observation in the study period (affects deciles)
