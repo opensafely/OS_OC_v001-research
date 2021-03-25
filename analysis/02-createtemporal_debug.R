@@ -259,7 +259,7 @@ measures_plots <- measures %>%
 #%>% summarise(quibble_catch(value, seq(0,1,0.1)))))
 
 print("> tibble mapping of deciles")
-flag_run=F
+flag_run=T
 
 if(flag_run){
     ###data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
