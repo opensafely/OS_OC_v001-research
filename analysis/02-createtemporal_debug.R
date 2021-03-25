@@ -170,7 +170,16 @@ print("> Summary tallies")
 quibble <- function(x, q = c(0.25, 0.5, 0.75)) {
   ## function that takes a vector and returns a tibble of quantiles - default is quartile
   print("> Quibble in")
+  
   tibble("{{ x }}" := quantile(x, q), "{{ x }}_q" := q)
+}
+
+quibble_catch <- function(x, q = c(0.25, 0.5, 0.75)) {
+  ## function that takes a vector and returns a tibble of quantiles - default is quartile
+  print("> Quibble in")
+  out <- tryCatch(tibble("{{ x }}" := quantile(x, q), "{{ x }}_q" := q),
+                  error=function(e) tibble("{{ x }}" := quantile(c(0,0), q), "{{ x }}_q" := q))
+  return(out)
 }
 
 # v_median <- function(v_quantiles) {
@@ -224,7 +233,7 @@ print("> tibble mapping of deciles")
 flag_run=F
 
 if(flag_run){
-    #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
+    ###data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
 # measures_plots <- measures_plots %>% 
 #   mutate(
 #     data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value*1000),v_median(value*1000))))
