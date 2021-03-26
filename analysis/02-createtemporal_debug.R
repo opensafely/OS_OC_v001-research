@@ -75,11 +75,11 @@ print("> Redactor def")
 #   denominator = "population",
 #   group_by = rep("practice",1,n_meas)
 # )
-n_meas=4
+n_meas=5
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b","OC_Y22b4","OC_XaXcK"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b","OC_Y22b4","OC_XaXcK"),
-  measure_label = c("GPconsult", "OC_Y1f3b","OC_Y22b4","OC_XaXcK"),
+  measure = c("gpc", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
+  measure_col=c("gp_consult_count", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
+  measure_label = c("GPconsult", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
