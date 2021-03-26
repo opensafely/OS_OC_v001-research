@@ -247,6 +247,15 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
+    OC_instance_snomed=patients.with_these_clinical_events(
+        oc_local_codes_snomed,    
+        between=[start_date, end_date],
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.5,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
     # Episode count - could use for 'repeat' appointment?
     OC_episode_count=patients.with_these_clinical_events(
         oc_local_codes,

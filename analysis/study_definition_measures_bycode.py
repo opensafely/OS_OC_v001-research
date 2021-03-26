@@ -24,12 +24,6 @@ oc_local_codes = codelist_from_csv(
     column = "CTV3Code"
 )
 
-oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_qds_ctv3.csv", 
-    system = "ctv3", 
-    column = "CTV3Code"
-)
-
 oc_Y1f3b = codelist_from_csv("codelists-local/onlineconsultation_Y1f3b_ctv3.csv", system = "ctv3", column = "CTV3Code")
 oc_XUkjp = codelist_from_csv("codelists-local/onlineconsultation_XUkjp_ctv3.csv", system = "ctv3", column = "CTV3Code")
 oc_XaXcK = codelist_from_csv("codelists-local/onlineconsultation_XaXcK_ctv3.csv", system = "ctv3", column = "CTV3Code")
