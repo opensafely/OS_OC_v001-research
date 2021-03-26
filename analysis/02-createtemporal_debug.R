@@ -77,9 +77,9 @@ print("> Redactor def")
 # )
 n_meas=5
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
-  measure_label = c("GPconsult", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
+  measure = c("gpc", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink"),
+  measure_col=c("gp_consult_count", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink"),
+  measure_label = c("GPconsult", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
