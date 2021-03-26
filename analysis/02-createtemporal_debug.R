@@ -1,5 +1,5 @@
 # ##==============================================================================
-# Analysis filename:			02-createtemporal.R
+# Analysis filename:			02-createtemporal.R BRANCH!! JS OC01
 # Project:				OC evaluation
 # Author:					Heavily lifted from W. Hulme Tutorial example 3. Minor adaptations: Martina Fonseca
 # Date: 					17/12/2020 (updated: 02/02/2021)
@@ -77,9 +77,9 @@ print("> Redactor def")
 # )
 n_meas=5
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
-  measure_label = c("GPconsult", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_9N34d"),
+  measure = c("gpc", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_XVCTw"),
+  measure_col=c("gp_consult_count", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_XVCTw"),
+  measure_label = c("GPconsult", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_XVCTw"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
