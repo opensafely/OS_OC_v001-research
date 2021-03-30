@@ -28,6 +28,7 @@ actions:
         tb06: output/tables/tb06_gpcr_ruc.csv
         tb07: output/tables/tb07_gpcr_care.csv
         tb08: output/tables/tb08_gpcr_dis.csv
+        tb09: output/tables/tb09_gpcr_imd.csv
 
   # https://docs.opensafely.org/en/latest/measures/
   generate_cohorts_long:

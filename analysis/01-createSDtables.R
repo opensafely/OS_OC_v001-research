@@ -45,16 +45,18 @@ df_cleaned <- df_input %>%
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
          livingalone = ifelse(hh_size<=1,1,0),
-         has_disability = ifelse(is.na(has_disability),0,has_disability)
+         has_disability = ifelse(is.na(has_disability),0,has_disability),
+         imd_quin=ifelse(is.na(imd)|imd==0,NA_integer_,imd)
+         
   )
 
 
 if (flag_gtsummaryoperational){
   ## Characteristics of those with any OC consultation, any GP consultation and overall population
-  desc_vars=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","oc_instance_had")
+  desc_vars=c("sex","age","age_group","ethnicity","livingalone","region","imd_quin","rural_urban","care_home_type","oc_instance_had")
   (gt_ocpop <- df_cleaned %>% select(desc_vars) %>% tbl_summary(by=oc_instance_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had OC**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any OC instance**"))
   
-  desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","rural_urban","care_home_type","gp_consult_had")
+  desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","imd_quin","rural_urban","care_home_type","gp_consult_had")
   (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
   
   # Use function from gt package to save table as neat png
@@ -145,6 +147,8 @@ tb07_gpcr_care <- df_to_tbrates(df_cleaned,c("care_home_type"),1,"tb07_gpcr_care
 ## OC and GP rates by presence of disability
 tb08_gpcr_dis <- df_to_tbrates(df_cleaned,c("has_disability"),1,"tb08_gpcr_dis")
 
+## OC and GP rates by presence of disability
+tb09_gpcr_imd <- df_to_tbrates(df_cleaned,c("imd_quin"),1,"tb08_gpcr_dis")
 
 ## close log connection
 sink()
