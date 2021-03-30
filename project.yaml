@@ -69,25 +69,25 @@ actions:
         figquant: output/plots/plot_quantiles_*_practice.svg
 
 
-  run_model_measuresDEBUG:
-    run: r:latest analysis/02-createtemporal_debug.R
-    needs: [generate_cohorts_long,generate_measures]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-02-createtemporal-debug.txt
-        #tb01: output/measures_gpc_pop_debug.csv
-        #fig01: output/plots/plot_overall_gpc_pop_debug.svg
-        #figall: output/plots/plot_each_debug_*_practice.svg
-        #figquant: output/plots/plot_quantiles_debug_*_practice.svg
-        #figquant2: output/plots/plot_quantiles2_debug_*_practice.svg
+#  run_model_measuresDEBUG:
+#    run: r:latest analysis/02-createtemporal_debug.R
+#    needs: [generate_cohorts_long,generate_measures]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/log-02-createtemporal-debug.txt
+#        #tb01: output/measures_gpc_pop_debug.csv
+#        #fig01: output/plots/plot_overall_gpc_pop_debug.svg
+#        #figall: output/plots/plot_each_debug_*_practice.svg
+#        #figquant: output/plots/plot_quantiles_debug_*_practice.svg
+#        #figquant2: output/plots/plot_quantiles2_debug_*_practice.svg
 
-  run_model_redactedmeasures:
-    run: r:latest analysis/02a-createredactedmeasure.R
-    needs: [generate_cohorts_long,generate_measures]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-02a-createredactedmeasure.txt
-        red_measures: output/tables/redacted2a_*.csv
+  #run_model_redactedmeasures:
+  #  run: r:latest analysis/02a-createredactedmeasure.R
+  #  needs: [generate_cohorts_long,generate_measures]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/log-02a-createredactedmeasure.txt
+  #      red_measures: output/tables/redacted2a_*.csv
 
 
 ### SRO template pipeline
