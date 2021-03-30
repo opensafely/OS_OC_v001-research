@@ -57,7 +57,7 @@ intellectual_disability_codes = codelist_from_csv(
 
 # Specifiy study definition
 
-start_date = "2019-07-01"
+start_date = "2019-01-01"
 end_date = "2020-12-31"
 
 study = StudyDefinition(
@@ -110,13 +110,33 @@ study = StudyDefinition(
 
     # IMD
     # https://github.com/opensafely/risk-factors-research/issues/45
-    imd=patients.address_as_of(
-        start_date,
-        returning="index_of_multiple_deprivation",
-        round_to_nearest=100,
+    # https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/5c2aedebe1fe4b238765d1e12d9086cb34f8924c/analysis/study_definition.py
+    imd=patients.categorised_as(
+        {
+            "0": "DEFAULT",
+            "1": """index_of_multiple_deprivation >=1 AND index_of_multiple_deprivation < 32844*1/5""",
+            "2": """index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5""",
+            "3": """index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5""",
+            "4": """index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5""",
+            "5": """index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation < 32844""",
+        },
+        index_of_multiple_deprivation=patients.address_as_of(
+            start_date,
+            returning="index_of_multiple_deprivation",
+            round_to_nearest=100,
+        ),
         return_expectations={
             "rate": "universal",
-            "category": {"ratios": {"100": 0.1, "200": 0.2, "300": 0.7}},
+            "category": {
+                "ratios": {
+                    "0": 0.05,
+                    "1": 0.19,
+                    "2": 0.19,
+                    "3": 0.19,
+                    "4": 0.19,
+                    "5": 0.19,
+                }
+            },
         },
     ),
 

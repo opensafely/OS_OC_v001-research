@@ -51,16 +51,17 @@ redactor <- function(n, threshold=6,e_overwrite=NA_integer_){
 print("redactor function")
 
 # create look-up table to iterate over
+n_meas=10
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_9N34d","OC_d9N34","OC_XUman","OC_Y22b4"),
-  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","9N34d","d9N34","XUman","Y22b4"),
-  by = rep("practice",1,11),
-  by_label = rep("by practice",1,11),
+  measure = c("gpc", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
+  measure_col=c("gp_consult_count", "OC_Y1f3b", "OC_XUkjp", "OC_XaXcK","OC_XVCTw","OC_XUuWQ","OC_XV1pT","OC_computerlink","OC_alertreceived","OC_Y22b4"),
+  measure_label = c("GPconsult", "Y1f3b", "XUkjp", "XaXcK","XVCTw","XUuWQ","XV1pT","ComputerLink","AlertReceived","Y22b4"),
+  by = rep("practice",1,n_meas),
+  by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
   numerator = measure,
   denominator = "population",
-  group_by = rep("practice",1,11)
+  group_by = rep("practice",1,n_meas)
 )
 print("create tibble")
 

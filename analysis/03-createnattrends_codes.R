@@ -105,7 +105,7 @@ ggplot(tbx_practice_flags_, aes(fill=`Instance presence`,x=code, y=no_practices,
   theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
   labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")
 
-ggsave(paste0(here::here("output","plots"),"/sc03_fig03_pracnatcoverage.svg"),width = 40, height = 20, dpi=300,units ="cm")
+ggsave(paste0(here::here("output","plots"),"/sc03_fig03_pracnatcoverage.svg"),width = 30, height = 20, dpi=300,units ="cm")
 
 
 ggplot(tbx_practice_flags_reg, aes(fill=`Instance presence`,x=code, y=no_practices,label=no_practices)) +
@@ -114,7 +114,7 @@ ggplot(tbx_practice_flags_reg, aes(fill=`Instance presence`,x=code, y=no_practic
   theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
   labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+facet_wrap(~region)
 
-ggsave(paste0(here::here("output","plots"),"/sc03_fig04_pracbyregcoverage.svg"),width = 40, height = 20, dpi=300,units ="cm")
+ggsave(paste0(here::here("output","plots"),"/sc03_fig04_pracbyregcoverage.svg"),width = 30, height = 20, dpi=300,units ="cm")
 
 
 rm(df_input)
@@ -133,13 +133,14 @@ write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattr
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 df_summary_long$month <- as.Date(df_summary_long$month)
-ggplot(data=df_summary_long,aes(x=month,y=Count,fill=Code)) +
-  geom_bar(stat="identity") +
-  facet_wrap(~Code,nrow=2,scales="free_y") +
+ggplot(data=df_summary_long,aes(x=month,y=Count,group=Code)) +
+  geom_bar(stat="identity",fill="#56B4E9") +
+  facet_wrap(~Code,nrow=4,scales="free_y") +
+  labs("Number of code instances")+
   scale_x_date(date_breaks = "2 months",expand=c(0,0))  +
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 
-ggsave(paste0(here::here("output","plots"),"/sc03_fig01_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
+ggsave(paste0(here::here("output","plots"),"/sc03_fig01_nattrends.svg"),width = 25, height = 30, dpi=300,units ="cm")
 # Disclosiveness: plot of national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 ggplot(data=df_summary_long %>% filter(Code%!in% c("OC_gp_consult_count","OC_population","OC_OC10")),aes(x=month,y=Count,color=Code)) +

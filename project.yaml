@@ -22,12 +22,13 @@ actions:
         rdata1: output/tables/gt_ocpop.RData
         rdata2: output/tables/gt_gpcpop.RData
         #tb01: output/tables/tb01_gpcr_region.csv
-        tb02: output/tables/tb02_gpcr_stp.csv
+        #tb02: output/tables/tb02_gpcr_stp.csv # guidance says to not output identifiable regions
         tb04: output/tables/tb04_gpcr_agesex.csv
         tb05: output/tables/tb05_gpcr_ethnicity.csv
         tb06: output/tables/tb06_gpcr_ruc.csv
         tb07: output/tables/tb07_gpcr_care.csv
         tb08: output/tables/tb08_gpcr_dis.csv
+        tb09: output/tables/tb09_gpcr_imd.csv
 
   # https://docs.opensafely.org/en/latest/measures/
   generate_cohorts_long:
@@ -62,10 +63,23 @@ actions:
       moderately_sensitive:
         log: logs/log-02-createtemporal.txt
         red_measures: output/tables/redacted_*.csv
-        tb01: output/measures_gpc_pop.csv
+        #tb01: output/measures_gpc_pop.csv # redundant into. omit output
         fig01: output/plots/plot_overall_gpc_pop.svg
         #figall: output/plots/plot_each_OC_*_practice.svg
         figquant: output/plots/plot_quantiles_OC_*_practice.svg
+
+
+  run_model_measuresDEBUG:
+    run: r:latest analysis/02-createtemporal_debug.R
+    needs: [generate_cohorts_long,generate_measures]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-02-createtemporal-debug.txt
+        #tb01: output/measures_gpc_pop_debug.csv
+        #fig01: output/plots/plot_overall_gpc_pop_debug.svg
+        #figall: output/plots/plot_each_debug_*_practice.svg
+        #figquant: output/plots/plot_quantiles_debug_*_practice.svg
+        #figquant2: output/plots/plot_quantiles2_debug_*_practice.svg
 
   run_model_redactedmeasures:
     run: r:latest analysis/02a-createredactedmeasure.R
