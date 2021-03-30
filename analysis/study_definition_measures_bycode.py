@@ -34,7 +34,7 @@ def make_variable(code):
 
 def make_variable_ctv3(code):
     return {
-        f"snomed_{ctv3}": (
+        f"ctv3_{code}": (
             patients.with_these_clinical_events(
                 codelist([code], system="ctv3"),
                 returning="number_of_matches_in_period",

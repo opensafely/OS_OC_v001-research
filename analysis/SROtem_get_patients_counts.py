@@ -7,7 +7,7 @@ import numpy as np
 patients_total = {}
 for file in os.listdir('output'):
 
-        if file.startswith('input_2'):
+        if file.startswith('input_measures_bycode_2'):
             date = file.split('_')[-1][:-4]
 
             df = pd.read_csv(os.path.join('output', file))
