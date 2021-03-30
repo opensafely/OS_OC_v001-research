@@ -43,10 +43,11 @@ df_cleaned <- df_input %>%
          ethnicity = factor(case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other")),
          care_home_type=factor(case_when(care_home_type=="PC" ~ "Care home",care_home_type=="PN" ~ "Care home",care_home_type=="PS" ~ "Care home",TRUE ~ "Non")),
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
+         OC_instance=OC_instance_snomed, # setting snomed as the relevant one
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
          livingalone = ifelse(hh_size<=1,1,0),
          has_disability = ifelse(is.na(has_disability),0,has_disability),
-         imd_quin=ifelse(is.na(imd)|imd==0,NA_integer_,imd)
+         imd_quin=ifelse(is.na(imd)|imd=="U",NA,imd)
          
   )
 
@@ -126,7 +127,7 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest",n_redact=6) {
 
 
 ## OC and GP rates per STP
-tb02_gpcr_stp <- df_to_tbrates(df_cleaned,c("stp"),1,"tb02_gpcr_stp")
+#tb02_gpcr_stp <- df_to_tbrates(df_cleaned,c("stp"),1,"tb02_gpcr_stp")
 
 ### OC and GP rates per practice
 #tb03_gpcr_practice <- df_to_tbrates(df_cleaned,c("practice"),1,"tb03_gpcr_practice")

@@ -10,50 +10,7 @@ from cohortextractor import (
 )
 
 # Import codelists
-
-MOCK_oc_codes = codelist_from_csv(
-    "codelists/opensafely-solid-organ-transplantation.csv", system="ctv3", column="CTV3ID"
-)
-
-# Local OC codelists, query data set (QDS) - ctv3
-oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_qds_ctv3.csv", 
-    system = "ctv3", 
-    column = "CTV3Code"
-)
-
-# Local OC codelists, minimal data set (MDS) - snomed
-oc_local_codes_snomed = codelist_from_csv(
-    "codelists-local/onlineconsultation_mds_snomed.csv", 
-    system = "snomed", 
-    column = "SNOMEDCode"
-)
-
-ethnicity_codes = codelist_from_csv(
-    "codelists/opensafely-ethnicity.csv",
-    system="ctv3",
-    column="Code",
-    category_column="Grouping_6",
-)
-ethnicity_codes_16 = codelist_from_csv(
-    "codelists/opensafely-ethnicity.csv",
-    system="ctv3",
-    column="Code",
-    category_column="Grouping_16",
-)
-
-learning_disability_codes = codelist_from_csv(
-    "codelists/opensafely-learning-disabilities.csv",
-    system="ctv3",
-    column="CTV3Code"
-)
-
-intellectual_disability_codes = codelist_from_csv(
-    "codelists/opensafely-intellectual-disability-including-downs-syndrome.csv",
-    system="ctv3",
-    column="CTV3ID"
-)
-
+from codelists import *
 
 # Specifiy study definition
 
@@ -113,12 +70,12 @@ study = StudyDefinition(
     # https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/5c2aedebe1fe4b238765d1e12d9086cb34f8924c/analysis/study_definition.py
     imd=patients.categorised_as(
         {
-            "0": "DEFAULT",
-            "1": """index_of_multiple_deprivation >=1 AND index_of_multiple_deprivation < 32844*1/5""",
-            "2": """index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5""",
-            "3": """index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5""",
-            "4": """index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5""",
-            "5": """index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation < 32844""",
+            "U": "DEFAULT",
+            "Q1": """index_of_multiple_deprivation >=1 AND index_of_multiple_deprivation < 32844*1/5""",
+            "Q2": """index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5""",
+            "Q3": """index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5""",
+            "Q4": """index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5""",
+            "Q5": """index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation < 32844""",
         },
         index_of_multiple_deprivation=patients.address_as_of(
             start_date,
@@ -129,12 +86,12 @@ study = StudyDefinition(
             "rate": "universal",
             "category": {
                 "ratios": {
-                    "0": 0.05,
-                    "1": 0.19,
-                    "2": 0.19,
-                    "3": 0.19,
-                    "4": 0.19,
-                    "5": 0.19,
+                    "U": 0.05,
+                    "Q1": 0.19,
+                    "Q2": 0.19,
+                    "Q3": 0.19,
+                    "Q4": 0.19,
+                    "Q5": 0.19,
                 }
             },
         },
@@ -167,9 +124,9 @@ study = StudyDefinition(
         },
     ),
 
-    # Househould size
+    # Househould size # Household data only currently available for 2020-02-01
     hh_size=patients.household_as_of(
-        start_date,
+        "2020-02-01",
         returning="household_size",
         return_expectations={
             "int": {"distribution": "normal", "mean": 3, "stddev": 1},
@@ -258,8 +215,17 @@ study = StudyDefinition(
     ),
 
 
-    OC_instance=patients.with_these_clinical_events(
+    OC_instance_ctv3=patients.with_these_clinical_events(
         oc_local_codes,    
+        between=[start_date, end_date],
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.5,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
+    OC_instance_snomed=patients.with_these_clinical_events(
+        oc_local_codes_snomed,    
         between=[start_date, end_date],
         returning="number_of_matches_in_period",        
         return_expectations={
