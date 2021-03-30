@@ -67,21 +67,23 @@ for (datenow in tail(query_dates,-1)){
   df_input <- df_input %>% bind_rows(df_input_now)
 }
 df_input <- as.data.frame(df_input)
-df_input <- df_input %>% rename(OC_gp_consult_count=gp_consult_count)
+df_input <- df_input %>% rename(snomedc_gp_consult_count=gp_consult_count)
 rm(df_input_now)
+
+myprefix="snomed"
 
 df_summary <- df_input %>%
   group_by(month) %>%
-  summarise_at(vars(starts_with("OC")),~sum(.,na.rm=T))
-df_summary_pop <- df_input %>% group_by(month) %>% summarise(OC_population=n())
+  summarise_at(vars(starts_with(myprefix)),~sum(.,na.rm=T))
+df_summary_pop <- df_input %>% group_by(month) %>% summarise(OC_population=n_distinct(patient_id))
 df_summary <- left_join(df_summary,df_summary_pop,id="month")
 
 rm(df_summary_pop)
 
 ## Calculations for practice coverage
-df_practice_flags <- df_input %>% group_by(region,stp,practice) %>% summarise_at(vars(starts_with("OC")),~ifelse(sum(.,na.rm=T)>0,1,0))
+df_practice_flags <- df_input %>% group_by(region,stp,practice) %>% summarise_at(vars(starts_with(myprefix)),~ifelse(sum(.,na.rm=T)>0,1,0))
 
-tbx_practice_flags_ <- pivot_longer(df_practice_flags,cols=starts_with("OC"),
+tbx_practice_flags_ <- pivot_longer(df_practice_flags,cols=starts_with(myprefix),
                                      names_to="code",
                                      values_to="had_instance")
 
@@ -89,32 +91,34 @@ tbx_practice_flags_reg <- tbx_practice_flags_ %>%
   group_by(region,code) %>%
   summarise(Present=sum(had_instance),Absent=n()-Present) %>%
   pivot_longer(c("Present","Absent"),names_to="Instance presence",values_to="no_practices") %>%
-  mutate(code=substr(code,4,nchar(code)))
+  mutate(code=substr(code,nchar(myprefix)+2,nchar(code)))
 
 tbx_practice_flags_ <- tbx_practice_flags_ %>%
   group_by(code) %>%
   summarise(Present=sum(had_instance),Absent=n()-Present) %>%
   pivot_longer(c("Present","Absent"),names_to="Instance presence",values_to="no_practices") %>%
-  mutate(code=substr(code,4,nchar(code)))
+  mutate(code=substr(code,nchar(myprefix)+2,nchar(code)))
 
 tbx_practice_flags_$`Instance presence` <- factor(tbx_practice_flags_$`Instance presence`)
 
 ggplot(tbx_practice_flags_, aes(fill=`Instance presence`,x=code, y=no_practices,label=no_practices)) +
   geom_bar( stat="identity")+
-  geom_text(aes(vjust=-1),position = position_stack(vjust = 0.2))+
+  geom_text(aes(vjust=0),position = position_stack(vjust = 0.2))+
   theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
-  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")
+  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+
+  coord_flip()
 
 ggsave(paste0(here::here("output","plots"),"/sc03_fig03_pracnatcoverage.svg"),width = 30, height = 20, dpi=300,units ="cm")
 
 
 ggplot(tbx_practice_flags_reg, aes(fill=`Instance presence`,x=code, y=no_practices,label=no_practices)) +
   geom_bar( stat="identity")+
-  geom_text(aes(vjust=-1),position = position_stack(vjust = 0.0))+
+  geom_text(aes(hjust=-1),position = position_stack(vjust = 0.0))+
   theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
-  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+facet_wrap(~region)
+  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+facet_wrap(~region)+
+  coord_flip()
 
-ggsave(paste0(here::here("output","plots"),"/sc03_fig04_pracbyregcoverage.svg"),width = 30, height = 20, dpi=300,units ="cm")
+ggsave(paste0(here::here("output","plots"),"/sc03_fig04_pracbyregcoverage.svg"),width = 30, height = 30, dpi=300,units ="cm")
 
 
 rm(df_input)
@@ -125,7 +129,7 @@ rm(tbx_practice_flags_reg)
 
 ## National trends
 
-df_summary_long <- df_summary %>% pivot_longer(cols=starts_with("OC"),
+df_summary_long <- df_summary %>% pivot_longer(cols=starts_with(myprefix),
                names_to="Code",
                values_to="Count") %>% filter(Code %!in% c("OC_population"))
 df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
@@ -133,19 +137,21 @@ write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattr
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 df_summary_long$month <- as.Date(df_summary_long$month)
-ggplot(data=df_summary_long,aes(x=month,y=Count,group=Code)) +
+df_summary_long <- df_summary_long %>% mutate(rate_per_1000=Count/OC_population*1000)
+ggplot(data=df_summary_long,aes(x=month,y=rate_per_1000,group=Code)) +
   geom_bar(stat="identity",fill="#56B4E9") +
   facet_wrap(~Code,nrow=4,scales="free_y") +
-  labs("Number of code instances")+
+  labs(y="Instance rate (per 1,000)")+
   scale_x_date(date_breaks = "2 months",expand=c(0,0))  +
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 
-ggsave(paste0(here::here("output","plots"),"/sc03_fig01_nattrends.svg"),width = 25, height = 30, dpi=300,units ="cm")
+ggsave(paste0(here::here("output","plots"),"/sc03_fig01_nattrends.svg"),width = 30, height = 30, dpi=300,units ="cm")
 # Disclosiveness: plot of national monthly tally of clinical code occurrence, not deemed disclosive. 
 
-ggplot(data=df_summary_long %>% filter(Code%!in% c("OC_gp_consult_count","OC_population","OC_OC10")),aes(x=month,y=Count,color=Code)) +
+ggplot(data=df_summary_long %>% filter(Code%!in% c("snomedc_gp_consult_count")),aes(x=month,y=rate_per_1000,color=Code)) +
    geom_line()+
   scale_x_date(date_breaks = "2 months",expand=c(0,0))+
+  labs(y="Instance rate (per 1,000)")+
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 
 ggsave(paste0(here::here("output","plots"),"/sc03_fig02_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
