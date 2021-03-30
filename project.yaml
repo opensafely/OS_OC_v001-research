@@ -65,8 +65,8 @@ actions:
         red_measures: output/tables/redacted_*.csv
         #tb01: output/measures_gpc_pop.csv # redundant into. omit output
         fig01: output/plots/plot_overall_gpc_pop.svg
-        #figall: output/plots/plot_each_OC_*_practice.svg
-        figquant: output/plots/plot_quantiles_OC_*_practice.svg
+        #figall: output/plots/plot_each_*_practice.svg
+        figquant: output/plots/plot_quantiles_*_practice.svg
 
 
   run_model_measuresDEBUG:

@@ -1,6 +1,6 @@
 from cohortextractor import codelist_from_csv
 
-holder_codelist = codelist_from_csv("codelists/opensafely-structured-medication-review-nhs-england.csv",
+holder_codelist = codelist_from_csv("codelists-local/martinaf-online-consultations-snomed-v01-28bba9bc.csv",
                               system="snomed",
                               column="code",)
 

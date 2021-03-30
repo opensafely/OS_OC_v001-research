@@ -12,40 +12,49 @@ from cohortextractor import (
 )
 
 # Import codelists
+from codelists import *
 
-MOCK_oc_codes = codelist_from_csv(
-    "codelists/opensafely-solid-organ-transplantation.csv", system="ctv3", column="CTV3ID"
-)
+# To loop over codes. Taken from longcovid repo
+def make_variable(code):
+    return {
+        f"snomed_{code}": (
+            patients.with_these_clinical_events(
+                codelist([code], system="snomed"),
+                returning="number_of_matches_in_period",
+                include_date_of_match=False,
+                #date_format="YYYY-MM-DD",
+                between = ["index_date", "index_date + 1 month"], 
+                return_expectations={
+                    "incidence": 0.1,
+                    "int": {"distribution": "normal", "mean": 3, "stddev": 1},
+                },
+            )
+        )
+    }
 
-# Local OC codelists, query data set (QDS) - ctv3
-oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_qds_ctv3.csv", 
-    system = "ctv3", 
-    column = "CTV3Code"
-)
+def make_variable_ctv3(code):
+    return {
+        f"snomed_{ctv3}": (
+            patients.with_these_clinical_events(
+                codelist([code], system="ctv3"),
+                returning="number_of_matches_in_period",
+                include_date_of_match=False,
+                #date_format="YYYY-MM-DD",
+                between = ["index_date", "index_date + 1 month"], 
+                return_expectations={
+                    "incidence": 0.1,
+                    "int": {"distribution": "normal", "mean": 3, "stddev": 1},
+                },
+            )
+        )
+    }
 
-oc_local_codes = codelist_from_csv(
-    "codelists-local/onlineconsultation_qds_ctv3.csv", 
-    system = "ctv3", 
-    column = "CTV3Code"
-)
+def loop_over_codes(code_list):
+    variables = {}
+    for code in code_list:
+        variables.update(make_variable(code))
+    return variables
 
-oc_Y1f3b = codelist_from_csv("codelists-local/onlineconsultation_Y1f3b_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_XUkjp = codelist_from_csv("codelists-local/onlineconsultation_XUkjp_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_XaXcK = codelist_from_csv("codelists-local/onlineconsultation_XaXcK_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_XVCTw = codelist_from_csv("codelists-local/onlineconsultation_XVCTw_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_XUuWQ = codelist_from_csv("codelists-local/onlineconsultation_XUuWQ_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_XV1pT = codelist_from_csv("codelists-local/onlineconsultation_XV1pT_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_computerlink = codelist_from_csv("codelists-local/onlineconsultation_computerlink_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_alertreceived = codelist_from_csv("codelists-local/onlineconsultation_alertreceived_ctv3.csv", system = "ctv3", column = "CTV3Code")
-oc_Y22b4 = codelist_from_csv("codelists-local/onlineconsultation_Y22b4_ctv3.csv", system = "ctv3", column = "CTV3Code")
-
-# Local codelists, minimal data set (MDS) - snomed
-#oc_local_codes = codelist_from_csv(
-#    "codelists-local/onlineconsultation_mds_snomed.csv", 
-#    system = "snomed", 
-#    column = "SNOMEDCode"
-#)
 
 # Specifiy study definition
 index_date = "2019-07-01"
@@ -226,6 +235,9 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
+    **loop_over_codes(oc_local_codes_snomed),
+
+    #**loop_over_codes_ctv3(oc_local_codes)
 
     
 )
@@ -238,38 +250,32 @@ measures = [
         group_by="practice"
     ),
     Measure(
-        id="OC_Y1f3b_practice",
-        numerator="OC_Y1f3b",
+        id="snomed_1068881000000101_practice",
+        numerator="snomed_1068881000000101",
         denominator="population",
         group_by="practice"
     ),
     Measure(
-        id="OC_XUkjp_practice",
-        numerator="OC_XUkjp",
+        id="snomed_978871000000104_practice",
+        numerator="snomed_978871000000104",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="snomed_325991000000105_practice",
+        numerator="snomed_325991000000105",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="snomed_325911000000101_practice",
+        numerator="snomed_325911000000101",
         denominator="population",
         group_by="practice"
     ),
     Measure(
         id="OC_XaXcK_practice",
         numerator="OC_XaXcK",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XVCTw_practice",
-        numerator="OC_XVCTw",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XUuWQ_practice",
-        numerator="OC_XUuWQ",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XV1pT_practice",
-        numerator="OC_XV1pT",
         denominator="population",
         group_by="practice"
     ),
