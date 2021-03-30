@@ -57,34 +57,33 @@ def loop_over_codes(code_list):
 
 
 # Specifiy study definition
-start_date = "2020-12-07"
+index_date = "2019-07-01"
 end_date = "2020-12-31"
 
 study = StudyDefinition(
     # Configure the expectations framework
-    
-    index_date = "2020-12-07",
     default_expectations={
-        "date": {"earliest": start_date, "latest": end_date},
+        "date": {"earliest": index_date, "latest": end_date},
         "rate": "exponential_increase",
         "incidence":1
     },
 
+    index_date = index_date,
 
     # Study population
     population = patients.satisfying(
         """
-        (age_ !=0) AND
+        (age >= 18 AND age < 120) AND
         (NOT died) AND
         (registered)
         """,
         
         died = patients.died_from_any_cause(
-		    on_or_before="index_date",
+		    on_or_before=index_date,
 		    returning="binary_flag"
 	    ),
-        registered = patients.registered_as_of("index_date"),
-        age_=patients.age_as_of("index_date"),
+        registered = patients.registered_as_of(index_date),
+        age=patients.age_as_of(index_date),
     ),
 
     #### Location / Registration
@@ -92,7 +91,7 @@ study = StudyDefinition(
     #
     # NUTS1 Region
     region=patients.registered_practice_as_of(
-        "index_date",
+        index_date,
         returning="nuts1_region_name",
         return_expectations={
             "rate": "universal",
@@ -114,7 +113,7 @@ study = StudyDefinition(
     # STP
     # https://github.com/opensafely/risk-factors-research/issues/44
     stp=patients.registered_practice_as_of(
-        "index_date",
+        index_date,
         returning="stp_code",
         return_expectations={
             "rate": "universal",
@@ -125,7 +124,7 @@ study = StudyDefinition(
 
     # Practice
     practice = patients.registered_practice_as_of(
-         "index_date",
+         index_date,
          returning = "pseudo_id",
          return_expectations={
              "int": {"distribution": "normal", "mean": 100, "stddev": 20}
