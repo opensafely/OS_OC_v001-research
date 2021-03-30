@@ -1,19 +1,19 @@
 code,term
-1.06888E+15,eConsultation via online application
-1.09037E+15,Referral to remote triage and advice service
 185320006,Encounter by computer link
-3.25871E+14,Remote consultation encounter type
-3.25901E+14,Remote non-verbal consultation encounter type
-3.25911E+14,Consultation via multimedia encounter type
-3.25951E+14,Remote assessment encounter type
-3.25981E+14,Remote non-verbal assessment encounter type
-3.25991E+14,Assessment via multimedia encounter type
-3.84131E+14,Remote encounter type
 401271004,E-mail sent to patient
 448337001,Telemedicine consultation with patient
 699249000,Alert received from telehealth monitoring system
 719407002,Remote non-verbal consultation
 763184009,Telepractice consultation
-8.54891E+14,Telehealth encounter type
 868184008,Telemedicine consultation with provider
-9.78871E+14,Consultation via multimedia
+325871000000103,Remote consultation encounter type
+325901000000103,Remote non-verbal consultation encounter type
+325911000000101,Consultation via multimedia encounter type
+325951000000102,Remote assessment encounter type
+325981000000108,Remote non-verbal assessment encounter type
+325991000000105,Assessment via multimedia encounter type
+384131000000101,Remote encounter type
+854891000000104,Telehealth encounter type
+978871000000104,Consultation via multimedia
+1068881000000101,eConsultation via online application
+1090371000000106,Referral to remote triage and advice service

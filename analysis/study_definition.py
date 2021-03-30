@@ -1,3 +1,4 @@
+# Adapted from William Hume's Tutorial 3: https://nbviewer.jupyter.org/github/opensafely/os-demo-research/blob/master/rmarkdown/Rdemo.html
 
 # Import functions
 
@@ -5,48 +6,46 @@ from cohortextractor import (
     StudyDefinition, 
     patients, 
     codelist, 
-    Measure,
-    codelist_from_csv
+    codelist_from_csv,
+    combine_codelists,
+    Measure
 )
 
 # Import codelists
 from codelists import *
 
-
+# Specifiy study definition
 start_date = "2020-12-07"
-end_date = "2021-02-01"
-
-
-# Specifiy study defeinition
+end_date = "2020-12-31"
 
 study = StudyDefinition(
-    index_date="2020-12-07",
+    
+    index_date = "2020-12-07",
     # Configure the expectations framework
     default_expectations={
         "date": {"earliest": start_date, "latest": end_date},
         "rate": "exponential_increase",
-        "incidence": 0.1,
+        "incidence":1
     },
-    
-    population=patients.satisfying(
+
+    # Study population
+    population = patients.satisfying(
         """
-        registered AND
+        (age_ !=0) AND
         (NOT died) AND
-        (sex = 'F' OR sex='M') AND
-        (age != 0)
+        (registered)
         """,
-
-        registered=patients.registered_as_of(
-            "index_date",
-            return_expectations={"incidence": 0.9},
-        ),
-
-        died=patients.died_from_any_cause(
-            on_or_before="index_date",
-            returning="binary_flag",
-            return_expectations={"incidence": 0.1}
-        ),
+        
+        died = patients.died_from_any_cause(
+		    on_or_before="index_date",
+		    returning="binary_flag"
+	    ),
+        registered = patients.registered_as_of("index_date"),
+        age_=patients.age_as_of("index_date"),
     ),
+
+
+    #### Sociodemographics : age ; sex ; imd ; ethnicity
 
     age=patients.age_as_of(
         "index_date",
@@ -87,7 +86,6 @@ study = StudyDefinition(
 
     ),
 
-
     sex=patients.sex(
         return_expectations={
             "rate": "universal",
@@ -95,48 +93,162 @@ study = StudyDefinition(
         }
     ),
 
-    practice=patients.registered_practice_as_of(
-        "index_date",
-        returning="pseudo_id",
+    # Ethnicity (6 categories)
+    ethnicity=patients.with_these_clinical_events(
+        ethnicity_codes,
+        returning="category",
+        find_last_match_in_period=True,
         return_expectations={
-            "int": {"distribution": "normal", "mean": 25, "stddev": 5}, "incidence": 0.5}
+            "category": {"ratios": {"1": 0.2, "2":0.2, "3":0.2, "4":0.2, "5": 0.2}},
+            "incidence": 0.75,
+        },
     ),
 
+
+    # IMD
+    # https://github.com/opensafely/risk-factors-research/issues/45
+    # https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/5c2aedebe1fe4b238765d1e12d9086cb34f8924c/analysis/study_definition.py
+    imd=patients.categorised_as(
+        {
+            "U": "DEFAULT",
+            "Q1": """index_of_multiple_deprivation >=1 AND index_of_multiple_deprivation < 32844*1/5""",
+            "Q2": """index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5""",
+            "Q3": """index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5""",
+            "Q4": """index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5""",
+            "Q5": """index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation < 32844""",
+        },
+        index_of_multiple_deprivation=patients.address_as_of(
+            "index_date",
+            returning="index_of_multiple_deprivation",
+            round_to_nearest=100,
+        ),
+        return_expectations={
+            "rate": "universal",
+            "category": {
+                "ratios": {
+                    "U": 0.05,
+                    "Q1": 0.19,
+                    "Q2": 0.19,
+                    "Q3": 0.19,
+                    "Q4": 0.19,
+                    "Q5": 0.19,
+                }
+            },
+        },
+    ),
+
+
+
+    #### Location / Registration
+    #
+    #
+    # NUTS1 Region
     region=patients.registered_practice_as_of(
         "index_date",
         returning="nuts1_region_name",
-        return_expectations={"category": {"ratios": {
-            "North East": 0.1,
-            "North West": 0.1,
-            "Yorkshire and the Humber": 0.1,
-            "East Midlands": 0.1,
-            "West Midlands": 0.1,
-            "East of England": 0.1,
-            "London": 0.2,
-            "South East": 0.2, }}}
+        return_expectations={
+            "rate": "universal",
+            "category": {
+                "ratios": {
+                    "North East": 0.1,
+                    "North West": 0.1,
+                    "Yorkshire and the Humber": 0.1,
+                    "East Midlands": 0.1,
+                    "West Midlands": 0.1,
+                    "East of England": 0.1,
+                    "London": 0.2,
+                    "South East": 0.2,
+                },
+            },
+        },
+    ),
+    
+    # STP
+    # https://github.com/opensafely/risk-factors-research/issues/44
+    stp=patients.registered_practice_as_of(
+        "index_date",
+        returning="stp_code",
+        return_expectations={
+            "rate": "universal",
+            "category": {"ratios": {"STP1": 0.5, "STP2": 0.5}},
+        },
+    ),
+    
+
+    # Practice
+    practice = patients.registered_practice_as_of(
+         "index_date",
+         returning = "pseudo_id",
+         return_expectations={
+             "int": {"distribution": "normal", "mean": 100, "stddev": 20}
+         },
     ),
 
+
+    #### CONSULTATION INFORMATION
+    #
+    #
+    gp_consult_count=patients.with_gp_consultations(    
+        between = ["index_date", "index_date + 1 month"],
+        returning="number_of_matches_in_period",
+        return_expectations={
+            "int": {"distribution": "normal", "mean": 4, "stddev": 2},
+            "incidence": 0.7,
+        },
+    ),
+
+    # count of occurrences / matches
+    OC_SNOMED=patients.with_these_clinical_events(
+        oc_local_codes_snomed,        
+        between = ["index_date", "index_date + 1 month"],    
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.5,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
+    # boolean for occurrence in period
     event_x =patients.with_these_clinical_events(
-        codelist=holder_codelist,
+        codelist=oc_local_codes_snomed,
         between=["index_date", "index_date + 1 month"],
         returning="binary_flag",
         return_expectations={"incidence": 0.5}
     ),
 
+    # returns /first/ type of code matched in period?
     event_x_event_code=patients.with_these_clinical_events(
-        codelist=holder_codelist,
+        codelist=oc_local_codes_snomed,
         between=["index_date", "index_date + 1 month"],
         returning="code",
         return_expectations={"category": {
-            "ratios": {"1239511000000100": 1}}, }
+            "ratios": {
+                    "1090371000000106":0.1,
+                    "1068881000000101": 0.1,
+                    "978871000000104": 0.05,
+                    "854891000000104": 0.05,
+                    "384131000000101": 0.05,
+                    "325991000000105": 0.05,
+                    "325981000000108": 0.05,
+                    "325951000000102": 0.05,
+                    "325911000000101": 0.05,
+                    "325901000000103":0.05,
+                    "325871000000103":0.05,
+                    "868184008":0.05,
+                    "763184009":0.05,
+                    "719407002":0.05,
+                    "699249000":0.05,
+                    "448337001":0.05,
+                    "401271004":0.05,
+                    "185320006":0.05
+
+                },
+            }, }
     ),
+
     
 )
 
-
 measures = [
-   
-
     Measure(
         id="1_total",
         numerator="event_x",
@@ -162,23 +274,35 @@ measures = [
         id="1_by_region",
         numerator="event_x",
         denominator="population",
-        group_by=["region"],
+        group_by=["region"]
     ),
 
     Measure(
         id="1_by_sex",
         numerator="event_x",
         denominator="population",
-        group_by=["sex"],
+        group_by=["sex"]
     ),
 
     Measure(
         id="1_by_age_band",
         numerator="event_x",
         denominator="population",
-        group_by=["age_band"],
+        group_by=["age_band"]
     ),
 
+    Measure(
+        id="1_by_imd",
+        numerator="event_x",
+        denominator="population",
+        group_by=["imd"]
+    ),
 
-    
+    Measure(
+        id="1_by_ethnicity",
+        numerator="event_x",
+        denominator="population",
+        group_by=["ethnicity"]
+    ),
+
 ]
