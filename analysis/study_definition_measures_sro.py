@@ -31,7 +31,7 @@ study = StudyDefinition(
     # Study population
     population = patients.satisfying(
         """
-        (age !=0) AND
+        (age_ !=0) AND
         (NOT died) AND
         (registered)
         """,
@@ -41,8 +41,103 @@ study = StudyDefinition(
 		    returning="binary_flag"
 	    ),
         registered = patients.registered_as_of("index_date"),
-        age=patients.age_as_of("index_date"),
+        age_=patients.age_as_of("index_date"),
     ),
+
+
+    #### Sociodemographics : age ; sex ; imd ; ethnicity
+
+    age=patients.age_as_of(
+        "index_date",
+        return_expectations={
+            "rate": "universal",
+            "int": {"distribution": "population_ages"},
+        },
+    ),
+
+    age_band=patients.categorised_as(
+        {
+            "0": "DEFAULT",
+            "0-19": """ age >= 0 AND age < 20""",
+            "20-29": """ age >=  20 AND age < 30""",
+            "30-39": """ age >=  30 AND age < 40""",
+            "40-49": """ age >=  40 AND age < 50""",
+            "50-59": """ age >=  50 AND age < 60""",
+            "60-69": """ age >=  60 AND age < 70""",
+            "70-79": """ age >=  70 AND age < 80""",
+            "80+": """ age >=  80 AND age < 120""",
+        },
+        return_expectations={
+            "rate": "universal",
+            "category": {
+                "ratios": {
+                    "0": 0.001,
+                    "0-19": 0.124,
+                    "20-29": 0.125,
+                    "30-39": 0.125,
+                    "40-49": 0.125,
+                    "50-59": 0.125,
+                    "60-69": 0.125,
+                    "70-79": 0.125,
+                    "80+": 0.125,
+                }
+            },
+        },
+
+    ),
+
+    sex=patients.sex(
+        return_expectations={
+            "rate": "universal",
+            "category": {"ratios": {"M": 0.49, "F": 0.5, "U": 0.01}},
+        }
+    ),
+
+    # Ethnicity (6 categories)
+    ethnicity=patients.with_these_clinical_events(
+        ethnicity_codes,
+        returning="category",
+        find_last_match_in_period=True,
+        return_expectations={
+            "category": {"ratios": {"1": 0.2, "2":0.2, "3":0.2, "4":0.2, "5": 0.2}},
+            "incidence": 0.75,
+        },
+    ),
+
+
+    # IMD
+    # https://github.com/opensafely/risk-factors-research/issues/45
+    # https://github.com/opensafely/covid-vaccine-effectiveness-research/blob/5c2aedebe1fe4b238765d1e12d9086cb34f8924c/analysis/study_definition.py
+    imd=patients.categorised_as(
+        {
+            "0": "DEFAULT",
+            "1": """index_of_multiple_deprivation >=1 AND index_of_multiple_deprivation < 32844*1/5""",
+            "2": """index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5""",
+            "3": """index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5""",
+            "4": """index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5""",
+            "5": """index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation < 32844""",
+        },
+        index_of_multiple_deprivation=patients.address_as_of(
+            start_date,
+            returning="index_of_multiple_deprivation",
+            round_to_nearest=100,
+        ),
+        return_expectations={
+            "rate": "universal",
+            "category": {
+                "ratios": {
+                    "0": 0.05,
+                    "1": 0.19,
+                    "2": 0.19,
+                    "3": 0.19,
+                    "4": 0.19,
+                    "5": 0.19,
+                }
+            },
+        },
+    ),
+
+
 
     #### Location / Registration
     #
@@ -102,8 +197,8 @@ study = StudyDefinition(
         },
     ),
 
-    OC_OC10=patients.with_these_clinical_events(
-        oc_local_codes,        
+    OC_SNOMED=patients.with_these_clinical_events(
+        oc_local_codes_snomed,        
         between = ["index_date", "index_date + 1 month"],    
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -111,88 +206,32 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    OC_Y1f3b=patients.with_these_clinical_events(
-        oc_Y1f3b,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    event_x =patients.with_these_clinical_events(
+        codelist=oc_local_codes_snomed,
+        between=["index_date", "index_date + 1 month"],
+        returning="binary_flag",
+        return_expectations={"incidence": 0.5}
     ),
 
-
-    OC_XUkjp=patients.with_these_clinical_events(
-        oc_XUkjp,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    event_x_event_code=patients.with_these_clinical_events(
+        codelist=oc_local_codes_snomed,
+        between=["index_date", "index_date + 1 month"],
+        returning="code",
+        return_expectations={"category": {
+            "ratios": {
+                    "1090371000000106":0.1,
+                    "1068881000000101": 0.1,
+                    "978871000000104": 0.1,
+                    "854891000000104": 0.1,
+                    "384131000000101": 0.1,
+                    "325991000000105": 0.1,
+                    "325981000000108": 0.1,
+                    "325951000000102": 0.1,
+                    "325911000000101": 0.1,
+                    "325901000000103":0.1,
+                },
+            }, }
     ),
-
-    OC_XaXcK=patients.with_these_clinical_events(
-        oc_XaXcK,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    OC_XVCTw=patients.with_these_clinical_events(
-        oc_XVCTw,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    OC_XUuWQ=patients.with_these_clinical_events(
-        oc_XUuWQ,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    OC_XV1pT=patients.with_these_clinical_events(
-        oc_XV1pT,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    OC_computerlink=patients.with_these_clinical_events(
-        oc_computerlink,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    OC_alertreceived=patients.with_these_clinical_events(
-        oc_alertreceived,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    OC_Y22b4=patients.with_these_clinical_events(
-        oc_Y22b4,        
-        between = ["index_date", "index_date + 1 month"],    
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.5,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
 
     
 )
@@ -205,56 +244,8 @@ measures = [
         group_by="practice"
     ),
     Measure(
-        id="OC_Y1f3b_practice",
-        numerator="OC_Y1f3b",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XUkjp_practice",
-        numerator="OC_XUkjp",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XaXcK_practice",
-        numerator="OC_XaXcK",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XVCTw_practice",
-        numerator="OC_XVCTw",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XUuWQ_practice",
-        numerator="OC_XUuWQ",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_XV1pT_practice",
-        numerator="OC_XV1pT",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_computerlink_practice",
-        numerator="OC_computerlink",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_alertreceived_practice",
-        numerator="OC_alertreceived",
-        denominator="population",
-        group_by="practice"
-    ),
-    Measure(
-        id="OC_Y22b4_practice",
-        numerator="OC_Y22b4",
+        id="oc_local_codes_snomed_practice",
+        numerator="oc_local_codes_snomed",
         denominator="population",
         group_by="practice"
     ),

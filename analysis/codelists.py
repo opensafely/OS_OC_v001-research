@@ -31,3 +31,30 @@ oc_local_codes_snomed = codelist_from_csv(
     system = "snomed", 
     column = "code"
 )
+
+
+## Sociodemographics / clinical etc
+ethnicity_codes = codelist_from_csv(
+    "codelists/opensafely-ethnicity.csv",
+    system="ctv3",
+    column="Code",
+    category_column="Grouping_6",
+)
+ethnicity_codes_16 = codelist_from_csv(
+    "codelists/opensafely-ethnicity.csv",
+    system="ctv3",
+    column="Code",
+    category_column="Grouping_16",
+)
+
+learning_disability_codes = codelist_from_csv(
+    "codelists/opensafely-learning-disabilities.csv",
+    system="ctv3",
+    column="CTV3Code"
+)
+
+intellectual_disability_codes = codelist_from_csv(
+    "codelists/opensafely-intellectual-disability-including-downs-syndrome.csv",
+    system="ctv3",
+    column="CTV3ID"
+)
