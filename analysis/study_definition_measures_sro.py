@@ -197,6 +197,7 @@ study = StudyDefinition(
         },
     ),
 
+    # count of occurrences / matches
     OC_SNOMED=patients.with_these_clinical_events(
         oc_local_codes_snomed,        
         between = ["index_date", "index_date + 1 month"],    
@@ -206,6 +207,7 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
+    # boolean for occurrence in period
     event_x =patients.with_these_clinical_events(
         codelist=oc_local_codes_snomed,
         between=["index_date", "index_date + 1 month"],
@@ -213,6 +215,7 @@ study = StudyDefinition(
         return_expectations={"incidence": 0.5}
     ),
 
+    # returns /first/ type of code matched in period?
     event_x_event_code=patients.with_these_clinical_events(
         codelist=oc_local_codes_snomed,
         between=["index_date", "index_date + 1 month"],
@@ -238,16 +241,59 @@ study = StudyDefinition(
 
 measures = [
     Measure(
-        id="gpc_practice",
-        numerator="gp_consult_count",
+        id="1_total",
+        numerator="event_x",
         denominator="population",
-        group_by="practice"
+        group_by=None
     ),
+
     Measure(
-        id="oc_local_codes_snomed_practice",
-        numerator="oc_local_codes_snomed",
+        id="1_event_code",
+        numerator="event_x",
         denominator="population",
-        group_by="practice"
+        group_by=["event_x_event_code"]
+    ),
+
+    Measure(
+        id="1_practice_only",
+        numerator="event_x",
+        denominator="population",
+        group_by=["practice"]
+    ),
+
+    Measure(
+        id="1_by_region",
+        numerator="event_x",
+        denominator="population",
+        group_by=["region"],
+    ),
+
+    Measure(
+        id="1_by_sex",
+        numerator="event_x",
+        denominator="population",
+        group_by=["sex"],
+    ),
+
+    Measure(
+        id="1_by_age_band",
+        numerator="event_x",
+        denominator="population",
+        group_by=["age_band"],
+    ),
+
+    Measure(
+        id="1_by_imd",
+        numerator="event_x",
+        denominator="population",
+        group_by=["imd"],
+    ),
+
+    Measure(
+        id="1_by_ethnicity",
+        numerator="event_x",
+        denominator="population",
+        group_by=["ethnicity"],
     ),
 
 ]
