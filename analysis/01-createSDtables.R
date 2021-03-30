@@ -148,7 +148,7 @@ tb07_gpcr_care <- df_to_tbrates(df_cleaned,c("care_home_type"),1,"tb07_gpcr_care
 tb08_gpcr_dis <- df_to_tbrates(df_cleaned,c("has_disability"),1,"tb08_gpcr_dis")
 
 ## OC and GP rates by presence of disability
-tb09_gpcr_imd <- df_to_tbrates(df_cleaned,c("imd_quin"),1,"tb08_gpcr_dis")
+tb09_gpcr_imd <- df_to_tbrates(df_cleaned,c("imd_quin"),1,"tb09_gpcr_imd")
 
 ## close log connection
 sink()
