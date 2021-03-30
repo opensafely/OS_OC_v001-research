@@ -33,38 +33,7 @@ oc_alertreceived = codelist_from_csv("codelists-local/onlineconsultation_alertre
 oc_Y22b4 = codelist_from_csv("codelists-local/onlineconsultation_Y22b4_ctv3.csv", system = "ctv3", column = "CTV3Code")
 
 # Local codelists, query data set (MDS) - snomed (following codelistbuilder https://codelists.opensafely.org/codelist/user/martinaf/online-consultations-snomed-v01/28bba9bc/)
-oc_local_codes_snomed = codelist_from_csv(
-    "codelists-local/martinaf-online-consultations-snomed-v01-28bba9bc.csv", 
-    system = "snomed", 
-    column = "code"
-)
-
-
-## Sociodemographics / clinical etc
-ethnicity_codes = codelist_from_csv(
-    "codelists/opensafely-ethnicity.csv",
-    system="ctv3",
-    column="Code",
-    category_column="Grouping_6",
-)
-ethnicity_codes_16 = codelist_from_csv(
-    "codelists/opensafely-ethnicity.csv",
-    system="ctv3",
-    column="Code",
-    category_column="Grouping_16",
-)
-
-learning_disability_codes = codelist_from_csv(
-    "codelists/opensafely-learning-disabilities.csv",
-    system="ctv3",
-    column="CTV3Code"
-)
-
-intellectual_disability_codes = codelist_from_csv(
-    "codelists/opensafely-intellectual-disability-including-downs-syndrome.csv",
-    system="ctv3",
-    column="CTV3ID"
-)
+from codelists import *
 
 # Specifiy study definition
 
