@@ -274,6 +274,12 @@ measures = [
         group_by="practice"
     ),
     Measure(
+        id="OC_Y1f3b_practice",
+        numerator="OC_Y1f3b",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
         id="OC_XaXcK_practice",
         numerator="OC_XaXcK",
         denominator="population",
