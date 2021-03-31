@@ -27,9 +27,9 @@ oc_Y22b4 = codelist_from_csv("codelists-local/onlineconsultation_Y22b4_ctv3.csv"
 
 # Local codelists, query data set (MDS) - snomed (following codelistbuilder https://codelists.opensafely.org/codelist/user/martinaf/online-consultations-snomed-v01/28bba9bc/)
 oc_local_codes_snomed = codelist_from_csv(
-    #"codelists-local/martinaf-online-consultations-snomed-v01-28bba9bc.csv", 
-    "codelists-local/opensafely-referral-and-signposting-for-long-covid.csv",
-    system = "snomed", 
+    "codelists-local/martinaf-online-consultations-snomed-v01-28bba9bc.csv", 
+    #"codelists-local/opensafely-referral-and-signposting-for-long-covid.csv",
+    system = "ctv3", 
     column = "code"
 )
 
