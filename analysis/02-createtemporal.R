@@ -211,7 +211,7 @@ if(flag_run){
 ## generate plots for each measure within the data frame
 measures_plots <- measures %>% 
   mutate(
-    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0,1,0.1)))),
+    data_quantiles = map(data, ~ (.) %>% group_by(date) %>% summarise(quibble(value, seq(0.1,0.9,0.1)))),
     #data_median = map(data_quantiles, ~ (.) %>% group_by(date) %>% filter(value_q==0.5) %>% transmute(median=value)),
     data_idr = map(data, ~ (.) %>% group_by(date) %>% summarise(v_idr(value*1000),v_median(value*1000))),
     plot_by = pmap(lst( group_by, data, measure_label, by_label), 
