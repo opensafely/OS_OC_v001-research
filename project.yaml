@@ -71,12 +71,12 @@ actions:
         figquant: output/plots/plot_quantiles_*_practice.svg
 
 
-  run_model_measuresDEBUG:
-    run: r:latest analysis/02-createtemporal_debug.R
-    needs: [generate_cohorts_long,generate_measures]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-02-createtemporal-debug.txt
+#  run_model_measuresDEBUG:
+#    run: r:latest analysis/02-createtemporal_debug.R
+#    needs: [generate_cohorts_long,generate_measures]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/log-02-createtemporal-debug.txt
         #tb01: output/measures_gpc_pop_debug.csv
         #fig01: output/plots/plot_overall_gpc_pop_debug.svg
         #figall: output/plots/plot_each_debug_*_practice.svg
