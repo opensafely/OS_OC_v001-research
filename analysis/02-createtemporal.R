@@ -63,11 +63,11 @@ redactor <- function(n, threshold=6,e_overwrite=NA_integer_){
 #   group_by = rep("practice",1,n_meas)
 # )
 
-n_meas=6
+n_meas=7
 md_tbl <- tibble(
-  measure = c("gpc", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
-  measure_col=c("gp_consult_count", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
-  measure_label = c("GPconsult", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
+  measure = c("gpc","OC_OC10", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
+  measure_col=c("gp_consult_count","OC_OC10", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
+  measure_label = c("GPconsult","OC_OC10", "OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),

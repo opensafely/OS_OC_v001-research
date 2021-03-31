@@ -61,8 +61,8 @@ if (flag_gtsummaryoperational){
   (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
   
   # Use function from gt package to save table as neat png
-  gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
-  gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+  #gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
+  #gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
   
   # steps to remove input data and strip further where possible
   gt_gpcpop$inputs <- NULL
@@ -77,8 +77,10 @@ if (flag_gtsummaryoperational){
   save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData"))
   
   # Save unformatted for disclosiveness assessment
-  write.csv(gt_ocpop$table_body,paste0(here::here("output","tables"),"/gt_ocpop_unformatted.csv"))
-  write.csv(gt_gpcpop$table_body,paste0(here::here("output","tables"),"/gt_gpcpop_unformatted.csv"))
+  aux<-as.data.frame(gt_ocpop$table_body)
+  write.csv(aux,paste0(here::here("output","tables"),"/gt_ocpop_unformatted.csv"))
+  aux<-as.data.frame(gt_gpcpop$table_body)
+  write.csv(aux,paste0(here::here("output","tables"),"/gt_gpcpop_unformatted.csv"))
 }
 
 
