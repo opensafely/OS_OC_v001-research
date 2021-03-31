@@ -39,8 +39,8 @@ df_input <- read_csv(
 
 df_cleaned <- df_input %>%
   mutate(age_group = factor(cut(age,breaks = c(0,18,40,50,60,70,80, Inf),dig.lab = 2)),
-         sex = factor(case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ sex)),
-         ethnicity = factor(case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other")),
+         sex = factor(case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ "Other/Unknown")),
+         ethnicity = factor(case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other",TRUE~"Other")),
          care_home_type=factor(case_when(care_home_type=="PC" ~ "Care home",care_home_type=="PN" ~ "Care home",care_home_type=="PS" ~ "Care home",TRUE ~ "Non")),
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
