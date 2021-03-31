@@ -131,7 +131,7 @@ rm(tbx_practice_flags_reg)
 
 df_summary_long <- df_summary %>% pivot_longer(cols=starts_with(myprefix),
                names_to="Code",
-               values_to="Count") %>% filter(Code %!in% c("OC_population"))
+               values_to="Count")
 df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
 write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 

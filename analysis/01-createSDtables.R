@@ -39,15 +39,17 @@ df_input <- read_csv(
 
 df_cleaned <- df_input %>%
   mutate(age_group = factor(cut(age,breaks = c(0,18,40,50,60,70,80, Inf),dig.lab = 2)),
-         sex = factor(case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ sex)),
-         ethnicity = factor(case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other")),
+         sex = factor(case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ "Other/Unknown")),
+         ethnicity = factor(case_when(ethnicity==1 ~ "White",ethnicity==2 ~ "Mixed",ethnicity==3 ~ "Asian",ethnicity==4 ~ "Black",ethnicity==5 ~ "Other",TRUE~"Other")),
          care_home_type=factor(case_when(care_home_type=="PC" ~ "Care home",care_home_type=="PN" ~ "Care home",care_home_type=="PS" ~ "Care home",TRUE ~ "Non")),
          gp_consult_had = ifelse(is.na(gp_consult_count)|gp_consult_count==0,0,1),
          OC_instance=OC_instance_snomed, # setting snomed as the relevant one
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
          livingalone = ifelse(hh_size<=1,1,0),
          has_disability = ifelse(is.na(has_disability),0,has_disability),
-         imd_quin=ifelse(is.na(imd)|imd=="U",NA,imd)
+         imd_quin=ifelse(is.na(imd)|imd=="U",NA,imd),
+         rural_urban=factor(case_when(rural_urban %in% c(1,2,3,4)~"Urban",rural_urban %in% c(5,6,7,8)~"Rural",TRUE~"Other"))
+         
          
   )
 
@@ -61,8 +63,8 @@ if (flag_gtsummaryoperational){
   (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
   
   # Use function from gt package to save table as neat png
-  gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
-  gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+  #gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
+  #gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
   
   # steps to remove input data and strip further where possible
   gt_gpcpop$inputs <- NULL
@@ -75,6 +77,13 @@ if (flag_gtsummaryoperational){
   # Save dta with actual table data, but underlying data removed
   save(gt_ocpop,file = file.path(here::here("output","tables"), "gt_ocpop.RData")) 
   save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData")) 
+  
+  # Save unformatted for disclosiveness assessment
+  aux<-as.data.frame(gt_ocpop$table_body); aux <- apply(aux,2,as.character)
+  write.csv(aux,paste0(here::here("output","tables"),"/gt_ocpop_unformatted.csv"))
+  aux<-as.data.frame(gt_gpcpop$table_body);aux <- apply(aux,2,as.character)
+  write.csv(aux,paste0(here::here("output","tables"),"/gt_gpcpop_unformatted.csv"))  
+  
 }
 
 
