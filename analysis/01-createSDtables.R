@@ -46,7 +46,8 @@ df_cleaned <- df_input %>%
          oc_instance_had = ifelse(is.na(OC_instance)|OC_instance==0,0,1),
          livingalone = ifelse(hh_size<=1,1,0),
          has_disability = ifelse(is.na(has_disability),0,has_disability),
-         imd_quin=ifelse(is.na(imd)|imd==0,NA_integer_,imd)
+         imd_quin=ifelse(is.na(imd)|imd==0,NA_integer_,imd),
+         rural_urban=factor(case_when(rural_urban %in% c(1,2,3,4)~"Urban",rural_urban %in% c(5,6,7,8)~"Rural",TRUE~"Other"))
          
   )
 
