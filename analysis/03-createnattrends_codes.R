@@ -101,18 +101,18 @@ tbx_practice_flags_$`Instance presence` <- factor(tbx_practice_flags_$`Instance 
 
 ggplot(tbx_practice_flags_, aes(fill=`Instance presence`,x=code, y=no_practices,label=no_practices)) +
   geom_bar( stat="identity")+
-  geom_text(aes(vjust=-1),position = position_stack(vjust = 0.2))+
+  geom_text(aes(hjust=0.5),position = position_stack(vjust = 0.2))+
   theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
-  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")
+  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+coord_flip()
 
 ggsave(paste0(here::here("output","plots"),"/sc03_fig03_pracnatcoverage.svg"),width = 30, height = 20, dpi=300,units ="cm")
 
 
 ggplot(tbx_practice_flags_reg, aes(fill=`Instance presence`,x=code, y=no_practices,label=no_practices)) +
   geom_bar( stat="identity")+
-  geom_text(aes(vjust=-1),position = position_stack(vjust = 0.0))+
+  geom_text(aes(hjust=0),position = position_stack(vjust = 0.2))+
   theme(axis.text.x = element_text(angle = -90),text = element_text(size=15))+
-  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+facet_wrap(~region)
+  labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")+facet_wrap(~region,scales="free_x")+coord_flip()
 
 ggsave(paste0(here::here("output","plots"),"/sc03_fig04_pracbyregcoverage.svg"),width = 30, height = 20, dpi=300,units ="cm")
 
@@ -127,10 +127,12 @@ rm(tbx_practice_flags_reg)
 
 df_summary_long <- df_summary %>% pivot_longer(cols=starts_with("OC"),
                names_to="Code",
-               values_to="Count") %>% filter(Code %!in% c("OC_population"))
+               values_to="Count")
 df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
 write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
-# Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
+# Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive.
+
+df_summary_long <- df_summary_long %>% filter(Code %!in% c("OC_population"))
 
 df_summary_long$month <- as.Date(df_summary_long$month)
 ggplot(data=df_summary_long,aes(x=month,y=Count,group=Code)) +

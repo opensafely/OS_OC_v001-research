@@ -74,7 +74,11 @@ if (flag_gtsummaryoperational){
   
   # Save dta with actual table data, but underlying data removed
   save(gt_ocpop,file = file.path(here::here("output","tables"), "gt_ocpop.RData")) 
-  save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData")) 
+  save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData"))
+  
+  # Save unformatted for disclosiveness assessment
+  write.csv(gt_ocpop$table_body,paste0(here::here("output","tables"),"/gt_ocpop_unformatted.csv"))
+  write.csv(gt_gpcpop$table_body,paste0(here::here("output","tables"),"/gt_gpcpop_unformatted.csv"))
 }
 
 
