@@ -75,11 +75,11 @@ redactor <- function(n, threshold=6,e_overwrite=NA_integer_){
 #   denominator = "population",
 #   group_by = rep("practice",1,n_meas)
 # )
-n_meas=7
+n_meas=9
 md_tbl <- tibble(
-  measure = c("gpc","snomed_1068881000000101","OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
-  measure_col=c("gp_consult_count","snomed_1068881000000101","OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
-  measure_label = c("GPconsult","eConsultation via online application","OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
+  measure = c("gpc","snomed_OCall","snomed_1068881000000101","OC_OC10","OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
+  measure_col=c("gp_consult_count","snomed_OCall","snomed_1068881000000101","OC_OC10","OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
+  measure_label = c("GPconsult","OC-relevant snomed codes","eConsultation via online application","OC-relevant ctv3 codes","OC_Y1f3b","OC_Y22b4","OC_XaXcK","OC_computerlink","OC_alertreceived"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),

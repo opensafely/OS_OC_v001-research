@@ -236,6 +236,15 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
+    snomed_OCall=patients.with_these_clinical_events(
+        oc_local_codes_snomed,        
+        between = ["index_date", "index_date + 1 month"],    
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.5,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
     **loop_over_codes(oc_local_codes_snomed),
 
     #**loop_over_codes_ctv3(oc_local_codes)
@@ -247,6 +256,12 @@ measures = [
     Measure(
         id="gpc_practice",
         numerator="gp_consult_count",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="snomed_OCall_practice",
+        numerator="snomed_OCall",
         denominator="population",
         group_by="practice"
     ),
@@ -271,6 +286,12 @@ measures = [
     Measure(
         id="snomed_325911000000101_practice",
         numerator="snomed_325911000000101",
+        denominator="population",
+        group_by="practice"
+    ),
+    Measure(
+        id="OC_OC10_practice",
+        numerator="OC_OC10",
         denominator="population",
         group_by="practice"
     ),

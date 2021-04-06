@@ -1,6 +1,6 @@
 [1] "> Tibble creation"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
   gp_consult_count = col_double(),
@@ -10,7 +10,17 @@ cols(
 )
 
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  snomed_OCall = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
   snomed_1068881000000101 = col_double(),
@@ -20,7 +30,17 @@ cols(
 )
 
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  OC_OC10 = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
   OC_Y1f3b = col_double(),
@@ -30,7 +50,7 @@ cols(
 )
 
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
   OC_Y22b4 = col_double(),
@@ -40,7 +60,7 @@ cols(
 )
 
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
   OC_XaXcK = col_double(),
@@ -50,7 +70,7 @@ cols(
 )
 
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
   OC_computerlink = col_double(),
@@ -60,7 +80,7 @@ cols(
 )
 
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
   OC_alertreceived = col_double(),
@@ -81,6 +101,10 @@ This message is displayed once per session.
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
+`summarise()` regrouping output by 'date' (override with `.groups` argument)
+`summarise()` regrouping output by 'date' (override with `.groups` argument)
+`summarise()` ungrouping output (override with `.groups` argument)
+`summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
