@@ -23,36 +23,6 @@ cols(
 -- Column specification -------------------------------------------------------------------------------------------
 cols(
   practice = col_double(),
-  snomed_978871000000104 = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification -------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
-  snomed_325991000000105 = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification -------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
-  snomed_325911000000101 = col_double(),
-  population = col_double(),
-  value = col_double(),
-  date = col_date(format = "")
-)
-
-
--- Column specification -------------------------------------------------------------------------------------------
-cols(
-  practice = col_double(),
   OC_Y1f3b = col_double(),
   population = col_double(),
   value = col_double(),
@@ -99,6 +69,10 @@ cols(
   date = col_date(format = "")
 )
 
+Note: Using an external vector in selections is ambiguous.
+i Use `all_of(measure_col)` instead of `measure_col` to silence this message.
+i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
+This message is displayed once per session.
 `summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
@@ -107,12 +81,6 @@ cols(
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
 `summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` regrouping output by 'date' (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
 `summarise()` ungrouping output (override with `.groups` argument)
