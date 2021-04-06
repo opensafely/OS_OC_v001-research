@@ -2,388 +2,380 @@
 [1] "Libraries loaded. Query dates established."
 [1] "Redactor defined"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-01-01.csv"
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  .default = col_double(),
+  region = col_character(),
+  stp = col_character()
+)
+i Use `spec()` for the full column specifications.
+
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-02-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-03-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-04-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-05-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-06-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-07-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-08-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-09-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-10-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-11-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-12-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-01-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-02-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-03-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-04-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-05-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-06-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-07-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-08-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-09-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-10-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-11-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
 
--- Column specification -------------------------------------------------------------------------------------------
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------------
 cols(
   .default = col_double(),
   region = col_character(),
   stp = col_character()
 )
-[36mi[39m Use `spec()` for the full column specifications.
+i Use `spec()` for the full column specifications.
 
-[1] "loaded"
-[1] "mutated"
-[1] "bound to master"
 [1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-12-01.csv"
-
--- Column specification -------------------------------------------------------------------------------------------
-cols(
-  .default = col_double(),
-  region = col_character(),
-  stp = col_character()
-)
-[36mi[39m Use `spec()` for the full column specifications.
-
 [1] "loaded"
+[1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-  practice snomedc_gp_consult_count OC_OC10 OC_Y1f3b OC_XUkjp OC_XaXcK OC_XVCTw OC_XUuWQ OC_XV1pT OC_computerlink
-1 23888592                   591487  300217   299797   299796   300121   299986   300060   300094          300107
-  OC_alertreceived OC_Y22b4 snomed_185320006 snomed_401271004 snomed_448337001 snomed_699249000 snomed_719407002
-1           300172   300278            60093            59974            60047            60330            60003
-  snomed_763184009 snomed_868184008 snomed_325871000000103 snomed_325901000000103 snomed_325911000000101
-1            60150            60068                  59648                  60254                  59969
-  snomed_325951000000102 snomed_325981000000108 snomed_325991000000105 snomed_384131000000101
-1                  60175                  59838                  59798                  60146
-  snomed_854891000000104 snomed_978871000000104 snomed_1068881000000101 snomed_1090371000000106  patient_id
-1                  60419                  59919                   60019                   59789 12008329027
-    region              stp               practice      snomedc_gp_consult_count    OC_OC10         OC_Y1f3b    
- Length:240000      Length:240000      Min.   : 14.00   Min.   :-4.000           Min.   :0.000   Min.   :0.000  
- Class :character   Class :character   1st Qu.: 86.00   1st Qu.: 0.000           1st Qu.:0.000   1st Qu.:0.000  
- Mode  :character   Mode  :character   Median :100.00   Median : 2.000           Median :0.000   Median :0.000  
-                                       Mean   : 99.54   Mean   : 2.465           Mean   :1.251   Mean   :1.249  
-                                       3rd Qu.:113.00   3rd Qu.: 4.000           3rd Qu.:3.000   3rd Qu.:2.000  
-                                       Max.   :190.00   Max.   :12.000           Max.   :5.000   Max.   :5.000  
-    OC_XUkjp        OC_XaXcK        OC_XVCTw       OC_XUuWQ       OC_XV1pT    OC_computerlink OC_alertreceived
- Min.   :0.000   Min.   :0.000   Min.   :0.00   Min.   :0.00   Min.   :0.00   Min.   :0.00    Min.   :0.000   
- 1st Qu.:0.000   1st Qu.:0.000   1st Qu.:0.00   1st Qu.:0.00   1st Qu.:0.00   1st Qu.:0.00    1st Qu.:0.000   
- Median :0.000   Median :0.000   Median :0.00   Median :0.00   Median :0.00   Median :0.00    Median :0.000   
- Mean   :1.249   Mean   :1.251   Mean   :1.25   Mean   :1.25   Mean   :1.25   Mean   :1.25    Mean   :1.251   
- 3rd Qu.:2.000   3rd Qu.:3.000   3rd Qu.:2.00   3rd Qu.:3.00   3rd Qu.:3.00   3rd Qu.:3.00    3rd Qu.:3.000   
- Max.   :5.000   Max.   :5.000   Max.   :5.00   Max.   :5.00   Max.   :5.00   Max.   :5.00    Max.   :5.000   
-    OC_Y22b4     snomed_185320006  snomed_401271004  snomed_448337001 snomed_699249000 snomed_719407002
- Min.   :0.000   Min.   :-1.0000   Min.   :-1.0000   Min.   :0.0000   Min.   :0.0000   Min.   :-1.00   
- 1st Qu.:0.000   1st Qu.: 0.0000   1st Qu.: 0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.: 0.00   
- Median :0.000   Median : 0.0000   Median : 0.0000   Median :0.0000   Median :0.0000   Median : 0.00   
- Mean   :1.251   Mean   : 0.2504   Mean   : 0.2499   Mean   :0.2502   Mean   :0.2514   Mean   : 0.25   
- 3rd Qu.:3.000   3rd Qu.: 0.0000   3rd Qu.: 0.0000   3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.: 0.00   
- Max.   :5.000   Max.   : 7.0000   Max.   : 6.0000   Max.   :6.0000   Max.   :7.0000   Max.   : 6.00   
- snomed_763184009 snomed_868184008 snomed_325871000000103 snomed_325901000000103 snomed_325911000000101
- Min.   :0.0000   Min.   :0.0000   Min.   :-1.0000        Min.   :0.0000         Min.   :0.0000        
- 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.: 0.0000        1st Qu.:0.0000         1st Qu.:0.0000        
- Median :0.0000   Median :0.0000   Median : 0.0000        Median :0.0000         Median :0.0000        
- Mean   :0.2506   Mean   :0.2503   Mean   : 0.2485        Mean   :0.2511         Mean   :0.2499        
- 3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.: 0.0000        3rd Qu.:0.0000         3rd Qu.:0.0000        
- Max.   :7.0000   Max.   :7.0000   Max.   : 7.0000        Max.   :7.0000         Max.   :6.0000        
- snomed_325951000000102 snomed_325981000000108 snomed_325991000000105 snomed_384131000000101
- Min.   :0.0000         Min.   :0.0000         Min.   :0.0000         Min.   :0.0000        
- 1st Qu.:0.0000         1st Qu.:0.0000         1st Qu.:0.0000         1st Qu.:0.0000        
- Median :0.0000         Median :0.0000         Median :0.0000         Median :0.0000        
- Mean   :0.2507         Mean   :0.2493         Mean   :0.2492         Mean   :0.2506        
- 3rd Qu.:0.0000         3rd Qu.:0.0000         3rd Qu.:0.0000         3rd Qu.:0.0000        
- Max.   :6.0000         Max.   :7.0000         Max.   :7.0000         Max.   :6.0000        
- snomed_854891000000104 snomed_978871000000104 snomed_1068881000000101 snomed_1090371000000106   patient_id   
- Min.   :-1.0000        Min.   :-1.0000        Min.   :-1.0000         Min.   :-1.0000         Min.   :    0  
- 1st Qu.: 0.0000        1st Qu.: 0.0000        1st Qu.: 0.0000         1st Qu.: 0.0000         1st Qu.:25068  
- Median : 0.0000        Median : 0.0000        Median : 0.0000         Median : 0.0000         Median :50068  
- Mean   : 0.2517        Mean   : 0.2497        Mean   : 0.2501         Mean   : 0.2491         Mean   :50035  
- 3rd Qu.: 0.0000        3rd Qu.: 0.0000        3rd Qu.: 0.0000         3rd Qu.: 0.0000         3rd Qu.:75053  
- Max.   : 7.0000        Max.   : 7.0000        Max.   : 7.0000         Max.   : 7.0000         Max.   :99999  
-    month          
- Length:240000     
- Class :character  
- Mode  :character  
-                   
-                   
-                   
- [1] region                   stp                      practice                 snomedc_gp_consult_count
- [5] OC_OC10                  OC_Y1f3b                 OC_XUkjp                 OC_XaXcK                
- [9] OC_XVCTw                 OC_XUuWQ                 OC_XV1pT                 OC_computerlink         
-[13] OC_alertreceived         OC_Y22b4                 snomed_185320006         snomed_401271004        
-[17] snomed_448337001         snomed_699249000         snomed_719407002         snomed_763184009        
-[21] snomed_868184008         snomed_325871000000103   snomed_325901000000103   snomed_325911000000101  
-[25] snomed_325951000000102   snomed_325981000000108   snomed_325991000000105   snomed_384131000000101  
-[29] snomed_854891000000104   snomed_978871000000104   snomed_1068881000000101  snomed_1090371000000106 
-[33] patient_id               month                   
+  practice gp_consult_count OC_OC10 OC_Y1f3b OC_XUkjp OC_XaXcK OC_XVCTw OC_XUuWQ OC_XV1pT OC_computerlink OC_alertreceived OC_Y22b4 snomed_185320006 snomed_401271004
+1  3677779           591487  300217   299797   299796   300121   299986   300060   300094          300107           300172   300278            60093            59974
+  snomed_448337001 snomed_699249000 snomed_719407002 snomed_763184009 snomed_868184008 snomed_325871000000103 snomed_325901000000103 snomed_325911000000101
+1            60047            60330            60003            60150            60068                  59648                  60254                  59969
+  snomed_325951000000102 snomed_325981000000108 snomed_325991000000105 snomed_384131000000101 snomed_854891000000104 snomed_978871000000104 snomed_1068881000000101
+1                  60175                  59838                  59798                  60146                  60419                  59919                   60019
+  snomed_1090371000000106 population
+1                   59789     240000
+    region              stp               practice      gp_consult_count    OC_OC10          OC_Y1f3b         OC_XUkjp         OC_XaXcK         OC_XVCTw         OC_XUuWQ     
+ Length:36984       Length:36984       Min.   : 14.00   Min.   : -3.00   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000  
+ Class :character   Class :character   1st Qu.: 75.00   1st Qu.:  5.00   1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.000  
+ Mode  :character   Mode  :character   Median : 99.00   Median : 12.00   Median : 6.000   Median : 6.000   Median : 6.000   Median : 6.000   Median : 6.000   Median : 6.000  
+                                       Mean   : 99.44   Mean   : 15.99   Mean   : 8.117   Mean   : 8.106   Mean   : 8.106   Mean   : 8.115   Mean   : 8.111   Mean   : 8.113  
+                                       3rd Qu.:124.00   3rd Qu.: 23.00   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000  
+                                       Max.   :190.00   Max.   :106.00   Max.   :56.000   Max.   :63.000   Max.   :54.000   Max.   :62.000   Max.   :53.000   Max.   :55.000  
+    OC_XV1pT      OC_computerlink  OC_alertreceived    OC_Y22b4      snomed_185320006 snomed_401271004 snomed_448337001 snomed_699249000 snomed_719407002 snomed_763184009
+ Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   :-1.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000  
+ Median : 6.000   Median : 6.000   Median : 6.000   Median : 6.000   Median : 0.000   Median : 0.000   Median : 0.000   Median : 0.000   Median : 0.000   Median : 0.000  
+ Mean   : 8.114   Mean   : 8.115   Mean   : 8.116   Mean   : 8.119   Mean   : 1.625   Mean   : 1.622   Mean   : 1.624   Mean   : 1.631   Mean   : 1.622   Mean   : 1.626  
+ 3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.: 3.000   3rd Qu.: 3.000   3rd Qu.: 3.000   3rd Qu.: 3.000   3rd Qu.: 3.000   3rd Qu.: 3.000  
+ Max.   :54.000   Max.   :69.000   Max.   :53.000   Max.   :57.000   Max.   :24.000   Max.   :26.000   Max.   :19.000   Max.   :22.000   Max.   :26.000   Max.   :24.000  
+ snomed_868184008 snomed_325871000000103 snomed_325901000000103 snomed_325911000000101 snomed_325951000000102 snomed_325981000000108 snomed_325991000000105
+ Min.   : 0.000   Min.   :-1.000         Min.   : 0.000         Min.   : 0.000         Min.   : 0.000         Min.   : 0.000         Min.   : 0.000        
+ 1st Qu.: 0.000   1st Qu.: 0.000         1st Qu.: 0.000         1st Qu.: 0.000         1st Qu.: 0.000         1st Qu.: 0.000         1st Qu.: 0.000        
+ Median : 0.000   Median : 0.000         Median : 0.000         Median : 0.000         Median : 0.000         Median : 0.000         Median : 0.000        
+ Mean   : 1.624   Mean   : 1.613         Mean   : 1.629         Mean   : 1.621         Mean   : 1.627         Mean   : 1.618         Mean   : 1.617        
+ 3rd Qu.: 3.000   3rd Qu.: 3.000         3rd Qu.: 3.000         3rd Qu.: 3.000         3rd Qu.: 3.000         3rd Qu.: 3.000         3rd Qu.: 3.000        
+ Max.   :24.000   Max.   :23.000         Max.   :26.000         Max.   :24.000         Max.   :23.000         Max.   :29.000         Max.   :25.000        
+ snomed_384131000000101 snomed_854891000000104 snomed_978871000000104 snomed_1068881000000101 snomed_1090371000000106   population        month          
+ Min.   : 0.000         Min.   :-1.000         Min.   : 0.00          Min.   : 0.000          Min.   :-1.000          Min.   : 1.000   Length:36984      
+ 1st Qu.: 0.000         1st Qu.: 0.000         1st Qu.: 0.00          1st Qu.: 0.000          1st Qu.: 0.000          1st Qu.: 2.000   Class :character  
+ Median : 0.000         Median : 0.000         Median : 0.00          Median : 0.000          Median : 0.000          Median : 5.000   Mode  :character  
+ Mean   : 1.626         Mean   : 1.634         Mean   : 1.62          Mean   : 1.623          Mean   : 1.617          Mean   : 6.489                     
+ 3rd Qu.: 3.000         3rd Qu.: 3.000         3rd Qu.: 3.00          3rd Qu.: 3.000          3rd Qu.: 3.000          3rd Qu.: 9.000                     
+ Max.   :22.000         Max.   :24.000         Max.   :21.00          Max.   :28.000          Max.   :19.000          Max.   :36.000                     
+ [1] region                  stp                     practice                gp_consult_count        OC_OC10                 OC_Y1f3b                OC_XUkjp               
+ [8] OC_XaXcK                OC_XVCTw                OC_XUuWQ                OC_XV1pT                OC_computerlink         OC_alertreceived        OC_Y22b4               
+[15] snomed_185320006        snomed_401271004        snomed_448337001        snomed_699249000        snomed_719407002        snomed_763184009        snomed_868184008       
+[22] snomed_325871000000103  snomed_325901000000103  snomed_325911000000101  snomed_325951000000102  snomed_325981000000108  snomed_325991000000105  snomed_384131000000101 
+[29] snomed_854891000000104  snomed_978871000000104  snomed_1068881000000101 snomed_1090371000000106 population              month                  
 <0 rows> (or 0-length row.names)
 [1] "summary created -a"
-`summarise()` ungrouping output (override with `.groups` argument)
-[1] "summary created -b"
-Joining, by = "month"
-[1] "summary created -c"
 [1] "practice calc 1"
 [1] "practice calc 2"
 `summarise()` regrouping output by 'region' (override with `.groups` argument)
@@ -395,6 +387,17 @@ Joining, by = "month"
 [1] "practice fig03 saved"
 [1] "practice fig04 created"
 [1] "practice fig04 saved"
+[1] "practice calc 1"
+[1] "practice calc 2"
+`summarise()` regrouping output by 'region' (override with `.groups` argument)
+[1] "practice calc 3"
+`summarise()` ungrouping output (override with `.groups` argument)
+[1] "practice calc 4"
+[1] "practice calc 5"
+[1] "practice fig05 created"
+[1] "practice fig05 saved"
+[1] "practice fig06 created"
+[1] "practice fig06 saved"
 [1] "national calc 1"
 [1] "national calc2"
 [1] "national calc saved"
@@ -402,3 +405,10 @@ Joining, by = "month"
 [1] "national fig01 saved"
 [1] "national fig02 created"
 [1] "national fig02 saved"
+[1] "national calc 1"
+[1] "national calc2"
+[1] "national calc saved"
+[1] "national fig07 created"
+[1] "national fig07 saved"
+[1] "national fig08 created"
+[1] "national fig08 saved"
