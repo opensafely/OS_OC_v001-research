@@ -247,29 +247,58 @@ measures_plots <- measures %>%
                        )
                    }
     ),
-    plot_quantiles = pmap(lst( group_by, data_quantiles, measure_label, by_label), 
-                          function(group_by, data_quantiles, measure_label, by_label){
-                            data_quantiles %>% mutate(value_1000 = value*1000) %>%
-                              ggplot()+
-                              geom_line(aes(x=date, y=value_1000, group=value_q, linetype=value_q==0.5, size=value_q==0.5), colour='blue')+
-                              scale_linetype_manual(breaks=c(TRUE, FALSE), values=c("solid", "dotted"), guide=FALSE)+
-                              scale_size_manual(breaks=c(TRUE, FALSE), values=c(1, 0.4), guide=FALSE)+
-                              scale_x_date(date_breaks = "1 month", labels = scales::date_format("%Y-%m"))+
-                              labs(
-                                x=NULL, y=NULL, 
-                                title=glue::glue("{measure_label} instances per 1000 patients"),
-                                subtitle = glue::glue("quantiles {by_label}")
-                              )+
-                              theme_bw()+
-                              theme(
-                                panel.border = element_blank(), 
-                                axis.line.x = element_line(colour = "black"),
-                                axis.text.x = element_text(angle = 70, vjust = 1, hjust=1),
-                                panel.grid.major.x = element_blank(),
-                                panel.grid.minor.x = element_blank(),
-                                #axis.line.y = element_blank(),
-                              )
-                          }
+    plot_logquantiles2 = pmap(lst( group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ), 
+                           function(group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ){
+                             data_quantiles %>% mutate(value_1000 = value*1000) %>%
+                               ggplot()+
+                               geom_line(aes(x=date, y=value_1000, group=value_q, linetype=value_q==0.5, size=value_q==0.5), colour='blue')+
+                               scale_linetype_manual(breaks=c(TRUE,FALSE), values=c("solid", "dashed"), guide=FALSE,labels=c("median","decile"))+
+                               scale_size_manual(breaks=c(TRUE, FALSE), values=c(1, 0.5), guide=FALSE)+
+                               scale_x_date(date_breaks = "1 month", labels = scales::date_format("%Y-%m"))+
+                               labs(
+                                 x=NULL,
+                                 y="rate per 1,000",
+                                 linetype="metric",
+                                 title=glue::glue("{measure_label}"),
+                                 subtitle = paste0(
+                                   "Practices included: ",
+                                   no_prac, " (",round(no_prac/no_prac_univ*100,1),"%)",
+                                   "; 2020 events: ",
+                                   paste0(round(no_2020_events/1000,1),"k"),
+                                   "; 2020 patients: ",
+                                   "TBA"
+                                 ),
+                                 caption=paste0("Feb median: ",
+                                                round(data_idr %>% filter(date=="2020-02-01") %>% .$median ,1),
+                                                " (IDR ",
+                                                round(data_idr %>% filter(date=="2020-02-01") %>% .$IDR ,1),"), ",
+                                                "April median: ",
+                                                round(data_idr %>% filter(date=="2020-04-01") %>% .$median ,1),
+                                                " (IDR ",
+                                                round(data_idr %>% filter(date=="2020-04-01") %>% .$IDR ,1),"),\n ",
+                                                "September median: ",
+                                                round(data_idr %>% filter(date=="2020-09-01") %>% .$median ,1),
+                                                " (IDR ",
+                                                round(data_idr %>% filter(date=="2020-09-01") %>% .$IDR ,1),"), ",
+                                                "December median: ",
+                                                round(data_idr %>% filter(date=="2020-12-01") %>% .$median ,1),
+                                                " (IDR ",
+                                                round(data_idr %>% filter(date=="2020-12-01") %>% .$IDR ,1),")\n",
+                                                str_medidrnarrative(data_idr)
+                                 )
+                               )+
+                               theme_bw()+
+                               theme(
+                                 panel.border = element_blank(), 
+                                 axis.line.x = element_line(colour = "black"),
+                                 axis.text.x = element_text(angle = 70, vjust = 1, hjust=1),
+                                 panel.grid.major.x = element_blank(),
+                                 panel.grid.minor.x = element_blank(),
+                                 axis.line.y = element_blank(),
+                                 plot.caption = element_text(color = "gray64", size=7)
+                               )+scale_y_log10()
+                               
+                           }
     ),
     plot_quantiles2 = pmap(lst( group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ), 
                           function(group_by, data_quantiles, measure_label, by_label,data_idr,no_2020_events,no_prac,no_prac_univ){
@@ -349,6 +378,20 @@ measures_plots %>%
     width = 15,
     limitsize=FALSE,
     filename = str_c("plot_quantiles_", id, ".svg"),
+    path = here::here("output", "plots"),
+  ) %>%
+  pwalk(ggsave)
+}
+
+## plot the charts (by quantile)
+measures_plots %>%
+  transmute(
+    plot = plot_logquantiles2,
+    units = "cm",
+    height = 10,
+    width = 15,
+    limitsize=FALSE,
+    filename = str_c("plot_logquantiles_", id, ".svg"),
     path = here::here("output", "plots"),
   ) %>%
   pwalk(ggsave)
