@@ -6,6 +6,8 @@
 ## open log connection to file
 sink(here::here("logs", "log-0a-snomedcheck.txt"))
 library(skimr)
+library(tidyverse)
+library(here)
 # create directory for saving tables, if not existent
 if (!dir.exists(here::here("output", "tables"))){
   dir.create(here::here("output", "tables"))
