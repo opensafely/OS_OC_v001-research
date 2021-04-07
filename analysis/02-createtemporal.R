@@ -381,7 +381,7 @@ measures_plots %>%
     path = here::here("output", "plots"),
   ) %>%
   pwalk(ggsave)
-}
+
 
 ## plot the charts (by quantile)
 measures_plots %>%
