@@ -74,6 +74,7 @@ actions:
         #figall: output/plots/plot_each_*_practice.svg
         figquant: output/plots/plot_quantiles_*_practice.svg
 
+ 
 
 #  run_model_measuresDEBUG:
 #    run: r:latest analysis/02-createtemporal_debug.R
@@ -95,6 +96,21 @@ actions:
   #      log: logs/log-02a-createredactedmeasure.txt
   #      red_measures: output/tables/redacted2a_*.csv
 
+### SNOMED check
+  generate_cohorts_checksnomed:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_checksnomed
+    outputs:
+      highly_sensitive:
+        cohort: output/input_checksnomed.csv
+
+
+  run_model_checksnomed:
+    run: r:latest analysis/0a-snomedcheck.R
+    needs: [generate_cohorts_checksnomed]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-0a-checksnomed.txt
+        tab1: output/tables/sc0a_snomedcheck_tallies.csv
 
 ### SRO template pipeline
   SROtem_generate_study_population:

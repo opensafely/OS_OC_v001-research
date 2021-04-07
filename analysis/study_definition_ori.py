@@ -220,11 +220,11 @@ study = StudyDefinition(
     #
     #
     gp_consult_count=patients.with_gp_consultations(
-        between=[start_date, "today"],
+        between=[start_date, end_date],
         returning="number_of_matches_in_period",
         return_expectations={
             "int": {"distribution": "normal", "mean": 4, "stddev": 2},
-            "date": {"earliest": start_date, "latest": "today"},
+            "date": {"earliest": start_date, "latest": end_date},
             "incidence": 0.7,
         },
     ),

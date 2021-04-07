@@ -1,4 +1,7 @@
-from cohortextractor import codelist_from_csv
+from cohortextractor import (
+    codelist_from_csv,
+    codelist
+)
 
 holder_codelist = codelist_from_csv("codelists-local/martinaf-online-consultations-snomed-v01-28bba9bc.csv",
                               system="snomed",
@@ -32,6 +35,27 @@ oc_local_codes_snomed = codelist_from_csv(
     system = "snomed", 
     column = "code"
 )
+
+ocsnomed_1068881000000101=codelist(["1068881000000101"], system="snomed")
+ocsnomed_978871000000104=codelist(["978871000000104"], system="snomed")
+ocsnomed_448337001=codelist(["448337001"], system="snomed")
+ocsnomed_868184008=codelist(["868184008"], system="snomed")
+ocsnomed_719407002=codelist(["719407002"], system="snomed")
+ocsnomed_763184009=codelist(["763184009"], system="snomed")
+ocsnomed_185320006=codelist(["185320006"], system="snomed")
+ocsnomed_1090371000000106=codelist(["1090371000000106"], system="snomed")
+ocsnomed_325951000000102=codelist(["325951000000102"], system="snomed")
+ocsnomed_325871000000103=codelist(["325871000000103"], system="snomed")
+ocsnomed_384131000000101=codelist(["384131000000101"], system="snomed")
+ocsnomed_325911000000101=codelist(["325911000000101"], system="snomed")
+ocsnomed_699249000=codelist(["699249000"], system="snomed")
+ocsnomed_401271004=codelist(["401271004"], system="snomed")
+ocsnomed_325901000000103=codelist(["325901000000103"], system="snomed")
+ocsnomed_325981000000108=codelist(["325981000000108"], system="snomed")
+ocsnomed_325991000000105=codelist(["325991000000105"], system="snomed")
+ocsnomed_854891000000104=codelist(["854891000000104"], system="snomed")
+
+
 
 
 ## Sociodemographics / clinical etc
