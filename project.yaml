@@ -109,7 +109,7 @@ actions:
     needs: [generate_cohorts_checksnomed]
     outputs:
       moderately_sensitive:
-        log: logs/log-0a-checksnomed.txt
+        log: logs/log-0a-snomedcheck.txt
         tab1: output/tables/sc0a_snomedcheck_tallies.csv
 
 ### SRO template pipeline
