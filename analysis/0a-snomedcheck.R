@@ -17,7 +17,7 @@ if (!dir.exists(here::here("output", "tables"))){
 df_input <- read_csv(
   here::here("output", "input_checksnomed.csv"))
 
-View(head(df_input))
+#View(head(df_input))
 
 print(df_input %>% select_if(is.numeric) %>% summarise_all(~sum(.,na.rm=T)))
 
