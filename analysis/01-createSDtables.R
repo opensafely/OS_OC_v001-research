@@ -16,7 +16,7 @@
 ## open log connection to file
 sink(here::here("logs", "log-01-createSDtables.txt"))
 
-flag_gtsummaryoperational = TRUE
+flag_gtsummaryoperational = FALSE
 
 ## library
 library(tidyverse)
@@ -143,22 +143,22 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest",n_redact=6) {
 
 
 ## OC and GP rates per age and gender
-tb04_gpcr_agesex <- df_to_tbrates(df_cleaned,c("age_group","sex"),1,"tb04_gpcr_agesex")
+tb04_gpcr_agesex <- df_to_tbrates(df_cleaned %>% filter(age_group %in% c("Male","Female")),c("age_group","sex"),1,"tb04_gpcr_agesex")
 
 ## OC and GP rates by ethnicity
-tb05_gpcr_ethnicity <- df_to_tbrates(df_cleaned,c("ethnicity"),1,"tb05_gpcr_ethnicity")
+#tb05_gpcr_ethnicity <- df_to_tbrates(df_cleaned,c("ethnicity"),1,"tb05_gpcr_ethnicity")
 
 ## OC and GP rates by region and rurality
-tb06_gpcr_ruc <- df_to_tbrates(df_cleaned,c("region","rural_urban"),1,"tb06_gpcr_ruc")
+#tb06_gpcr_ruc <- df_to_tbrates(df_cleaned,c("region","rural_urban"),1,"tb06_gpcr_ruc")
 
 ## OC and GP rates by care home status
-tb07_gpcr_care <- df_to_tbrates(df_cleaned,c("care_home_type"),1,"tb07_gpcr_care")
+#tb07_gpcr_care <- df_to_tbrates(df_cleaned,c("care_home_type"),1,"tb07_gpcr_care")
 
 ## OC and GP rates by presence of disability
-tb08_gpcr_dis <- df_to_tbrates(df_cleaned,c("has_disability"),1,"tb08_gpcr_dis")
+#tb08_gpcr_dis <- df_to_tbrates(df_cleaned,c("has_disability"),1,"tb08_gpcr_dis")
 
 ## OC and GP rates by presence of disability
-tb09_gpcr_imd <- df_to_tbrates(df_cleaned,c("imd_quin"),1,"tb09_gpcr_imd")
+#tb09_gpcr_imd <- df_to_tbrates(df_cleaned,c("imd_quin"),1,"tb09_gpcr_imd")
 
 ## close log connection
 sink()
