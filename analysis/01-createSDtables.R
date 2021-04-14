@@ -79,9 +79,11 @@ if (flag_gtsummaryoperational){
   save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData")) 
   
   # Save unformatted for disclosiveness assessment
-  unlisted_ocpop  <-  as.data.frame(matrix(unlist(gt_ocpop$table_body), nrow=length(unlist(gt_ocpop$table_body[1]))))
+  #unlisted_ocpop  <-  as.data.frame(matrix(unlist(gt_ocpop$table_body), nrow=length(unlist(gt_ocpop$table_body[1]))))
+  unlisted_ocpop <- as.data.frame(matrix(unlist(gt_ocpop$table_body)))
   write.csv(unlisted_ocpop,paste0(here::here("output","tables"),"/gt_ocpop_unlisted.csv"))
-  unlisted_gpcpop  <-  as.data.frame(matrix(unlist(gt_gpcpop$table_body), nrow=length(unlist(gt_gpcpop$table_body[1]))))
+  #unlisted_gpcpop  <-  as.data.frame(matrix(unlist(gt_gpcpop$table_body), nrow=length(unlist(gt_gpcpop$table_body[1]))))
+  unlisted_gpcpop  <-  as.data.frame(matrix(unlist(gt_gpcpop$table_body)))
   write.csv(unlisted_gpcpop,paste0(here::here("output","tables"),"/gt_gpcpop_unlisted.csv"))
   
   aux<-as.data.frame(gt_ocpop$table_body); aux <- apply(aux,2,as.character)
