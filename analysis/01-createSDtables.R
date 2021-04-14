@@ -54,46 +54,6 @@ df_cleaned <- df_input %>%
   )
 
 
-if (flag_gtsummaryoperational){
-  ## Characteristics of those with any OC consultation, any GP consultation and overall population
-  desc_vars=c("sex","age","age_group","ethnicity","livingalone","region","imd_quin","rural_urban","care_home_type","oc_instance_had")
-  (gt_ocpop <- df_cleaned %>% select(desc_vars) %>% tbl_summary(by=oc_instance_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had OC**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any OC instance**"))
-  
-  desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","imd_quin","rural_urban","care_home_type","gp_consult_had")
-  (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
-  
-  # Use function from gt package to save table as neat png
-  #gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
-  #gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
-  
-  # steps to remove input data and strip further where possible
-  gt_gpcpop$inputs <- NULL
-  gt_gpcpop$call_list <- NULL
-  gt_gpcpop$meta_data <- NULL
-  gt_ocpop$inputs <- NULL
-  gt_ocpop$call_list <- NULL
-  gt_ocpop$meta_data <- NULL
-  
-  # Save dta with actual table data, but underlying data removed
-  save(gt_ocpop,file = file.path(here::here("output","tables"), "gt_ocpop.RData")) 
-  save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData")) 
-  
-  # Save unformatted for disclosiveness assessment
-  #unlisted_ocpop  <-  as.data.frame(matrix(unlist(gt_ocpop$table_body), nrow=length(unlist(gt_ocpop$table_body[1]))))
-  unlisted_ocpop <- as.data.frame(matrix(unlist(gt_ocpop$table_body)))
-  write.csv(unlisted_ocpop,paste0(here::here("output","tables"),"/gt_ocpop_unlisted.csv"))
-  #unlisted_gpcpop  <-  as.data.frame(matrix(unlist(gt_gpcpop$table_body), nrow=length(unlist(gt_gpcpop$table_body[1]))))
-  unlisted_gpcpop  <-  as.data.frame(matrix(unlist(gt_gpcpop$table_body)))
-  write.csv(unlisted_gpcpop,paste0(here::here("output","tables"),"/gt_gpcpop_unlisted.csv"))
-  
-  aux<-as.data.frame(gt_ocpop$table_body); aux <- apply(aux,2,as.character)
-  write.csv(aux,paste0(here::here("output","tables"),"/gt_ocpop_unformatted.csv"))
-  aux<-as.data.frame(gt_gpcpop$table_body);aux <- apply(aux,2,as.character)
-  write.csv(aux,paste0(here::here("output","tables"),"/gt_gpcpop_unformatted.csv"))  
-  
-}
-
-
 ## Redactor code (W.Hulme)
 redactor <- function(n, threshold){
   # given a vector of frequencies, this returns a boolean vector that is TRUE if
@@ -166,6 +126,51 @@ tb04_gpcr_agesex <- df_to_tbrates(df_cleaned %>% filter(sex %in% c("Male","Femal
 
 ## OC and GP rates by presence of disability
 #tb09_gpcr_imd <- df_to_tbrates(df_cleaned,c("imd_quin"),1,"tb09_gpcr_imd")
+
+
+if (flag_gtsummaryoperational){
+  ## Characteristics of those with any OC consultation, any GP consultation and overall population
+  desc_vars=c("sex","age","age_group","ethnicity","livingalone","region","imd_quin","rural_urban","care_home_type","oc_instance_had")
+  (gt_ocpop <- df_cleaned %>% select(desc_vars) %>% tbl_summary(by=oc_instance_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had OC**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any OC instance**"))
+  
+  desc_vars2=c("sex","age","age_group","ethnicity","livingalone","region","imd_quin","rural_urban","care_home_type","gp_consult_had")
+  (gt_gpcpop <- df_cleaned %>% select(desc_vars2) %>% tbl_summary(by=gp_consult_had) %>% add_p() %>% add_overall() %>% modify_header(label="**Characteristic | had GP consultation**") %>% modify_spanning_header(c("stat_1", "stat_2") ~ "**Had any GP consultation**"))
+  
+  # Use function from gt package to save table as neat png
+  #gt::gtsave(as_gt(gt_ocpop), file = file.path(here::here("output","tables"), "gt_ocpop.png"))
+  #gt::gtsave(as_gt(gt_gpcpop), file = file.path(here::here("output","tables"), "gt_gpcpop.png"))
+  
+  # steps to remove input data and strip further where possible
+  gt_gpcpop$inputs <- NULL
+  gt_gpcpop$call_list <- NULL
+  gt_gpcpop$meta_data <- NULL
+  gt_ocpop$inputs <- NULL
+  gt_ocpop$call_list <- NULL
+  gt_ocpop$meta_data <- NULL
+  
+  # Save dta with actual table data, but underlying data removed
+  save(gt_ocpop,file = file.path(here::here("output","tables"), "gt_ocpop.RData")) 
+  save(gt_gpcpop,file = file.path(here::here("output","tables"), "gt_gpcpop.RData")) 
+  
+  # Save unformatted for disclosiveness assessment
+  #unlisted_ocpop  <-  as.data.frame(matrix(unlist(gt_ocpop$table_body), nrow=length(unlist(gt_ocpop$table_body[1]))))
+  unlisted_ocpop <- as.data.frame(matrix(unlist(gt_ocpop$table_body)))
+  print(class(unlisted_ocpop))
+  write_csv(unlisted_ocpop,paste0(here::here("output","tables"),"/gt_ocpop_unlisted.csv"))
+  #unlisted_gpcpop  <-  as.data.frame(matrix(unlist(gt_gpcpop$table_body), nrow=length(unlist(gt_gpcpop$table_body[1]))))
+  unlisted_gpcpop  <-  as.data.frame(matrix(unlist(gt_gpcpop$table_body)))
+  print(class(unlisted_gpcpop))
+  write_csv(unlisted_gpcpop,paste0(here::here("output","tables"),"/gt_gpcpop_unlisted.csv"))
+  
+  aux<-as.data.frame(gt_ocpop$table_body); aux <- apply(aux,2,as.character)
+  print(class(aux))
+  write.csv(aux,paste0(here::here("output","tables"),"/gt_ocpop_unformatted.csv"))
+  aux<-as.data.frame(gt_gpcpop$table_body);aux <- apply(aux,2,as.character)
+  print(class(aux))
+  write.csv(aux,paste0(here::here("output","tables"),"/gt_gpcpop_unformatted.csv"))  
+  
+}
+
 
 ## close log connection
 sink()
