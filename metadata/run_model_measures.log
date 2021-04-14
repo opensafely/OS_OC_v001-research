@@ -1,0 +1,157 @@
+2021-04-14T14:15:34.702628200Z -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+2021-04-14T14:15:34.729202500Z v ggplot2 3.3.2     v purrr   0.3.4
+2021-04-14T14:15:34.729310800Z v tibble  3.0.3     v dplyr   1.0.2
+2021-04-14T14:15:34.729400300Z v tidyr   1.1.2     v stringr 1.4.0
+2021-04-14T14:15:34.729432000Z v readr   1.3.1     v forcats 0.5.0
+2021-04-14T14:15:35.648080600Z -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+2021-04-14T14:15:35.648181400Z x dplyr::filter() masks stats::filter()
+2021-04-14T14:15:35.648258200Z x dplyr::lag()    masks stats::lag()
+2021-04-14T14:15:35.720552900Z here() starts at /workspace
+2021-04-14T14:15:36.147241500Z Parsed with column specification:
+2021-04-14T14:15:36.147293300Z cols(
+2021-04-14T14:15:36.147322200Z   practice = col_double(),
+2021-04-14T14:15:36.147350100Z   gp_consult_count = col_double(),
+2021-04-14T14:15:36.147378300Z   population = col_double(),
+2021-04-14T14:15:36.147406000Z   value = col_double(),
+2021-04-14T14:15:36.147433900Z   date = col_date(format = "")
+2021-04-14T14:15:36.147461900Z )
+2021-04-14T14:15:36.217677900Z Parsed with column specification:
+2021-04-14T14:15:36.217737400Z cols(
+2021-04-14T14:15:36.217770800Z   practice = col_double(),
+2021-04-14T14:15:36.217801300Z   snomed_OCall = col_double(),
+2021-04-14T14:15:36.217830200Z   population = col_double(),
+2021-04-14T14:15:36.217858500Z   value = col_double(),
+2021-04-14T14:15:36.217886500Z   date = col_date(format = "")
+2021-04-14T14:15:36.217914700Z )
+2021-04-14T14:15:36.244198200Z Parsed with column specification:
+2021-04-14T14:15:36.244260100Z cols(
+2021-04-14T14:15:36.244292000Z   practice = col_double(),
+2021-04-14T14:15:36.244323400Z   snomed_1068881000000101 = col_double(),
+2021-04-14T14:15:36.244351300Z   population = col_double(),
+2021-04-14T14:15:36.244383900Z   value = col_double(),
+2021-04-14T14:15:36.244414400Z   date = col_date(format = "")
+2021-04-14T14:15:36.244444300Z )
+2021-04-14T14:15:36.263092100Z Parsed with column specification:
+2021-04-14T14:15:36.263151800Z cols(
+2021-04-14T14:15:36.263183300Z   practice = col_double(),
+2021-04-14T14:15:36.263214400Z   OC_OC10 = col_double(),
+2021-04-14T14:15:36.263244700Z   population = col_double(),
+2021-04-14T14:15:36.263274900Z   value = col_double(),
+2021-04-14T14:15:36.263305300Z   date = col_date(format = "")
+2021-04-14T14:15:36.263333700Z )
+2021-04-14T14:15:36.371242900Z Parsed with column specification:
+2021-04-14T14:15:36.371325100Z cols(
+2021-04-14T14:15:36.371411800Z   practice = col_double(),
+2021-04-14T14:15:36.371441900Z   OC_Y1f3b = col_double(),
+2021-04-14T14:15:36.372430800Z   population = col_double(),
+2021-04-14T14:15:36.400894800Z   value = col_double(),
+2021-04-14T14:15:36.400934300Z   date = col_date(format = "")
+2021-04-14T14:15:36.400967900Z )
+2021-04-14T14:15:36.420651700Z Parsed with column specification:
+2021-04-14T14:15:36.420705900Z cols(
+2021-04-14T14:15:36.420737700Z   practice = col_double(),
+2021-04-14T14:15:36.420797200Z   OC_Y22b4 = col_double(),
+2021-04-14T14:15:36.421091900Z   population = col_double(),
+2021-04-14T14:15:36.422546600Z   value = col_double(),
+2021-04-14T14:15:36.422578700Z   date = col_date(format = "")
+2021-04-14T14:15:36.422608800Z )
+2021-04-14T14:15:36.563532700Z Parsed with column specification:
+2021-04-14T14:15:36.563612000Z cols(
+2021-04-14T14:15:36.563643500Z   practice = col_double(),
+2021-04-14T14:15:36.563671400Z   OC_XaXcK = col_double(),
+2021-04-14T14:15:36.563701400Z   population = col_double(),
+2021-04-14T14:15:36.563737600Z   value = col_double(),
+2021-04-14T14:15:36.563768000Z   date = col_date(format = "")
+2021-04-14T14:15:36.563794500Z )
+2021-04-14T14:15:36.585358000Z Parsed with column specification:
+2021-04-14T14:15:36.585409800Z cols(
+2021-04-14T14:15:36.585440600Z   practice = col_double(),
+2021-04-14T14:15:36.585471300Z   OC_computerlink = col_double(),
+2021-04-14T14:15:36.585500600Z   population = col_double(),
+2021-04-14T14:15:36.586002300Z   value = col_double(),
+2021-04-14T14:15:36.586051700Z   date = col_date(format = "")
+2021-04-14T14:15:36.586083900Z )
+2021-04-14T14:15:36.686795800Z Parsed with column specification:
+2021-04-14T14:15:36.686849100Z cols(
+2021-04-14T14:15:36.686879000Z   practice = col_double(),
+2021-04-14T14:15:36.686902700Z   OC_alertreceived = col_double(),
+2021-04-14T14:15:36.686932100Z   population = col_double(),
+2021-04-14T14:15:36.686962100Z   value = col_double(),
+2021-04-14T14:15:36.686990500Z   date = col_date(format = "")
+2021-04-14T14:15:36.687027500Z )
+2021-04-14T14:15:36.959147100Z Note: Using an external vector in selections is ambiguous.
+2021-04-14T14:15:36.959222100Z i Use `all_of(measure_col)` instead of `measure_col` to silence this message.
+2021-04-14T14:15:36.959262100Z i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
+2021-04-14T14:15:36.959315200Z This message is displayed once per session.
+2021-04-14T14:15:40.559572300Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:45.603653500Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:46.068548100Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:46.621445800Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:47.198532100Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:47.526985400Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:47.907878800Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:48.164778700Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:48.485760400Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:48.701243200Z `summarise()` regrouping output by 'date' (override with `.groups` argument)
+2021-04-14T14:15:48.959493500Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:49.195414500Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:49.472822900Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:49.643166600Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:49.880019700Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:50.149526100Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:50.279402200Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:50.407237700Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:15:50.546937400Z `summarise()` ungrouping output (override with `.groups` argument)
+2021-04-14T14:16:04.537203800Z Warning messages:
+2021-04-14T14:16:04.537394700Z 1: Transformation introduced infinite values in continuous y-axis 
+2021-04-14T14:16:04.537430100Z 2: Transformation introduced infinite values in continuous y-axis 
+2021-04-14T14:16:04.537460900Z 3: Transformation introduced infinite values in continuous y-axis 
+2021-04-14T14:16:04.537491500Z 4: Transformation introduced infinite values in continuous y-axis 
+2021-04-14T14:16:04.537530300Z 5: Transformation introduced infinite values in continuous y-axis 
+2021-04-14T14:16:04.537563100Z 6: Transformation introduced infinite values in continuous y-axis 
+2021-04-14T14:16:04.537737600Z 7: Transformation introduced infinite values in continuous y-axis 
+2021-04-14T14:16:04.537809400Z 8: Transformation introduced infinite values in continuous y-axis 
+
+
+state: succeeded
+commit: none
+docker_image_id: sha256:c2fc5042bf86134947d83ad8e70bd926e2c1f91a263c6bfe87438ad783bec981
+exit_code: 0
+job_id: 5ybnsa77nro4o6tp
+run_by_user: None
+created_at: 2021-04-14T14:08:04Z
+started_at: 2021-04-14T14:15:28Z
+completed_at: 2021-04-14T14:16:11Z
+
+Completed successfully
+
+outputs:
+  logs/log-02-createtemporal.txt                                       - moderately_sensitive
+  output/plots/plot_logquantiles_OC_OC10_practice.svg                  - moderately_sensitive
+  output/plots/plot_logquantiles_OC_XaXcK_practice.svg                 - moderately_sensitive
+  output/plots/plot_logquantiles_OC_Y1f3b_practice.svg                 - moderately_sensitive
+  output/plots/plot_logquantiles_OC_Y22b4_practice.svg                 - moderately_sensitive
+  output/plots/plot_logquantiles_OC_alertreceived_practice.svg         - moderately_sensitive
+  output/plots/plot_logquantiles_OC_computerlink_practice.svg          - moderately_sensitive
+  output/plots/plot_logquantiles_gpc_practice.svg                      - moderately_sensitive
+  output/plots/plot_logquantiles_snomed_1068881000000101_practice.svg  - moderately_sensitive
+  output/plots/plot_logquantiles_snomed_OCall_practice.svg             - moderately_sensitive
+  output/plots/plot_overall_gpc_pop.svg                                - moderately_sensitive
+  output/plots/plot_quantiles_OC_OC10_practice.svg                     - moderately_sensitive
+  output/plots/plot_quantiles_OC_XaXcK_practice.svg                    - moderately_sensitive
+  output/plots/plot_quantiles_OC_Y1f3b_practice.svg                    - moderately_sensitive
+  output/plots/plot_quantiles_OC_Y22b4_practice.svg                    - moderately_sensitive
+  output/plots/plot_quantiles_OC_alertreceived_practice.svg            - moderately_sensitive
+  output/plots/plot_quantiles_OC_computerlink_practice.svg             - moderately_sensitive
+  output/plots/plot_quantiles_gpc_practice.svg                         - moderately_sensitive
+  output/plots/plot_quantiles_snomed_1068881000000101_practice.svg     - moderately_sensitive
+  output/plots/plot_quantiles_snomed_OCall_practice.svg                - moderately_sensitive
+  output/tables/redacted_measure_OC_OC10_practice.csv                  - moderately_sensitive
+  output/tables/redacted_measure_OC_XaXcK_practice.csv                 - moderately_sensitive
+  output/tables/redacted_measure_OC_Y1f3b_practice.csv                 - moderately_sensitive
+  output/tables/redacted_measure_OC_Y22b4_practice.csv                 - moderately_sensitive
+  output/tables/redacted_measure_OC_alertreceived_practice.csv         - moderately_sensitive
+  output/tables/redacted_measure_OC_computerlink_practice.csv          - moderately_sensitive
+  output/tables/redacted_measure_gpc_practice.csv                      - moderately_sensitive
+  output/tables/redacted_measure_snomed_1068881000000101_practice.csv  - moderately_sensitive
+  output/tables/redacted_measure_snomed_OCall_practice.csv             - moderately_sensitive

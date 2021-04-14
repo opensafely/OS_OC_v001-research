@@ -1,0 +1,18 @@
+2021-04-14T14:09:00.012152300Z 2021-04-14 14:09:00 [info     ] Generating cohort for study_definition_checksnomed in output [cohortextractor.cohortextractor] 
+2021-04-14T14:09:03.119427000Z 2021-04-14 14:09:03 [info     ] Successfully created cohort and covariates at output/input_checksnomed.csv [cohortextractor.cohortextractor] 
+
+
+state: succeeded
+commit: none
+docker_image_id: sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b
+exit_code: 0
+job_id: sjuaocrac7palk3t
+run_by_user: None
+created_at: 2021-04-14T14:08:04Z
+started_at: 2021-04-14T14:08:48Z
+completed_at: 2021-04-14T14:09:21Z
+
+Completed successfully
+
+outputs:
+  output/input_checksnomed.csv  - highly_sensitive

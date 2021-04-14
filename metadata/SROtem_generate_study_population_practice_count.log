@@ -1,0 +1,18 @@
+2021-04-14T14:16:05.884872700Z 2021-04-14 14:16:05 [info     ] Generating cohort for study_definition_practice_count in output [cohortextractor.cohortextractor] 
+2021-04-14T14:16:06.832235900Z 2021-04-14 14:16:06 [info     ] Successfully created cohort and covariates at output/input_practice_count.csv [cohortextractor.cohortextractor] 
+
+
+state: succeeded
+commit: none
+docker_image_id: sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b
+exit_code: 0
+job_id: wnv2batcxmz24kus
+run_by_user: None
+created_at: 2021-04-14T14:08:04Z
+started_at: 2021-04-14T14:16:00Z
+completed_at: 2021-04-14T14:16:25Z
+
+Completed successfully
+
+outputs:
+  output/input_practice_count.csv  - highly_sensitive

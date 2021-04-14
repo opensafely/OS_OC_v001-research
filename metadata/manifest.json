@@ -1,0 +1,2517 @@
+{
+  "files": {
+    "logs/log-01-createSDtables.txt": {
+      "created_by_action": "run_model",
+      "privacy_level": "moderately_sensitive"
+    },
+    "logs/log-02-createtemporal.txt": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "logs/log-03-createnattrends.txt": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "logs/log-0a-snomedcheck.txt": {
+      "created_by_action": "run_model_checksnomed",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/SRO-Notebook.html": {
+      "created_by_action": "generate_notebook",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/input_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_study_population",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_checksnomed.csv": {
+      "created_by_action": "generate_cohorts_checksnomed",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_ori.csv": {
+      "created_by_action": "generate_cohorts_main",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/input_practice_count.csv": {
+      "created_by_action": "SROtem_generate_study_population_practice_count",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measure_1_by_age_band.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_age_band_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_ethnicity_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_imd_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_region_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_by_sex_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_event_code_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_practice_only_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2019-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-01-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-02-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-03-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-04-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-05-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-06-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-07-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-08-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-09-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-10-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-11-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measure_1_total_2020-12-01.csv": {
+      "created_by_action": "SROtem_generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-01-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-02-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-03-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-04-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-05-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-06-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-07-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-08-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-09-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-10-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-11-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2019-12-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-01-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-02-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-03-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-04-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-05-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-06-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-07-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-08-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-09-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-10-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-11-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/input_measures_bycode_2020-12-01.csv": {
+      "created_by_action": "generate_cohorts_long",
+      "privacy_level": "highly_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_OC10_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_XaXcK_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y1f3b_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_Y22b4_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_alertreceived_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_OC_computerlink_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_gpc_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_1068881000000101_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325911000000101_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_325991000000105_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_978871000000104_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2019-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-01-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-02-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-03-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-04-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-05-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-06-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-07-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-08-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-09-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-10-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-11-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/measures/measure_snomed_OCall_practice_2020-12-01.csv": {
+      "created_by_action": "generate_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/patient_count.json": {
+      "created_by_action": "SROtem_get_patient_count",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_OC_OC10_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_OC_XaXcK_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_OC_Y1f3b_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_OC_Y22b4_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_OC_alertreceived_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_OC_computerlink_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_gpc_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_snomed_1068881000000101_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_logquantiles_snomed_OCall_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_overall_gpc_pop.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_OC_OC10_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_OC_XaXcK_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_OC_Y1f3b_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_OC_Y22b4_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_OC_alertreceived_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_OC_computerlink_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_gpc_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_snomed_1068881000000101_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/plot_quantiles_snomed_OCall_practice.svg": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig01_nattrends.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig02_nattrends.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig03_pracnatcoverage.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig04_pracbyregcoverage.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig05_ctv3pracnatcoverage.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig06_ctv3pracbyregcoverage.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig07_ctv3nattrends.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/plots/sc03_fig08_ctv3nattrends.svg": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/gt_gpcpop.html": {
+      "created_by_action": "run_model",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/gt_ocpop.html": {
+      "created_by_action": "run_model",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_OC_OC10_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_OC_XaXcK_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_OC_Y1f3b_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_OC_Y22b4_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_OC_alertreceived_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_OC_computerlink_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_gpc_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_snomed_1068881000000101_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/redacted_measure_snomed_OCall_practice.csv": {
+      "created_by_action": "run_model_measures",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/sc03_tb01_nattrends.csv": {
+      "created_by_action": "run_model_long",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/sc0a_snomedcheck_tallies.csv": {
+      "created_by_action": "run_model_checksnomed",
+      "privacy_level": "moderately_sensitive"
+    },
+    "output/tables/tb04_gpcr_agesex.csv": {
+      "created_by_action": "run_model",
+      "privacy_level": "moderately_sensitive"
+    }
+  },
+  "actions": {
+    "generate_cohorts_main": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b",
+      "job_id": "rezq5ap6iafjjgxm",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:08:53Z"
+    },
+    "generate_cohorts_checksnomed": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b",
+      "job_id": "sjuaocrac7palk3t",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:09:21Z"
+    },
+    "generate_cohorts_long": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b",
+      "job_id": "v7qdr4d4yloowmyn",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:09:46Z"
+    },
+    "run_model_checksnomed": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:c2fc5042bf86134947d83ad8e70bd926e2c1f91a263c6bfe87438ad783bec981",
+      "job_id": "7pflttz3kcsn4crf",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:10:37Z"
+    },
+    "run_model": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:c2fc5042bf86134947d83ad8e70bd926e2c1f91a263c6bfe87438ad783bec981",
+      "job_id": "ktrmmoqx27azqqpw",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:10:55Z"
+    },
+    "generate_measures": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b",
+      "job_id": "t2u3odaxgyvpvurq",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:11:01Z"
+    },
+    "SROtem_generate_study_population": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b",
+      "job_id": "g5ew5te5kd6kx3iy",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:15:29Z"
+    },
+    "run_model_long": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:c2fc5042bf86134947d83ad8e70bd926e2c1f91a263c6bfe87438ad783bec981",
+      "job_id": "fbvwuatykfuvibxa",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:16:04Z"
+    },
+    "run_model_measures": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:c2fc5042bf86134947d83ad8e70bd926e2c1f91a263c6bfe87438ad783bec981",
+      "job_id": "5ybnsa77nro4o6tp",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:16:11Z"
+    },
+    "SROtem_generate_study_population_practice_count": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b",
+      "job_id": "wnv2batcxmz24kus",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:16:25Z"
+    },
+    "SROtem_generate_measures": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b",
+      "job_id": "muxnicoewcdgbtas",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:17:08Z"
+    },
+    "SROtem_get_patient_count": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:72e495b05dc47accb4f4af77f226bdd4fdfc5368ec5c756b4eaf0ccef7f48c95",
+      "job_id": "fdsv7w4tzvv6xudv",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:18:27Z"
+    },
+    "generate_notebook": {
+      "state": "succeeded",
+      "commit": "none",
+      "docker_image_id": "sha256:620c43d69c1e9055e6f572f7b287c9770c823c71a2a59e6acf03d17c4c07ab0d",
+      "job_id": "jrguqlv2eyrad2am",
+      "run_by_user": null,
+      "created_at": "2021-04-14T14:08:04Z",
+      "completed_at": "2021-04-14T14:20:00Z"
+    }
+  },
+  "workspace": "OS_OC_v001-research",
+  "repo": "/Users/Louis/Documents/DataLab/OS_OC_v001-research"
+}

@@ -1,0 +1,88 @@
+2021-04-14T14:08:36.621531500Z 2021-04-14 14:08:36 [info     ] Generating cohort for study_definition_measures_bycode in output/measures [cohortextractor.cohortextractor] 
+2021-04-14T14:08:39.487050900Z 2021-04-14 14:08:39 [info     ] Setting index_date to 2020-12-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:08:45.047694300Z 2021-04-14 14:08:45 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-12-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:08:45.048220200Z 2021-04-14 14:08:45 [info     ] Setting index_date to 2020-11-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:08:47.242786800Z 2021-04-14 14:08:47 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-11-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:08:47.242868500Z 2021-04-14 14:08:47 [info     ] Setting index_date to 2020-10-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:08:48.558379800Z 2021-04-14 14:08:48 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-10-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:08:48.558449900Z 2021-04-14 14:08:48 [info     ] Setting index_date to 2020-09-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:08:49.333259000Z 2021-04-14 14:08:49 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-09-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:08:49.334121300Z 2021-04-14 14:08:49 [info     ] Setting index_date to 2020-08-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:08:51.669310100Z 2021-04-14 14:08:51 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-08-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:08:51.669418300Z 2021-04-14 14:08:51 [info     ] Setting index_date to 2020-07-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:08:57.095875600Z 2021-04-14 14:08:57 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-07-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:08:57.109680900Z 2021-04-14 14:08:57 [info     ] Setting index_date to 2020-06-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:00.154540800Z 2021-04-14 14:09:00 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-06-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:00.162689500Z 2021-04-14 14:09:00 [info     ] Setting index_date to 2020-05-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:01.738824300Z 2021-04-14 14:09:01 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-05-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:01.738894500Z 2021-04-14 14:09:01 [info     ] Setting index_date to 2020-04-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:06.652918100Z 2021-04-14 14:09:06 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-04-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:06.653004800Z 2021-04-14 14:09:06 [info     ] Setting index_date to 2020-03-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:08.457167200Z 2021-04-14 14:09:08 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-03-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:08.466971700Z 2021-04-14 14:09:08 [info     ] Setting index_date to 2020-02-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:09.925840100Z 2021-04-14 14:09:09 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-02-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:09.925963400Z 2021-04-14 14:09:09 [info     ] Setting index_date to 2020-01-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:11.479532100Z 2021-04-14 14:09:11 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2020-01-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:11.479614000Z 2021-04-14 14:09:11 [info     ] Setting index_date to 2019-12-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:12.888881300Z 2021-04-14 14:09:12 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-12-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:12.888969700Z 2021-04-14 14:09:12 [info     ] Setting index_date to 2019-11-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:13.803001100Z 2021-04-14 14:09:13 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-11-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:13.804002000Z 2021-04-14 14:09:13 [info     ] Setting index_date to 2019-10-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:14.797222800Z 2021-04-14 14:09:14 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-10-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:14.798078500Z 2021-04-14 14:09:14 [info     ] Setting index_date to 2019-09-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:15.799071100Z 2021-04-14 14:09:15 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-09-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:15.799616900Z 2021-04-14 14:09:15 [info     ] Setting index_date to 2019-08-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:17.478092400Z 2021-04-14 14:09:17 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-08-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:17.479926700Z 2021-04-14 14:09:17 [info     ] Setting index_date to 2019-07-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:21.549541600Z 2021-04-14 14:09:21 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-07-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:21.549612100Z 2021-04-14 14:09:21 [info     ] Setting index_date to 2019-06-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:24.664647600Z 2021-04-14 14:09:24 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-06-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:24.666498400Z 2021-04-14 14:09:24 [info     ] Setting index_date to 2019-05-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:26.931833500Z 2021-04-14 14:09:26 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-05-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:26.931922100Z 2021-04-14 14:09:26 [info     ] Setting index_date to 2019-04-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:28.762902800Z 2021-04-14 14:09:28 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-04-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:28.769793900Z 2021-04-14 14:09:28 [info     ] Setting index_date to 2019-03-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:31.312627800Z 2021-04-14 14:09:31 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-03-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:31.312747700Z 2021-04-14 14:09:31 [info     ] Setting index_date to 2019-02-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:32.891000700Z 2021-04-14 14:09:32 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-02-01.csv [cohortextractor.cohortextractor] 
+2021-04-14T14:09:32.902690500Z 2021-04-14 14:09:32 [info     ] Setting index_date to 2019-01-01 [cohortextractor.cohortextractor] 
+2021-04-14T14:09:34.394609900Z 2021-04-14 14:09:34 [info     ] Successfully created cohort and covariates at output/measures/input_measures_bycode_2019-01-01.csv [cohortextractor.cohortextractor] 
+
+
+state: succeeded
+commit: none
+docker_image_id: sha256:a8644f2122ebe4472dab45af2b99850f7511992d5557e29b9a654f2ea25bd82b
+exit_code: 0
+job_id: v7qdr4d4yloowmyn
+run_by_user: None
+created_at: 2021-04-14T14:08:04Z
+started_at: 2021-04-14T14:08:25Z
+completed_at: 2021-04-14T14:09:46Z
+
+Completed successfully
+
+outputs:
+  output/measures/input_measures_bycode_2019-01-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-02-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-03-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-04-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-05-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-06-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-07-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-08-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-09-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-10-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-11-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2019-12-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-01-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-02-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-03-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-04-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-05-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-06-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-07-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-08-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-09-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-10-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-11-01.csv  - highly_sensitive
+  output/measures/input_measures_bycode_2020-12-01.csv  - highly_sensitive
