@@ -99,6 +99,28 @@ actions:
   #      log: logs/log-02a-createredactedmeasure.txt
   #      red_measures: output/tables/redacted2a_*.csv
 
+### Weekly tallies to compare with OC/VC supplier data
+  generate_cohorts_weekly2021:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_weekly --index-date-range "2020-04-27 to 2021-03-22 by week" --output-dir=output/measures-week
+    outputs:
+      highly_sensitive:
+        cohort: output/measures-week/input_measures_weekly_*.csv
+
+  generate_measures_weekly2021:
+    run: cohortextractor:latest generate_measures --study-definition study_definition_measures_weekly --output-dir=output/measures-week
+    needs: [generate_cohorts_weekly2021]
+    outputs:
+      moderately_sensitive:
+        measure_csv: output/measures/measure_*.csv
+
+  run_model_weekly2021:
+    run: r:latest analysis/04-weekly2021.R
+    needs: [generate_cohorts_weekly2021,generate_measures_weekly2021]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-04-weekly2021.txt
+        tab1: output/tables/sc04-weeklynattrend.csv
+
 ### SNOMED check
   generate_cohorts_checksnomed:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_checksnomed
