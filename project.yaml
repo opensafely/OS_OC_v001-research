@@ -101,7 +101,7 @@ actions:
 
 ### Weekly tallies to compare with OC/VC supplier data
   generate_cohorts_weekly2021:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_weekly --index-date-range "2020-04-27 to 2021-03-22 by week" --output-dir=output/measures-week
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_weekly --index-date-range "2020-01-06 to 2021-03-22 by week" --output-dir=output/measures-week
     outputs:
       highly_sensitive:
         cohort: output/measures-week/input_measures_weekly_*.csv
@@ -111,7 +111,7 @@ actions:
     needs: [generate_cohorts_weekly2021]
     outputs:
       moderately_sensitive:
-        measure_csv: output/measures/measure_*.csv
+        measure_csv: output/measures-week/measure_*.csv
 
   run_model_weekly2021:
     run: r:latest analysis/04-weekly2021.R
