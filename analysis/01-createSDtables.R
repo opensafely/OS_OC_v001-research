@@ -143,7 +143,7 @@ df_to_tbrates <- function(mydf,myvars,flag_save=0,tb_name="latest",n_redact=6) {
 
 
 ## OC and GP rates per age and gender
-tb04_gpcr_agesex <- df_to_tbrates(df_cleaned %>% filter(age_group %in% c("Male","Female")),c("age_group","sex"),1,"tb04_gpcr_agesex")
+tb04_gpcr_agesex <- df_to_tbrates(df_cleaned %>% filter(sex %in% c("Male","Female")),c("age_group","sex"),1,"tb04_gpcr_agesex")
 
 ## OC and GP rates by ethnicity
 #tb05_gpcr_ethnicity <- df_to_tbrates(df_cleaned,c("ethnicity"),1,"tb05_gpcr_ethnicity")
