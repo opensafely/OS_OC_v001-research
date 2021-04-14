@@ -20,8 +20,8 @@ actions:
         #rdata1_unlist: output/tables/gt_ocpop_unlisted.csv
         #rdata2_unlist: output/tables/gt_gpcpop_unlisted.csv
         tb04: output/tables/tb04_gpcr_agesex.csv
-        gtpng1: output/tables/gt_ocpop.png
-        gtpng2: output/tables/gt_gpcpop.png
+        gtpng1: output/tables/gt_ocpop.html
+        gtpng2: output/tables/gt_gpcpop.html
         #rdata1: output/tables/gt_ocpop.RData
         #rdata2: output/tables/gt_gpcpop.RData        
         #rdata1_discl: output/tables/gt_ocpop_unformatted.csv
