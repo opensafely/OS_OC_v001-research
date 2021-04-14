@@ -17,17 +17,17 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/log-01-createSDtables.txt
-        rdata1_unlist: output/tables/gt_ocpop_unlisted.csv
-        rdata2_unlist: output/tables/gt_gpcpop_unlisted.csv
-        #gtpng1: output/tables/gt_ocpop.png
-        #gtpng2: output/tables/gt_gpcpop.png
+        #rdata1_unlist: output/tables/gt_ocpop_unlisted.csv
+        #rdata2_unlist: output/tables/gt_gpcpop_unlisted.csv
+        tb04: output/tables/tb04_gpcr_agesex.csv
+        gtpng1: output/tables/gt_ocpop.png
+        gtpng2: output/tables/gt_gpcpop.png
         #rdata1: output/tables/gt_ocpop.RData
         #rdata2: output/tables/gt_gpcpop.RData        
         #rdata1_discl: output/tables/gt_ocpop_unformatted.csv
         #rdata2_discl: output/tables/gt_gpcpop_unformatted.csv
         #tb01: output/tables/tb01_gpcr_region.csv
         #tb02: output/tables/tb02_gpcr_stp.csv # guidance says to not output identifiable regions
-        tb04: output/tables/tb04_gpcr_agesex.csv
         #tb05: output/tables/tb05_gpcr_ethnicity.csv
         #tb06: output/tables/tb06_gpcr_ruc.csv
         #tb07: output/tables/tb07_gpcr_care.csv

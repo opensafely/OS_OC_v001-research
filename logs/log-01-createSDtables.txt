@@ -31,4 +31,7 @@ Note: Using an external vector in selections is ambiguous.
 i Use `all_of(desc_vars2)` instead of `desc_vars2` to silence this message.
 i See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>.
 This message is displayed once per session.
+[1] "data.frame"
+[1] "data.frame"
+[1] "matrix" "array" 
 [1] "matrix" "array" 
