@@ -1,0 +1,32 @@
+# Table of contents
+
+* output
+  * output/plots
+    * [output/plots/plot_logquantiles_OC_OC10_practice.svg](output/plots/plot_logquantiles_OC_OC10_practice.svg)
+    * [output/plots/plot_logquantiles_snomed_1068881000000101_practice.svg](output/plots/plot_logquantiles_snomed_1068881000000101_practice.svg)
+    * [output/plots/plot_logquantiles_snomed_OCall_practice.svg](output/plots/plot_logquantiles_snomed_OCall_practice.svg)
+    * [output/plots/plot_quantiles_gpc_practice.svg](output/plots/plot_quantiles_gpc_practice.svg)
+    * [output/plots/plot_quantiles_OC_OC10_practice.svg](output/plots/plot_quantiles_OC_OC10_practice.svg)
+    * [output/plots/plot_quantiles_OC_XaXcK_practice.svg](output/plots/plot_quantiles_OC_XaXcK_practice.svg)
+    * [output/plots/plot_quantiles_OC_Y22b4_practice.svg](output/plots/plot_quantiles_OC_Y22b4_practice.svg)
+    * [output/plots/plot_quantiles_snomed_1068881000000101_practice.svg](output/plots/plot_quantiles_snomed_1068881000000101_practice.svg)
+    * [output/plots/plot_quantiles_snomed_OCall_practice.svg](output/plots/plot_quantiles_snomed_OCall_practice.svg)
+    * [output/plots/sc03_fig01_nattrends.svg](output/plots/sc03_fig01_nattrends.svg)
+    * [output/plots/sc03_fig02_nattrends.svg](output/plots/sc03_fig02_nattrends.svg)
+    * [output/plots/sc03_fig03_pracnatcoverage.svg](output/plots/sc03_fig03_pracnatcoverage.svg)
+    * [output/plots/sc03_fig04_pracbyregcoverage.svg](output/plots/sc03_fig04_pracbyregcoverage.svg)
+    * [output/plots/sc03_fig05_ctv3pracnatcoverage.svg](output/plots/sc03_fig05_ctv3pracnatcoverage.svg)
+    * [output/plots/sc03_fig06_ctv3pracbyregcoverage.svg](output/plots/sc03_fig06_ctv3pracbyregcoverage.svg)
+    * [output/plots/sc03_fig07_ctv3nattrends.svg](output/plots/sc03_fig07_ctv3nattrends.svg)
+    * [output/plots/sc03_fig08_ctv3nattrends.svg](output/plots/sc03_fig08_ctv3nattrends.svg)
+  * output/tables
+    * [output/tables/gt_gpcpop.html](output/tables/gt_gpcpop.html)
+    * [output/tables/gt_ocpop.html](output/tables/gt_ocpop.html)
+    * [output/tables/sc03_tb01_nattrends.csv](output/tables/sc03_tb01_nattrends.csv)
+    * [output/tables/sc04-weeklynattrend.csv](output/tables/sc04-weeklynattrend.csv)
+    * [output/tables/tb04_gpcr_agesex.csv](output/tables/tb04_gpcr_agesex.csv)
+    * [output/tables/tb05_gpcr_ethnicity.csv](output/tables/tb05_gpcr_ethnicity.csv)
+    * [output/tables/tb06_gpcr_ruc.csv](output/tables/tb06_gpcr_ruc.csv)
+    * [output/tables/tb07_gpcr_care.csv](output/tables/tb07_gpcr_care.csv)
+    * [output/tables/tb08_gpcr_dis.csv](output/tables/tb08_gpcr_dis.csv)
+    * [output/tables/tb09_gpcr_imd.csv](output/tables/tb09_gpcr_imd.csv)
