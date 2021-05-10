@@ -2,5 +2,35 @@ opensafely/solid-organ-transplantation/2020-04-10
 opensafely/ethnicity/2020-04-27
 opensafely/intellectual-disability-including-downs-syndrome/2020-08-27
 opensafely/learning-disabilities/2020-07-06
+opensafely/asthma-diagnosis/2020-04-15
+opensafely/hypertension/2020-04-28
+opensafely/osteoarthritis/2020-06-04
+opensafely/depression/2020-07-09
+opensafely/diabetes/2020-04-15
+opensafely/chronic-cardiac-disease/2020-04-08
+opensafely/other-heart-disease/2020-05-11
+opensafely/cancer-excluding-lung-and-haematological/2020-04-15
+opensafely/lung-cancer/2020-04-15
+opensafely/haematological-cancer/2020-04-15
+opensafely/atrial-fibrillation-clinical-finding/2020-07-09
+opensafely/stroke-updated/2020-06-02
+opensafely/chronic-respiratory-disease/2020-04-10
+opensafely/heart-failure/2020-05-05
+opensafely/chronic-kidney-disease/2020-04-14
+primis-covid19-vacc-uptake/sev_mental/v1
+opensafely/peripheral-arterial-disease/50e915d7
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
