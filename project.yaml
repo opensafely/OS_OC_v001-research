@@ -123,21 +123,21 @@ actions:
 
 #### Clinical history
   generate_cohorts_v2:
-      run: cohortextractor:latest generate_cohort --study-definition study_definition_v2
-      outputs:
-        highly_sensitive:
-          cohort: output/input_v2.csv
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_v2
+    outputs:
+      highly_sensitive:
+        cohort: output/input_v2.csv
 
   run_model_v2:
-      run: r:latest analysis/05-createClinicalConditiontables.R
-      needs: [generate_cohorts_v2]
-      outputs:
-        moderately_sensitive:
-          log: logs/log-05-createClinicalConditiontables.txt
-          gthtml1: output/tables/gt_econsult_pop_pre.html
-          gthtml2: output/tables/gt_econsult_pop_post.html
-          gthtml3: output/tables/gt_econsult_consultpop_pre.html
-          gthtml4: output/tables/gt_econsult_consultpop_post.html
+    run: r:latest analysis/05-createClinicalConditiontables.R
+    needs: [generate_cohorts_v2]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-05-createClinicalConditiontables.txt
+        gthtml1: output/tables/gt_econsult_pop_pre.html
+        gthtml2: output/tables/gt_econsult_pop_post.html
+        gthtml3: output/tables/gt_econsult_consultpop_pre.html
+        gthtml4: output/tables/gt_econsult_consultpop_post.html
 
 ### SNOMED check
   generate_cohorts_checksnomed:
