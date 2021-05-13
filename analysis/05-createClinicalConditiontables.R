@@ -37,6 +37,8 @@ if (!dir.exists(here::here("output", "tables"))){
 df_input <- read_csv(
   here::here("output", "input_v2.csv"))
 
+df_input <- df_input %>% rename(history_serious_mental_illness="serious_mental_illness_disease")
+
 df_cleaned <- df_input %>%
   mutate(age_group = factor(cut(age,breaks = c(0,18,40,50,60,70,80, Inf),dig.lab = 2)),
          sex = factor(case_when(sex=="F" ~ "Female",sex=="M" ~ "Male",TRUE ~ "Other/Unknown")),
@@ -75,7 +77,7 @@ if (flag_gtsummaryoperational){
   
   ## Characteristics of those with any OC consultation in the post period (pandemic), only for practices with any eConsultation coding recorded in that period
   study_pop_post <- df_cleaned %>% group_by(practice) %>% filter(sum(econsult_post_had,na.rm=T)!=0) %>% ungroup() %>%
-                      select(c(starts_with("history"),"econsult_pre_had","econsult_post_had"))
+                      select(c(starts_with("history"),"econsult_pre_had","econsult_post_had","gp_consult_pre_had","gp_consult_post_had"))
   
   (gt_econsult_pop_post <- study_pop_post %>%
       tbl_summary(by=econsult_post_had) %>% add_p() %>% add_overall() %>%
@@ -83,7 +85,7 @@ if (flag_gtsummaryoperational){
   
   ## Characteristics of those with any OC consultation in the post period (pandemic), only for practices with any eConsultation coding recorded in that period
   study_pop_pre <- df_cleaned %>% group_by(practice) %>% filter(sum(econsult_pre_had,na.rm=T)!=0) %>% ungroup() %>%
-    select(c(starts_with("history"),"econsult_pre_had","econsult_post_had"))
+    select(c(starts_with("history"),"econsult_pre_had","econsult_post_had","gp_consult_pre_had","gp_consult_post_had"))
   
   (gt_econsult_pop_pre <- study_pop_pre %>%
       tbl_summary(by=econsult_pre_had) %>% add_p() %>% add_overall() %>%
@@ -97,7 +99,7 @@ if (flag_gtsummaryoperational){
   ## Characteristics of those with any OC consultation in the post period (pandemic), only for practices with any eConsultation coding recorded in that period. Compare those with either GPconsult or eConsult in that period
   study_consultpop_post <- df_cleaned %>% group_by(practice) %>% filter(sum(econsult_post_had,na.rm=T)!=0) %>% ungroup() %>%
     filter(econsult_post_had>0|gp_consult_post_had>0) %>%
-    select(c(starts_with("history"),"econsult_pre_had","econsult_post_had","gp_consult_post_had"))
+    select(c(starts_with("history"),"econsult_pre_had","econsult_post_had","gp_consult_pre_had","gp_consult_post_had"))
   
   (gt_econsult_consultpop_post <- study_consultpop_post %>%
       tbl_summary(by=econsult_post_had) %>% add_p() %>% add_overall() %>%
@@ -106,7 +108,7 @@ if (flag_gtsummaryoperational){
   ## Characteristics of those with any OC consultation in the pre period (pre-pandemic), only for practices with any eConsultation coding recorded in that period. Compare those with either GPconsult or eConsult in that period
   study_consultpop_pre <- df_cleaned %>% group_by(practice) %>% filter(sum(econsult_pre_had,na.rm=T)!=0) %>% ungroup() %>%
     filter(econsult_pre_had>0|gp_consult_pre_had>0) %>%
-    select(c(starts_with("history"),"econsult_pre_had","econsult_post_had","gp_consult_pre_had"))
+    select(c(starts_with("history"),"econsult_pre_had","econsult_post_had","gp_consult_pre_had","gp_consult_post_had"))
   
   (gt_econsult_consultpop_pre <- study_consultpop_pre %>%
       tbl_summary(by=econsult_pre_had) %>% add_p() %>% add_overall() %>%
