@@ -85,7 +85,7 @@ print(head(df_input,0))
 rm(df_input_now)
 
 df_summary <- df_input %>%
-  group_by(month) %>%
+  group_by(month,practice) %>%
   summarise_at(vars(starts_with("snomed"),starts_with("OC"),population,gp_consult_count),~sum(.,na.rm=T))
 print("summary created -a")
 #df_summary_pop <- df_input %>% group_by(month) %>% summarise(OC_population=n_distinct(patient_id))
@@ -208,17 +208,27 @@ print("practice fig06 saved")
 #### National trends - snomed ####
 myprefix="snomed"
 df_summary_long <- df_summary %>% pivot_longer(cols=c("gp_consult_count",union(starts_with("snomed"),starts_with("oc"))),
-               names_to="Code",
-               values_to="Count")
+                                               names_to="Code",
+                                               values_to="Count")
 print("national calc 1")
-df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
+
+df_summary_long <- df_summary_long %>% ungroup() %>% group_by(month,Code) %>%
+  summarise(populationTPP=sum(population,na.rm=T),
+            practices=n_distinct(practice),
+            practicewithcode=sum(ifelse(Count>0,1,0)),
+            practicecoverage=practicewithcode/practices*100,
+            populationpracwithcode=sum(ifelse(Count>0,population,0)),
+            Count=sum(Count,na.rm=T))
+df_summary_long_s <- df_summary_long
+df_summary_long_s$Count <- redactor(df_summary_long_s$Count,threshold =6,e_overwrite=NA_integer_)
+df_summary_long_s <- df_summary_long_s %>% mutate(populationpracwithcode=ifelse(practicewithcode==1,NA_integer_,populationpracwithcode)) 
 print("national calc2")
-write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
+write.csv(df_summary_long_s,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
 print("national calc saved")
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 df_summary_long$month <- as.Date(df_summary_long$month)
-df_summary_long <- df_summary_long %>% mutate(rate_per_1000=Count/population*1000)
+df_summary_long <- df_summary_long %>% mutate(rate_per_1000=Count/populationTPP*1000)
 ggplot(data=df_summary_long %>% filter(Code=="gp_consult_count"|substr(Code,1,nchar(myprefix))==myprefix),aes(x=month,y=rate_per_1000,group=Code)) +
   geom_bar(stat="identity",fill="#56B4E9") +
   facet_wrap(~Code,nrow=4,scales="free_y") +
@@ -245,18 +255,6 @@ print("national fig02 saved")
 
 #### National trends - ctv3 ####
 myprefix="OC"
-df_summary_long <- df_summary %>% pivot_longer(cols=c("gp_consult_count",union(starts_with("snomed"),starts_with("oc"))),
-                                               names_to="Code",
-                                               values_to="Count")
-print("national calc 1")
-df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
-print("national calc2")
-write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
-print("national calc saved")
-# Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
-
-df_summary_long$month <- as.Date(df_summary_long$month)
-df_summary_long <- df_summary_long %>% mutate(rate_per_1000=Count/population*1000)
 ggplot(data=df_summary_long %>% filter(Code=="gp_consult_count"|substr(Code,1,nchar(myprefix))==myprefix),aes(x=month,y=rate_per_1000,group=Code)) +
   geom_bar(stat="identity",fill="#56B4E9") +
   facet_wrap(~Code,nrow=4,scales="free_y") +
