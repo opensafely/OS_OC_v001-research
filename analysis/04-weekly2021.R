@@ -65,6 +65,12 @@ df_now <- read_csv(here::here("output","measures-week","measure_snomed_eConsult_
 
 df_input <- df_input %>% bind_rows(df_now)
 
+df_now <- read_csv(here::here("output","measures-week","measure_snomed_multimedia_rate.csv")) %>%
+  mutate(Code="snomed_multimedia") %>%
+  rename(Count=snomed_multimedia)
+
+df_input <- df_input %>% bind_rows(df_now)
+
 df_now <- read_csv(here::here("output","measures-week","measure_snomed_OCall_all.csv"))%>%
   mutate(Code="snomed_OCall") %>%
   rename(Count=snomed_OCall)

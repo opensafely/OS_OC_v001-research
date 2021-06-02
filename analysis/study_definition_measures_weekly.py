@@ -67,6 +67,15 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
+    snomed_multimedia=patients.with_these_clinical_events(
+        ocsnomed_978871000000104,        
+        between = ["index_date", "index_date + 6 days"],    
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.5,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
     snomed_OCall=patients.with_these_clinical_events(
         oc_local_codes_snomed,        
         between = ["index_date", "index_date + 6 days"],    
@@ -110,6 +119,12 @@ measures = [
     Measure(
         id="snomed_eConsult_rate",
         numerator="snomed_eConsult",
+        denominator="population",
+        group_by="region"
+    ),
+    Measure(
+        id="snomed_multimedia_rate",
+        numerator="snomed_multimedia",
         denominator="population",
         group_by="region"
     ),
