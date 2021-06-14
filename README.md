@@ -19,9 +19,10 @@ Suggestion to for now restrict analysis to a simple, broad sociodemographic char
 
 The overview brief is in the [Documentation folder](./docs).
 
-This is the code and configuration for our paper, _name goes here_
+This is the code and configuration for our paper, _Primary care coding activity related to online consultations
+Exploratory analysis using OpenSAFELY_
 
-* The final paper is [here](TBA)
+* The draft paper is [here](./docs), as _docs/Online consultations_v0.4_07May21_DRAFT_internal(1).pdf_.
 * Raw model outputs, including charts, crosstabs, etc, are in `released_analysis_results/`
 * If you are interested in how we defined our variables, take a look at the [study definition](analysis/study_definition.py); this is written in `python`, but non-programmers should be able to understand what is going on there
 * If you are interested in how we defined our code lists, look in the [codelists folder](./codelists/).
