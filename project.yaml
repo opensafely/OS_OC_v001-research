@@ -37,8 +37,8 @@ actions:
       moderately_sensitive:
         log: logs/log-EMIS02-createtemporal.txt
         red_measures: output/tables/redacted_*.csv
-        figquant: output/plots/EMISplot_quantiles_*_practice.svg
-        figlogquant: output/plots/EMISplot_logquantiles_*_practice.svg
+        figquant: output/plots/emisplot_quantiles_*_practice.svg
+        figlogquant: output/plots/emisplot_logquantiles_*_practice.svg
 
 ### Weekly tallies to compare with OC/VC supplier data. https://docs.opensafely.org/en/latest/measures/
   generate_cohorts_weekly2021_emis:
