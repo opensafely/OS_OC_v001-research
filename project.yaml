@@ -30,6 +30,15 @@ actions:
         fig02: output/plots/EMISsc03_fig02_absnattrends.svg
         fig03: output/plots/EMISsc03_fig03_pracnatcoverage.svg
 
+  run_model_measures_emis:
+    run: r:latest analysis/EMIS02-createtemporal.R
+    needs: [generate_cohorts_long_emis,generate_measures_emis]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-EMIS02-createtemporal.txt
+        red_measures: output/tables/redacted_*.csv
+        figquant: output/plots/EMISplot_quantiles_*_practice.svg
+        figlogquant: output/plots/EMISplot_logquantiles_*_practice.svg
 
 ### Weekly tallies to compare with OC/VC supplier data. https://docs.opensafely.org/en/latest/measures/
   generate_cohorts_weekly2021_emis:
