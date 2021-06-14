@@ -5,188 +5,50 @@ expectations:
 
 actions:
 
-  generate_cohorts_main:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_ori
+### Monthly tallies.
+  generate_cohorts_long_emis:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_EMISmeasures_bycode --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output/emismeasures
     outputs:
       highly_sensitive:
-        cohort: output/input_ori.csv
+        cohort: output/emismeasures/input_EMISmeasures_bycode_*.csv
 
-  run_model:
-    run: r:latest analysis/01-createSDtables.R
-    needs: [generate_cohorts_main]
+  generate_measures_emis:
+    run: cohortextractor:latest generate_measures --study-definition study_definition_EMISmeasures_bycode --output-dir=output/emismeasures
+    needs: [generate_cohorts_long_emis]
     outputs:
       moderately_sensitive:
-        log: logs/log-01-createSDtables.txt
-        #rdata1_unlist: output/tables/gt_ocpop_unlisted.csv
-        #rdata2_unlist: output/tables/gt_gpcpop_unlisted.csv
-        tb04: output/tables/tb04_gpcr_agesex.csv
-        gtpng1: output/tables/gt_ocpop.html
-        gtpng2: output/tables/gt_gpcpop.html
-        #rdata1: output/tables/gt_ocpop.RData
-        #rdata2: output/tables/gt_gpcpop.RData        
-        #rdata1_discl: output/tables/gt_ocpop_unformatted.csv
-        #rdata2_discl: output/tables/gt_gpcpop_unformatted.csv
-        #tb01: output/tables/tb01_gpcr_region.csv
-        #tb02: output/tables/tb02_gpcr_stp.csv # guidance says to not output identifiable regions
-        #tb05: output/tables/tb05_gpcr_ethnicity.csv
-        #tb06: output/tables/tb06_gpcr_ruc.csv
-        #tb07: output/tables/tb07_gpcr_care.csv
-        #tb08: output/tables/tb08_gpcr_dis.csv
-        #tb09: output/tables/tb09_gpcr_imd.csv
+        measure_csv: output/emismeasures/measure_*.csv
 
-  # https://docs.opensafely.org/en/latest/measures/
-  generate_cohorts_long:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_bycode --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output/measures
-    outputs:
-      highly_sensitive:
-        cohort: output/measures/input_measures_bycode_*.csv
-
-  generate_measures:
-    run: cohortextractor:latest generate_measures --study-definition study_definition_measures_bycode --output-dir=output/measures
-    needs: [generate_cohorts_long]
+  run_model_long_emis:
+    run: r:latest analysis/EMIS03-createnattrends_codes.R
+    needs: [generate_cohorts_long_emis]
     outputs:
       moderately_sensitive:
-        measure_csv: output/measures/measure_*.csv
-
-  run_model_long:
-    run: r:latest analysis/03-createnattrends_codes.R
-    needs: [generate_cohorts_long]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-03-createnattrends.txt
+        log: logs/log-EMIS03-createnattrends.txt
         tb01: output/tables/sc03_tb01_nattrends.csv
-        fig01: output/plots/sc03_fig01_nattrends.svg
-        fig02: output/plots/sc03_fig02_nattrends.svg
-        fig03: output/plots/sc03_fig03_pracnatcoverage.svg
-        fig04: output/plots/sc03_fig04_pracbyregcoverage.svg
-        fig07: output/plots/sc03_fig07_ctv3nattrends.svg
-        fig08: output/plots/sc03_fig08_ctv3nattrends.svg
-        fig05: output/plots/sc03_fig05_ctv3pracnatcoverage.svg
-        fig06: output/plots/sc03_fig06_ctv3pracbyregcoverage.svg
+        fig01: output/plots/EMISsc03_fig01_nattrends.svg
+        fig02: output/plots/EMISsc03_fig02_nattrends.svg
+        fig03: output/plots/EMISsc03_fig03_pracnatcoverage.svg
 
-  run_model_measures:
-    run: r:latest analysis/02-createtemporal.R
-    needs: [generate_cohorts_long,generate_measures]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-02-createtemporal.txt
-        red_measures: output/tables/redacted_*.csv
-        #tb01: output/measures_gpc_pop.csv # redundant into. omit output
-        fig01: output/plots/plot_overall_gpc_pop.svg
-        #figall: output/plots/plot_each_*_practice.svg
-        figquant: output/plots/plot_quantiles_*_practice.svg
-        figlogquant: output/plots/plot_logquantiles_*_practice.svg
 
- 
-
-#  run_model_measuresDEBUG:
-#    run: r:latest analysis/02-createtemporal_debug.R
-#    needs: [generate_cohorts_long,generate_measures]
-#    outputs:
-#      moderately_sensitive:
-#        log: logs/log-02-createtemporal-debug.txt
-#        #tb01: output/measures_gpc_pop_debug.csv
-#        #fig01: output/plots/plot_overall_gpc_pop_debug.svg
-#        #figall: output/plots/plot_each_debug_*_practice.svg
-#        #figquant: output/plots/plot_quantiles_debug_*_practice.svg
-#        #figquant2: output/plots/plot_quantiles2_debug_*_practice.svg
-
-  #run_model_redactedmeasures:
-  #  run: r:latest analysis/02a-createredactedmeasure.R
-  #  needs: [generate_cohorts_long,generate_measures]
-  #  outputs:
-  #    moderately_sensitive:
-  #      log: logs/log-02a-createredactedmeasure.txt
-  #      red_measures: output/tables/redacted2a_*.csv
-
-### Weekly tallies to compare with OC/VC supplier data
-  generate_cohorts_weekly2021:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_weekly --index-date-range "2020-01-06 to 2021-03-22 by week" --output-dir=output/measures-week
+### Weekly tallies to compare with OC/VC supplier data. https://docs.opensafely.org/en/latest/measures/
+  generate_cohorts_weekly2021_emis:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_EMISmeasures_weekly --index-date-range "2020-01-06 to 2021-05-31 by week" --output-dir=output/emismeasures-weekly
     outputs:
       highly_sensitive:
-        cohort: output/measures-week/input_measures_weekly_*.csv
+        cohort: output/emismeasures-weekly/input_EMISmeasures_weekly_*.csv
 
-  generate_measures_weekly2021:
-    run: cohortextractor:latest generate_measures --study-definition study_definition_measures_weekly --output-dir=output/measures-week
-    needs: [generate_cohorts_weekly2021]
+  generate_measures_weekly2021_emis:
+    run: cohortextractor:latest generate_measures --study-definition study_definition_EMISmeasures_weekly --output-dir=output/emismeasures-weekly
+    needs: [generate_cohorts_weekly2021_emis]
     outputs:
       moderately_sensitive:
-        measure_csv: output/measures-week/measure_*.csv
+        measure_csv: output/emismeasures-weekly/measure_*.csv
 
-  run_model_weekly2021:
+  run_model_weekly2021_emis:
     run: r:latest analysis/04-weekly2021.R
-    needs: [generate_cohorts_weekly2021,generate_measures_weekly2021]
+    needs: [generate_cohorts_weekly2021_emis,generate_measures_weekly2021_emis]
     outputs:
       moderately_sensitive:
-        log: logs/log-04-weekly2021.txt
-        tab1: output/tables/sc04-weeklynattrend.csv
-
-#### Clinical history
-  generate_cohorts_v2:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_v2
-    outputs:
-      highly_sensitive:
-        cohort: output/input_v2.csv
-
-  run_model_v2:
-    run: r:latest analysis/05-createClinicalConditiontables.R
-    needs: [generate_cohorts_v2]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-05-createClinicalConditiontables.txt
-        gthtml1: output/tables/gt_econsult_pop_pre.html
-        gthtml2: output/tables/gt_econsult_pop_post.html
-        gthtml3: output/tables/gt_econsult_consultpop_pre.html
-        gthtml4: output/tables/gt_econsult_consultpop_post.html
-
-### SNOMED check
-  generate_cohorts_checksnomed:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_checksnomed
-    outputs:
-      highly_sensitive:
-        cohort: output/input_checksnomed.csv
-
-
-  run_model_checksnomed:
-    run: r:latest analysis/0a-snomedcheck.R
-    needs: [generate_cohorts_checksnomed]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-0a-snomedcheck.txt
-        tab1: output/tables/sc0a_snomedcheck_tallies.csv
-
-### SRO template pipeline
-  SROtem_generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output
-    outputs:
-      highly_sensitive:
-        cohort: output/input_*.csv
-
-  SROtem_generate_study_population_practice_count:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_practice_count --output-dir=output
-    outputs:
-      highly_sensitive:
-        cohort: output/input_practice_count.csv
-
-  
-  SROtem_generate_measures:
-      run: cohortextractor:latest generate_measures --study-definition study_definition --output-dir=output
-      needs: [SROtem_generate_study_population]
-      outputs:
-        moderately_sensitive:
-          measure_csv: output/measure_*.csv
-
-  SROtem_get_patient_count:
-    run: python:latest python analysis/SROtem_get_patients_counts.py
-    needs: [SROtem_generate_study_population]
-    outputs:
-      moderately_sensitive:
-        text: output/patient_count.json
-
-
-  generate_notebook:
-    run: jupyter:latest jupyter nbconvert /workspace/notebooks/SRO-Notebook.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
-    needs: [SROtem_generate_measures, SROtem_generate_study_population_practice_count]
-    outputs:
-      moderately_sensitive:
-        notebook: output/SRO-Notebook.html
+        log: logs/log-EMIS04-weekly2021.txt
+        tab1: output/tables/EMISsc04-weeklynattrend.csv

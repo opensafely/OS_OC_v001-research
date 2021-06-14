@@ -1,158 +1,204 @@
 [1] "directories cleared"
 [1] "Libraries loaded. Query dates established."
 [1] "Redactor defined"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-01-01.csv"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-02-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-01-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-02-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-03-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-03-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-04-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-04-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-05-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-05-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-06-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-06-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-07-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-07-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-08-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-08-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-09-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-09-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-10-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-10-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-11-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-11-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2019-12-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2019-12-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-01-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-01-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-02-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-02-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-03-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-03-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-04-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-04-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-05-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-05-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-06-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-06-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-07-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-07-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-08-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-08-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-09-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-09-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-10-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-10-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-11-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-11-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "C:/Users/marti/OneDrive/Documents/GitHub/OS_OC_v001-research/output/measures/input_measures_bycode_2020-12-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_measures_bycode_2020-12-01.csv"
 [1] "loaded"
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-[1] "practice calc 1"
-[1] "practice calc 2"
-[1] "practice calc 3"
-[1] "practice calc 4"
-[1] "practice calc 5"
-[1] "practice fig03 created"
-[1] "practice fig03 saved"
-[1] "practice fig04 created"
-[1] "practice fig04 saved"
-[1] "practice calc 1"
-[1] "practice calc 2"
-[1] "practice calc 3"
-[1] "practice calc 4"
-[1] "practice calc 5"
-[1] "practice fig05 created"
-[1] "practice fig05 saved"
-[1] "practice fig06 created"
-[1] "practice fig06 saved"
-[1] "national calc 1"
-[1] "national calc2"
-[1] "national calc saved"
-NULL
-  [1]  24  26  27  29  31  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63
- [37]  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99
- [73] 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135
-[109] 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 164 167 169 175  30 163 177  19 165
-[145] 168 171 182   8  21 166 173 194  25  28  32 170 172 180  23 178 176  13  18 179  15 174 185  22
-[1] "national calc 1"
-[1] "national calc2"
-[1] "national calc saved"
-[1] "national fig01 created"
-[1] "national fig01 saved"
-[1] "national fig07 created"
-[1] "national fig07 saved"
-[1] "national fig08 created"
-[1] "national fig08 saved"
+  practice gp_consult_count OC_OC10 OC_Y1f3b OC_XUkjp OC_XaXcK OC_XVCTw OC_XUuWQ OC_XV1pT
+1  3683823           592466  299804   299724   300045   300188   300068   299961   299873
+  OC_computerlink OC_alertreceived OC_Y22b4 snomed_OCall snomed_1068881000000101
+1          299996           300092   300122       300094                   60065
+  snomed_1090371000000106 snomed_185320006 snomed_325871000000103 snomed_325901000000103
+1                   60055            60133                  60053                  60400
+  snomed_325911000000101 snomed_325951000000102 snomed_325981000000108 snomed_325991000000105
+1                  60245                  60116                  60034                  60028
+  snomed_384131000000101 snomed_401271004 snomed_448337001 snomed_699249000 snomed_719407002
+1                  60027            60182            59989            60077            60166
+  snomed_763184009 snomed_854891000000104 snomed_868184008 snomed_978871000000104 population
+1            60062                  60180            60131                  60146     240000
+    region              stp               practice     gp_consult_count    OC_OC10     
+ Length:37060       Length:37060       Min.   :  1.0   Min.   : -3.00   Min.   : 0.00  
+ Class :character   Class :character   1st Qu.: 75.0   1st Qu.:  5.00   1st Qu.: 3.00  
+ Mode  :character   Mode  :character   Median : 99.0   Median : 12.00   Median : 6.00  
+                                       Mean   : 99.4   Mean   : 15.99   Mean   : 8.09  
+                                       3rd Qu.:124.0   3rd Qu.: 23.00   3rd Qu.:12.00  
+                                       Max.   :197.0   Max.   :100.00   Max.   :57.00  
+    OC_Y1f3b         OC_XUkjp         OC_XaXcK       OC_XVCTw         OC_XUuWQ     
+ Min.   : 0.000   Min.   : 0.000   Min.   : 0.0   Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.0   1st Qu.: 3.000   1st Qu.: 3.000  
+ Median : 6.000   Median : 6.000   Median : 6.0   Median : 6.000   Median : 6.000  
+ Mean   : 8.088   Mean   : 8.096   Mean   : 8.1   Mean   : 8.097   Mean   : 8.094  
+ 3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.0   3rd Qu.:12.000   3rd Qu.:12.000  
+ Max.   :51.000   Max.   :54.000   Max.   :55.0   Max.   :58.000   Max.   :51.000  
+    OC_XV1pT      OC_computerlink  OC_alertreceived    OC_Y22b4       snomed_OCall   
+ Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 3.000   1st Qu.: 2.000   1st Qu.: 3.000   1st Qu.: 3.000   1st Qu.: 3.000  
+ Median : 6.000   Median : 6.000   Median : 6.000   Median : 6.000   Median : 6.000  
+ Mean   : 8.092   Mean   : 8.095   Mean   : 8.097   Mean   : 8.098   Mean   : 8.098  
+ 3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000   3rd Qu.:12.000  
+ Max.   :53.000   Max.   :58.000   Max.   :55.000   Max.   :61.000   Max.   :54.000  
+ snomed_1068881000000101 snomed_1090371000000106 snomed_185320006 snomed_325871000000103
+ Min.   : 0.000          Min.   : 0.00           Min.   : 0.000   Min.   : 0.00         
+ 1st Qu.: 0.000          1st Qu.: 0.00           1st Qu.: 0.000   1st Qu.: 0.00         
+ Median : 0.000          Median : 0.00           Median : 0.000   Median : 0.00         
+ Mean   : 1.621          Mean   : 1.62           Mean   : 1.623   Mean   : 1.62         
+ 3rd Qu.: 3.000          3rd Qu.: 3.00           3rd Qu.: 3.000   3rd Qu.: 3.00         
+ Max.   :20.000          Max.   :21.00           Max.   :22.000   Max.   :21.00         
+ snomed_325901000000103 snomed_325911000000101 snomed_325951000000102 snomed_325981000000108
+ Min.   :-1.00          Min.   : 0.000         Min.   : 0.000         Min.   : 0.00         
+ 1st Qu.: 0.00          1st Qu.: 0.000         1st Qu.: 0.000         1st Qu.: 0.00         
+ Median : 0.00          Median : 0.000         Median : 0.000         Median : 0.00         
+ Mean   : 1.63          Mean   : 1.626         Mean   : 1.622         Mean   : 1.62         
+ 3rd Qu.: 3.00          3rd Qu.: 3.000         3rd Qu.: 3.000         3rd Qu.: 3.00         
+ Max.   :23.00          Max.   :26.000         Max.   :22.000         Max.   :21.00         
+ snomed_325991000000105 snomed_384131000000101 snomed_401271004 snomed_448337001
+ Min.   :-1.00          Min.   : 0.00          Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 0.00          1st Qu.: 0.00          1st Qu.: 0.000   1st Qu.: 0.000  
+ Median : 0.00          Median : 0.00          Median : 0.000   Median : 0.000  
+ Mean   : 1.62          Mean   : 1.62          Mean   : 1.624   Mean   : 1.619  
+ 3rd Qu.: 3.00          3rd Qu.: 3.00          3rd Qu.: 3.000   3rd Qu.: 3.000  
+ Max.   :30.00          Max.   :24.00          Max.   :27.000   Max.   :22.000  
+ snomed_699249000 snomed_719407002 snomed_763184009 snomed_854891000000104 snomed_868184008
+ Min.   : 0.000   Min.   :-1.000   Min.   : 0.000   Min.   :-1.000         Min.   : 0.000  
+ 1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000         1st Qu.: 0.000  
+ Median : 0.000   Median : 0.000   Median : 0.000   Median : 0.000         Median : 0.000  
+ Mean   : 1.621   Mean   : 1.623   Mean   : 1.621   Mean   : 1.624         Mean   : 1.623  
+ 3rd Qu.: 3.000   3rd Qu.: 3.000   3rd Qu.: 3.000   3rd Qu.: 3.000         3rd Qu.: 3.000  
+ Max.   :21.000   Max.   :23.000   Max.   :25.000   Max.   :22.000         Max.   :23.000  
+ snomed_978871000000104   population        month          
+ Min.   : 0.000         Min.   : 1.000   Length:37060      
+ 1st Qu.: 0.000         1st Qu.: 2.000   Class :character  
+ Median : 0.000         Median : 5.000   Mode  :character  
+ Mean   : 1.623         Mean   : 6.476                     
+ 3rd Qu.: 3.000         3rd Qu.: 9.000                     
+ Max.   :23.000         Max.   :33.000                     
+ [1] region                  stp                     practice               
+ [4] gp_consult_count        OC_OC10                 OC_Y1f3b               
+ [7] OC_XUkjp                OC_XaXcK                OC_XVCTw               
+[10] OC_XUuWQ                OC_XV1pT                OC_computerlink        
+[13] OC_alertreceived        OC_Y22b4                snomed_OCall           
+[16] snomed_1068881000000101 snomed_1090371000000106 snomed_185320006       
+[19] snomed_325871000000103  snomed_325901000000103  snomed_325911000000101 
+[22] snomed_325951000000102  snomed_325981000000108  snomed_325991000000105 
+[25] snomed_384131000000101  snomed_401271004        snomed_448337001       
+[28] snomed_699249000        snomed_719407002        snomed_763184009       
+[31] snomed_854891000000104  snomed_868184008        snomed_978871000000104 
+[34] population              month                  
+<0 rows> (or 0-length row.names)
+[1] "summary created -a"
 [1] "practice calc 1"
 [1] "practice calc 2"
 [1] "practice calc 3"
