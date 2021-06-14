@@ -1,0 +1,193 @@
+[1] "directories cleared"
+[1] "Libraries loaded. Query dates established."
+[1] "Redactor defined"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/measures/input_EMISmeasures_bycode_2019-01-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-02-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-03-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-04-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-05-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-06-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-07-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-08-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-09-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-10-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-11-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2019-12-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-01-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-02-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-03-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-04-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-05-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-06-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-07-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-08-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-09-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-10-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-11-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Documents/GitHub/EMIS_OS_OC_v001-research/output/emismeasures/input_EMISmeasures_bycode_2020-12-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+  practice snomed_OCall snomed_1068881000000101 snomed_1090371000000106 snomed_185320006 snomed_325871000000103 snomed_325901000000103
+1   326807       300143                   60010                   59998            60068                  59508                  60045
+  snomed_325911000000101 snomed_325951000000102 snomed_325981000000108 snomed_325991000000105 snomed_384131000000101 snomed_401271004
+1                  60167                  60087                  60184                  60079                  59866            60385
+  snomed_448337001 snomed_699249000 snomed_719407002 snomed_763184009 snomed_854891000000104 snomed_868184008 snomed_978871000000104 population
+1            59903            60027            60378            60073                  59851            60039                  60221     240000
+    practice       snomed_OCall    snomed_1068881000000101 snomed_1090371000000106 snomed_185320006 snomed_325871000000103 snomed_325901000000103
+ Min.   : 11.00   Min.   :  0.00   Min.   : 0.00           Min.   : 0.00           Min.   : 0.00    Min.   : 0.00          Min.   : 0.00         
+ 1st Qu.: 66.00   1st Qu.:  9.00   1st Qu.: 2.00           1st Qu.: 1.00           1st Qu.: 2.00    1st Qu.: 2.00          1st Qu.: 1.00         
+ Median :100.00   Median : 57.00   Median :11.00           Median :11.00           Median :11.00    Median :11.00          Median :11.00         
+ Mean   : 99.73   Mean   : 91.59   Mean   :18.31           Mean   :18.31           Mean   :18.33    Mean   :18.16          Mean   :18.32         
+ 3rd Qu.:134.00   3rd Qu.:170.00   3rd Qu.:32.00           3rd Qu.:33.00           3rd Qu.:33.00    3rd Qu.:32.00          3rd Qu.:33.00         
+ Max.   :188.00   Max.   :309.00   Max.   :96.00           Max.   :81.00           Max.   :88.00    Max.   :93.00          Max.   :97.00         
+ snomed_325911000000101 snomed_325951000000102 snomed_325981000000108 snomed_325991000000105 snomed_384131000000101 snomed_401271004
+ Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00   
+ 1st Qu.: 1.00          1st Qu.: 2.00          1st Qu.: 2.00          1st Qu.: 1.00          1st Qu.: 2.00          1st Qu.: 2.00   
+ Median :11.00          Median :11.00          Median :11.00          Median :11.00          Median :11.00          Median :11.00   
+ Mean   :18.36          Mean   :18.34          Mean   :18.37          Mean   :18.33          Mean   :18.27          Mean   :18.43   
+ 3rd Qu.:33.00          3rd Qu.:33.00          3rd Qu.:33.00          3rd Qu.:33.00          3rd Qu.:33.00          3rd Qu.:32.00   
+ Max.   :87.00          Max.   :85.00          Max.   :84.00          Max.   :86.00          Max.   :79.00          Max.   :90.00   
+ snomed_448337001 snomed_699249000 snomed_719407002 snomed_763184009 snomed_854891000000104 snomed_868184008 snomed_978871000000104   population    
+ Min.   : 0.00    Min.   : 0.00    Min.   : 0.00    Min.   : 0.00    Min.   : 0.00          Min.   : 0.00    Min.   : 0.00          Min.   :  1.00  
+ 1st Qu.: 2.00    1st Qu.: 2.00    1st Qu.: 2.00    1st Qu.: 1.00    1st Qu.: 1.00          1st Qu.: 2.00    1st Qu.: 2.00          1st Qu.:  7.00  
+ Median :11.00    Median :11.00    Median :11.00    Median :11.00    Median :11.00          Median :11.00    Median :11.00          Median : 46.00  
+ Mean   :18.28    Mean   :18.32    Mean   :18.42    Mean   :18.33    Mean   :18.26          Mean   :18.32    Mean   :18.38          Mean   : 73.24  
+ 3rd Qu.:32.00    3rd Qu.:32.00    3rd Qu.:33.00    3rd Qu.:33.00    3rd Qu.:32.00          3rd Qu.:33.00    3rd Qu.:33.00          3rd Qu.:137.00  
+ Max.   :89.00    Max.   :89.00    Max.   :92.00    Max.   :92.00    Max.   :83.00          Max.   :83.00    Max.   :91.00          Max.   :236.00  
+    month          
+ Length:3277       
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   
+ [1] practice                snomed_OCall            snomed_1068881000000101 snomed_1090371000000106 snomed_185320006        snomed_325871000000103 
+ [7] snomed_325901000000103  snomed_325911000000101  snomed_325951000000102  snomed_325981000000108  snomed_325991000000105  snomed_384131000000101 
+[13] snomed_401271004        snomed_448337001        snomed_699249000        snomed_719407002        snomed_763184009        snomed_854891000000104 
+[19] snomed_868184008        snomed_978871000000104  population              month                  
+<0 rows> (or 0-length row.names)
+[1] "summary created -a"
+[1] "practice calc 2"
+[1] "practice calc 4"
+[1] "practice calc 5"
+[1] "practice fig03 created"
+[1] "practice fig03 saved"
+[1] "national calc 1"
+[1] "national calc2"
+[1] "national calc saved"
+[1] "national fig01 created"
+[1] "national fig01 saved"
+[1] "practice calc 2"
+[1] "practice calc 4"
+[1] "practice calc 5"
+[1] "practice calc 1"
+[1] "practice calc 2"
+[1] "practice calc 4"
+[1] "practice calc 5"
+[1] "practice fig03 created"
+[1] "practice calc 1"
+[1] "practice calc 2"
+[1] "practice calc 4"
+[1] "practice calc 5"
+[1] "practice calc 4"
+[1] "practice calc 5"
+[1] "practice fig03 created"
+[1] "national calc2"
+[1] "national calc 1"
+[1] "national calc2"
+[1] "national calc2"
+[1] "national fig01 saved"
+[1] "national fig01 created"
+[1] "national fig02 saved"
+[1] 3
+[1] "1068881000000101"

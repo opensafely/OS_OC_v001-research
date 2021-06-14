@@ -1,0 +1,3 @@
+[1] "directories cleared"
+[1] "Libraries loaded. Query dates established."
+[1] "Redactor defined"
