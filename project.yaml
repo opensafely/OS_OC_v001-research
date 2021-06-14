@@ -46,7 +46,7 @@ actions:
         measure_csv: output/emismeasures-weekly/measure_*.csv
 
   run_model_weekly2021_emis:
-    run: r:latest analysis/04-weekly2021.R
+    run: r:latest analysis/EMIS04-weekly2021.R
     needs: [generate_cohorts_weekly2021_emis,generate_measures_weekly2021_emis]
     outputs:
       moderately_sensitive:
