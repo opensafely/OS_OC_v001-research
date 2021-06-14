@@ -13,7 +13,7 @@
 ## ==============================================================================
 
 ## open log connection to file
-sink(here::here("logs", "EMISlog-04-weekly2021.txt"))
+sink(here::here("logs", "log-EMIS04-weekly2021.txt"))
 
 
 # create directory for saving tables, if not existent

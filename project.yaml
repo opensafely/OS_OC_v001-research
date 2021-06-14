@@ -25,9 +25,9 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/log-EMIS03-createnattrends.txt
-        tb01: output/tables/sc03_tb01_nattrends.csv
+        tb01: output/tables/EMISsc03_tb01_nattrends.csv
         fig01: output/plots/EMISsc03_fig01_nattrends.svg
-        fig02: output/plots/EMISsc03_fig02_nattrends.svg
+        fig02: output/plots/EMISsc03_fig02_absnattrends.svg
         fig03: output/plots/EMISsc03_fig03_pracnatcoverage.svg
 
 
