@@ -17,6 +17,7 @@
 sink(here::here("logs", "log-05-createClinicalConditiontables.txt"))
 
 flag_gtsummaryoperational = TRUE
+flag_lmtestoperational=FALSE
 
 ## library
 library(tidyverse)
@@ -28,7 +29,10 @@ library(here)
 library(webshot)
 library(sjPlot) # to create goodlooking summary plots of OR/HR
 library(sandwich) # robust errors
-library(lmtest)
+if (flag_lmtestoperational){
+  library(lmtest)
+}
+library(modelsummary)
 #webshot::install_phantomjs() # not supported
 
 # create directory for saving tables, if not existent
@@ -160,69 +164,86 @@ postglm <- glm(fmla,
 print("standard")
 print(summary(postglm))
 
-print("robust")
-print(coeftest(postglm, vcov = vcovHC(postglm, type="HC1")))
-
-a <- coeftest(postglm, vcov = vcovHC(postglm, type="HC1"))
-
-# https://github.com/tidymodels/broom/issues/663
-robustse <- function(o_glm, coef = c("logit", "odd.ratio")) {
+if (flag_lmtestoperational){
+  print("robust")
+  print(coeftest(postglm, vcov = vcovHC(postglm, type="HC1")))
   
-  myvcov = vcovHC(postglm, type="HC1")
+  a <- coeftest(postglm, vcov = vcovHC(postglm, type="HC1"))
   
-  a <- coeftest(postglm, vcov = myvcov )
-  a<- as.data.frame(unclass(a))
-  
-  b <- coefci(postglm,vcov=myvcov)
-  b <- as.data.frame(b)
-  
-  df_join <- a
-  df_join$LCI95=b[,"2.5 %"]
-  df_join$UCI95=b[,"97.5 %"]
-  
-  if (coef == "logit") {
+  # https://github.com/tidymodels/broom/issues/663
+  robustse <- function(o_glm, coef = c("logit", "odd.ratio")) {
     
-    return(df_join) # return logit with robust SE's
-  } else if (coef == "odd.ratio") {
-    df_join[, 1] <- exp(df_join[, 1]) # return odd ratios with robust SE's
-    df_join[, 2] <- df_join[, 1] * df_join[, 2]
-    df_join[,c("LCI95")]=exp(df_join[,c("LCI95")])
-    df_join[,c("UCI95")]=exp(df_join[,c("UCI95")])
-    return(df_join)
-  } 
+    myvcov = vcovHC(postglm, type="HC1")
+    
+    a <- coeftest(postglm, vcov = myvcov )
+    a<- as.data.frame(unclass(a))
+    
+    b <- coefci(postglm,vcov=myvcov)
+    b <- as.data.frame(b)
+    
+    df_join <- a
+    df_join$LCI95=b[,"2.5 %"]
+    df_join$UCI95=b[,"97.5 %"]
+    
+    if (coef == "logit") {
+      
+      return(df_join) # return logit with robust SE's
+    } else if (coef == "odd.ratio") {
+      df_join[, 1] <- exp(df_join[, 1]) # return odd ratios with robust SE's
+      df_join[, 2] <- df_join[, 1] * df_join[, 2]
+      df_join[,c("LCI95")]=exp(df_join[,c("LCI95")])
+      df_join[,c("UCI95")]=exp(df_join[,c("UCI95")])
+      return(df_join)
+    } 
+  }
+  
+  mf_01 <- robustse(postglm,coef="odd.ratio")
+  
+  mf_01 <- cbind(Characteristic = rownames(mf_01), mf_01)
+  rownames(mf_01) <- 1:nrow(mf_01)
+  
+  mf_01 <- mf_01 %>% mutate("s.s."=ifelse(`Pr(>|z|)`<0.05,"*",""))
+  
+  gt_tbl <- gt(mf_01 %>% select(-c("Std. Error","z value")) %>% mutate_if(is.numeric,~round(.,3))) %>% tab_header(
+    title = "Adjusted odds of having had an online consultation in 20/21",
+    subtitle = "Cohort: those in practices with eConsultation code activity,\n patients with either GP interaction or eConsultation"
+  )
+  gt_tbl
+  
+  # Use function from gt package to save table as neat png, save the original dataframe too
+  gt::gtsave(gt_tbl, file = file.path(here::here("output","tables"), "pracglm_submission_rob.html"))
+  write.csv(mf_01,file.path(here::here("output","tables"), "pracglm_submission_rob.csv"))
+  
+  
+  # check only
+  (mf_01 %>% mutate(checkLCI95=Estimate-qnorm(0.975)*`Std. Error`,
+                   checkUCI95=Estimate+qnorm(0.975)*`Std. Error`))
+  
+  #plot_model(postglm,show.values=T, show.p=TRUE, ci.lvl=.95, value.offset = 0.5,robust=T,vcov.type="HC1",show.intercept=T,digits=3)# + scale_y_log10(limits = c(0.01, 1000))
 }
 
-mf_01 <- robustse(postglm,coef="odd.ratio")
-
-mf_01 <- cbind(Characteristic = rownames(mf_01), mf_01)
-rownames(mf_01) <- 1:nrow(mf_01)
-
-mf_01 <- mf_01 %>% mutate("s.s."=ifelse(`Pr(>|z|)`<0.05,"*",""))
-
-gt_tbl <- gt(mf_01 %>% select(-c("Std. Error","z value")) %>% mutate_if(is.numeric,~round(.,3))) %>% tab_header(
-  title = "Adjusted odds of having had an online consultation in 20/21",
-  subtitle = "Cohort: those in practices with eConsultation code activity,\n patients with either GP interaction or eConsultation"
-)
-gt_tbl
-
-# Use function from gt package to save table as neat png, save the original dataframe too
-gt::gtsave(gt_tbl, file = file.path(here::here("output","tables"), "pracglm_submission_rob.html"))
-write.csv(mf_01,file.path(here::here("output","tables"), "pracglm_submission_rob.csv"))
-
-
-# check only
-(mf_01 %>% mutate(checkLCI95=Estimate-qnorm(0.975)*`Std. Error`,
-                 checkUCI95=Estimate+qnorm(0.975)*`Std. Error`))
-
-#plot_model(postglm,show.values=T, show.p=TRUE, ci.lvl=.95, value.offset = 0.5,robust=T,vcov.type="HC1",show.intercept=T,digits=3)# + scale_y_log10(limits = c(0.01, 1000))
-
+  
+  
 myglm_gt <- gtsummary::tbl_regression(postglm,exponentiate=TRUE) %>% add_global_p() %>% as_gt() %>%
-  gt::tab_source_note(gt::md("*Practices with at least one eConsultation instance in20/21, comparator to patients with GP consultations in-year*"))
+  gt::tab_source_note(gt::md("*Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year*"))
   #set_summ_defaults(digits = 2, pvals = FALSE, robust = "HC1")
 myglm_gt
 
 gt::gtsave(myglm_gt, file = file.path(here::here("output","tables"), "pracglm_submission.html"))
 
+
+
+modelsummary(postglm,exponentiate=TRUE,vcov=vcovHC(postglm, type="HC1"))
+myglm_ms <- modelsummary(postglm,
+                         vcov=vcovHC(postglm, type="HC1"),
+                         #estimate="{estimate} [{conf.low}, {conf.high}]",
+                         estimate="{estimate} {stars} [{conf.low}, {conf.high}]",
+                         #statistic="{p.value} {stars} [{conf.low}, {conf.high}]",
+                         statistic=NULL,
+                         output="gt",
+                         title="Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year")
+
+gt::gtsave(myglm_ms, file = file.path(here::here("output","tables"), "pracglm_submission_rob_logit.html"))
 
 
 ## close log connection

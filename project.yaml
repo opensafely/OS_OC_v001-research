@@ -128,19 +128,20 @@ actions:
       highly_sensitive:
         cohort: output/input_v2.csv
 
-  # run_model_v2:
-  #   run: r:latest analysis/05-createClinicalConditiontables.R
-  #   needs: [generate_cohorts_v2]
-  #   outputs:
-  #     moderately_sensitive:
-  #       log: logs/log-05-createClinicalConditiontables.txt
-  #       gthtml1: output/tables/gt_econsult_pop_pre.html
-  #       gthtml2: output/tables/gt_econsult_pop_post.html
-  #       gthtml3: output/tables/gt_econsult_consultpop_pre.html
-  #       gthtml4: output/tables/gt_econsult_consultpop_post.html
-  #       gtglm1: output/tables/pracglm_submission.html
-  #       gtglm2: output/tables/pracglm_submission_rob.csv
-  #       gtglm3: output/tables/pracglm_submission_rob.html
+  run_model_v2:
+    run: r:latest analysis/05-createClinicalConditiontables.R
+    needs: [generate_cohorts_v2]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-05-createClinicalConditiontables.txt
+        gthtml1: output/tables/gt_econsult_pop_pre.html
+        gthtml2: output/tables/gt_econsult_pop_post.html
+        gthtml3: output/tables/gt_econsult_consultpop_pre.html
+        gthtml4: output/tables/gt_econsult_consultpop_post.html
+        gtglm1: output/tables/pracglm_submission.html
+        gtglm4: output/tables/pracglm_submission_rob_logit.html
+        #gtglm2: output/tables/pracglm_submission_rob.csv
+        #gtglm3: output/tables/pracglm_submission_rob.html
 
 # ### SNOMED check
 #   generate_cohorts_checksnomed:
