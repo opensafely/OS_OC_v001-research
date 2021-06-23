@@ -26,7 +26,10 @@ if (flag_gtsummaryoperational){
 library(gt)
 library(here)
 library(webshot)
-#webshot::install_phantomjs()
+library(sjPlot) # to create goodlooking summary plots of OR/HR
+library(sandwich) # robust errors
+library(lmtest)
+#webshot::install_phantomjs() # not supported
 
 # create directory for saving tables, if not existent
 if (!dir.exists(here::here("output", "tables"))){
@@ -54,6 +57,12 @@ df_cleaned <- df_input %>%
   )
 
 
+#### Re-level where appropriate
+df_cleaned$ethnicity <- relevel(df_cleaned$ethnicity,ref="White")
+df_cleaned$age_group <- relevel(df_cleaned$age_group,ref="(60,70]")
+df_cleaned$sex <- relevel(df_cleaned$sex,ref="Male")
+
+
 ## Redactor code (W.Hulme)
 redactor <- function(n, threshold){
   # given a vector of frequencies, this returns a boolean vector that is TRUE if
@@ -71,6 +80,8 @@ redactor <- function(n, threshold){
   }
   n_redacted <- if_else(redact, NA_integer_, n)
 }
+
+
 
 
 if (flag_gtsummaryoperational){
@@ -119,6 +130,100 @@ if (flag_gtsummaryoperational){
   gt::gtsave(as_gt(gt_econsult_consultpop_post), file = file.path(here::here("output","tables"), "gt_econsult_consultpop_post.html"))
   
 }  
+
+
+###############################
+#### Model for regression #####
+################################
+
+
+#vars_m <- c("ageg","Sex","ethn","IMD_Decile","high_capability")
+outcomevar = "econsult_post_had"
+
+explanatoryvar = colnames(df_cleaned) %>% as.tibble()
+explanatoryvar = explanatoryvar %>% filter(substr(value,1,7)=="history" | value=="age_group" | value=="sex")
+
+
+fmla <-
+  as.formula(paste(outcomevar, paste(explanatoryvar$value, collapse = " + "
+  ), sep = "~"))
+print(fmla)
+
+# Cohort: those in practices with at least an econsultation code instance in 20/21, those with either an econsult or GP consultation recorded.
+data_model = df_cleaned %>% group_by(practice) %>% filter(sum(econsult_post_had,na.rm=T)!=0) %>% ungroup() %>%
+  filter(econsult_post_had>0|gp_consult_post_had>0)
+
+postglm <- glm(fmla,
+               data = data_model,
+               family=binomial)
+
+print("standard")
+print(summary(postglm))
+
+print("robust")
+print(coeftest(postglm, vcov = vcovHC(postglm, type="HC1")))
+
+a <- coeftest(postglm, vcov = vcovHC(postglm, type="HC1"))
+
+# https://github.com/tidymodels/broom/issues/663
+robustse <- function(o_glm, coef = c("logit", "odd.ratio")) {
+  
+  myvcov = vcovHC(postglm, type="HC1")
+  
+  a <- coeftest(postglm, vcov = myvcov )
+  a<- as.data.frame(unclass(a))
+  
+  b <- coefci(postglm,vcov=myvcov)
+  b <- as.data.frame(b)
+  
+  df_join <- a
+  df_join$LCI95=b[,"2.5 %"]
+  df_join$UCI95=b[,"97.5 %"]
+  
+  if (coef == "logit") {
+    
+    return(df_join) # return logit with robust SE's
+  } else if (coef == "odd.ratio") {
+    df_join[, 1] <- exp(df_join[, 1]) # return odd ratios with robust SE's
+    df_join[, 2] <- df_join[, 1] * df_join[, 2]
+    df_join[,c("LCI95")]=exp(df_join[,c("LCI95")])
+    df_join[,c("UCI95")]=exp(df_join[,c("UCI95")])
+    return(df_join)
+  } 
+}
+
+mf_01 <- robustse(postglm,coef="odd.ratio")
+
+mf_01 <- cbind(Characteristic = rownames(mf_01), mf_01)
+rownames(mf_01) <- 1:nrow(mf_01)
+
+mf_01 <- mf_01 %>% mutate("s.s."=ifelse(`Pr(>|z|)`<0.05,"*",""))
+
+gt_tbl <- gt(mf_01 %>% select(-c("Std. Error","z value")) %>% mutate_if(is.numeric,~round(.,3))) %>% tab_header(
+  title = "Adjusted odds of having had an online consultation in 20/21",
+  subtitle = "Cohort: those in practices with eConsultation code activity,\n patients with either GP interaction or eConsultation"
+)
+gt_tbl
+
+# Use function from gt package to save table as neat png, save the original dataframe too
+gt::gtsave(gt_tbl, file = file.path(here::here("output","tables"), "pracglm_submission_rob.html"))
+write.csv(mf_01,file.path(here::here("output","tables"), "pracglm_submission_rob.csv"))
+
+
+# check only
+(mf_01 %>% mutate(checkLCI95=Estimate-qnorm(0.975)*`Std. Error`,
+                 checkUCI95=Estimate+qnorm(0.975)*`Std. Error`))
+
+#plot_model(postglm,show.values=T, show.p=TRUE, ci.lvl=.95, value.offset = 0.5,robust=T,vcov.type="HC1",show.intercept=T,digits=3)# + scale_y_log10(limits = c(0.01, 1000))
+
+myglm_gt <- gtsummary::tbl_regression(postglm,exponentiate=TRUE) %>% add_global_p() %>% as_gt() %>%
+  gt::tab_source_note(gt::md("*Practices with at least one eConsultation instance in20/21, comparator to patients with GP consultations in-year*"))
+  #set_summ_defaults(digits = 2, pvals = FALSE, robust = "HC1")
+myglm_gt
+
+gt::gtsave(myglm_gt, file = file.path(here::here("output","tables"), "pracglm_submission.html"))
+
+
 
 ## close log connection
 sink()
