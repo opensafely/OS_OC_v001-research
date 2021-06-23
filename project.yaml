@@ -128,68 +128,68 @@ actions:
       highly_sensitive:
         cohort: output/input_v2.csv
 
-  run_model_v2:
-    run: r:latest analysis/05-createClinicalConditiontables.R
-    needs: [generate_cohorts_v2]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-05-createClinicalConditiontables.txt
-        gthtml1: output/tables/gt_econsult_pop_pre.html
-        gthtml2: output/tables/gt_econsult_pop_post.html
-        gthtml3: output/tables/gt_econsult_consultpop_pre.html
-        gthtml4: output/tables/gt_econsult_consultpop_post.html
-        gtglm1: output/tables/pracglm_submission.html
-        gtglm2: output/tables/pracglm_submission_rob.csv
-        gtglm3: output/tables/pracglm_submission_rob.html
+  # run_model_v2:
+  #   run: r:latest analysis/05-createClinicalConditiontables.R
+  #   needs: [generate_cohorts_v2]
+  #   outputs:
+  #     moderately_sensitive:
+  #       log: logs/log-05-createClinicalConditiontables.txt
+  #       gthtml1: output/tables/gt_econsult_pop_pre.html
+  #       gthtml2: output/tables/gt_econsult_pop_post.html
+  #       gthtml3: output/tables/gt_econsult_consultpop_pre.html
+  #       gthtml4: output/tables/gt_econsult_consultpop_post.html
+  #       gtglm1: output/tables/pracglm_submission.html
+  #       gtglm2: output/tables/pracglm_submission_rob.csv
+  #       gtglm3: output/tables/pracglm_submission_rob.html
 
-### SNOMED check
-  generate_cohorts_checksnomed:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_checksnomed
-    outputs:
-      highly_sensitive:
-        cohort: output/input_checksnomed.csv
+# ### SNOMED check
+#   generate_cohorts_checksnomed:
+#     run: cohortextractor:latest generate_cohort --study-definition study_definition_checksnomed
+#     outputs:
+#       highly_sensitive:
+#         cohort: output/input_checksnomed.csv
 
 
-  run_model_checksnomed:
-    run: r:latest analysis/0a-snomedcheck.R
-    needs: [generate_cohorts_checksnomed]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-0a-snomedcheck.txt
-        tab1: output/tables/sc0a_snomedcheck_tallies.csv
+#   run_model_checksnomed:
+#     run: r:latest analysis/0a-snomedcheck.R
+#     needs: [generate_cohorts_checksnomed]
+#     outputs:
+#       moderately_sensitive:
+#         log: logs/log-0a-snomedcheck.txt
+#         tab1: output/tables/sc0a_snomedcheck_tallies.csv
 
-### SRO template pipeline
-  SROtem_generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output
-    outputs:
-      highly_sensitive:
-        cohort: output/input_*.csv
+# ### SRO template pipeline
+#   SROtem_generate_study_population:
+#     run: cohortextractor:latest generate_cohort --study-definition study_definition --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output
+#     outputs:
+#       highly_sensitive:
+#         cohort: output/input_*.csv
 
-  SROtem_generate_study_population_practice_count:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_practice_count --output-dir=output
-    outputs:
-      highly_sensitive:
-        cohort: output/input_practice_count.csv
+#   SROtem_generate_study_population_practice_count:
+#     run: cohortextractor:latest generate_cohort --study-definition study_definition_practice_count --output-dir=output
+#     outputs:
+#       highly_sensitive:
+#         cohort: output/input_practice_count.csv
 
   
-  SROtem_generate_measures:
-      run: cohortextractor:latest generate_measures --study-definition study_definition --output-dir=output
-      needs: [SROtem_generate_study_population]
-      outputs:
-        moderately_sensitive:
-          measure_csv: output/measure_*.csv
+#   SROtem_generate_measures:
+#       run: cohortextractor:latest generate_measures --study-definition study_definition --output-dir=output
+#       needs: [SROtem_generate_study_population]
+#       outputs:
+#         moderately_sensitive:
+#           measure_csv: output/measure_*.csv
 
-  SROtem_get_patient_count:
-    run: python:latest python analysis/SROtem_get_patients_counts.py
-    needs: [SROtem_generate_study_population]
-    outputs:
-      moderately_sensitive:
-        text: output/patient_count.json
+#   SROtem_get_patient_count:
+#     run: python:latest python analysis/SROtem_get_patients_counts.py
+#     needs: [SROtem_generate_study_population]
+#     outputs:
+#       moderately_sensitive:
+#         text: output/patient_count.json
 
 
-  generate_notebook:
-    run: jupyter:latest jupyter nbconvert /workspace/notebooks/SRO-Notebook.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
-    needs: [SROtem_generate_measures, SROtem_generate_study_population_practice_count]
-    outputs:
-      moderately_sensitive:
-        notebook: output/SRO-Notebook.html
+#   generate_notebook:
+#     run: jupyter:latest jupyter nbconvert /workspace/notebooks/SRO-Notebook.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
+#     needs: [SROtem_generate_measures, SROtem_generate_study_population_practice_count]
+#     outputs:
+#       moderately_sensitive:
+#         notebook: output/SRO-Notebook.html
