@@ -18,6 +18,7 @@ sink(here::here("logs", "log-05-createClinicalConditiontables.txt"))
 
 flag_gtsummaryoperational = TRUE
 flag_lmtestoperational=FALSE
+flag_sjplotoperational=FALSE
 
 ## library
 library(tidyverse)
@@ -27,7 +28,9 @@ if (flag_gtsummaryoperational){
 library(gt)
 library(here)
 library(webshot)
-library(sjPlot) # to create goodlooking summary plots of OR/HR
+if (flag_sjplotoperational){
+  library(sjPlot) # to create goodlooking summary plots of OR/HR
+}
 library(sandwich) # robust errors
 if (flag_lmtestoperational){
   library(lmtest)
@@ -219,10 +222,12 @@ if (flag_lmtestoperational){
   (mf_01 %>% mutate(checkLCI95=Estimate-qnorm(0.975)*`Std. Error`,
                    checkUCI95=Estimate+qnorm(0.975)*`Std. Error`))
   
-  #plot_model(postglm,show.values=T, show.p=TRUE, ci.lvl=.95, value.offset = 0.5,robust=T,vcov.type="HC1",show.intercept=T,digits=3)# + scale_y_log10(limits = c(0.01, 1000))
+  
 }
 
-  
+if (flag_sjplotoperational){
+  plot_model(postglm,show.values=T, show.p=TRUE, ci.lvl=.95, value.offset = 0.5,robust=T,vcov.type="HC1",show.intercept=T,digits=3)# + scale_y_log10(limits = c(0.01, 1000))
+}
   
 myglm_gt <- gtsummary::tbl_regression(postglm,exponentiate=TRUE) %>% add_global_p() %>% as_gt() %>%
   gt::tab_source_note(gt::md("*Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year*"))
@@ -232,7 +237,8 @@ myglm_gt
 gt::gtsave(myglm_gt, file = file.path(here::here("output","tables"), "pracglm_submission.html"))
 
 
-
+# https://vincentarelbundock.github.io/modelsummary/articles/modelsummary.html#exponentiated-coefficients-and-other-extras-
+# https://vincentarelbundock.github.io/modelsummary/reference/modelsummary.html
 modelsummary(postglm,exponentiate=TRUE,vcov=vcovHC(postglm, type="HC1"))
 myglm_ms <- modelsummary(postglm,
                          vcov=vcovHC(postglm, type="HC1"),
