@@ -17,7 +17,7 @@
 sink(here::here("logs", "log-05-createClinicalConditiontables.txt"))
 
 flag_gtsummaryoperational = TRUE
-flag_lmtestoperational=FALSE
+flag_lmtestoperational=TRUE
 flag_sjplotoperational=FALSE
 
 ## library
@@ -164,8 +164,39 @@ postglm <- glm(fmla,
                data = data_model,
                family=binomial)
 
-print("standard")
+
+print("standard errors")
 print(summary(postglm))
+
+print(anova(postglm,test="LRT"))
+#chisq.test(postglm)
+
+if (flag_sjplotoperational){
+  plot_model(postglm,show.values=T, show.p=TRUE, ci.lvl=.95, value.offset = 0.5,robust=T,vcov.type="HC1",show.intercept=T,digits=3)# + scale_y_log10(limits = c(0.01, 1000))
+}
+  
+# myglm_gt <- gtsummary::tbl_regression(postglm,exponentiate=TRUE) %>% add_global_p() %>% as_gt() %>%
+#   gt::tab_source_note(gt::md("*Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year*"))
+#   #set_summ_defaults(digits = 2, pvals = FALSE, robust = "HC1")
+# myglm_gt
+# 
+# gt::gtsave(myglm_gt, file = file.path(here::here("output","tables"), "pracglm_submission.html"))
+
+
+# https://vincentarelbundock.github.io/modelsummary/articles/modelsummary.html#exponentiated-coefficients-and-other-extras-
+# https://vincentarelbundock.github.io/modelsummary/reference/modelsummary.html
+modelsummary(postglm,exponentiate=TRUE,vcov=vcovHC(postglm, type="HC1"))
+myglm_ms <- modelsummary(postglm,
+                         vcov=vcovHC(postglm, type="HC1"),
+                         #estimate="{estimate} [{conf.low}, {conf.high}]",
+                         estimate="{estimate} {stars} [{conf.low}, {conf.high}]",
+                         #statistic="{p.value} {stars} [{conf.low}, {conf.high}]",
+                         statistic=NULL,
+                         output="gt",
+                         title="Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year")
+
+gt::gtsave(myglm_ms, file = file.path(here::here("output","tables"), "pracglm_submission_rob_logit.html"))
+
 
 if (flag_lmtestoperational){
   print("robust")
@@ -220,37 +251,10 @@ if (flag_lmtestoperational){
   
   # check only
   (mf_01 %>% mutate(checkLCI95=Estimate-qnorm(0.975)*`Std. Error`,
-                   checkUCI95=Estimate+qnorm(0.975)*`Std. Error`))
+                    checkUCI95=Estimate+qnorm(0.975)*`Std. Error`))
   
   
 }
-
-if (flag_sjplotoperational){
-  plot_model(postglm,show.values=T, show.p=TRUE, ci.lvl=.95, value.offset = 0.5,robust=T,vcov.type="HC1",show.intercept=T,digits=3)# + scale_y_log10(limits = c(0.01, 1000))
-}
-  
-myglm_gt <- gtsummary::tbl_regression(postglm,exponentiate=TRUE) %>% add_global_p() %>% as_gt() %>%
-  gt::tab_source_note(gt::md("*Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year*"))
-  #set_summ_defaults(digits = 2, pvals = FALSE, robust = "HC1")
-myglm_gt
-
-gt::gtsave(myglm_gt, file = file.path(here::here("output","tables"), "pracglm_submission.html"))
-
-
-# https://vincentarelbundock.github.io/modelsummary/articles/modelsummary.html#exponentiated-coefficients-and-other-extras-
-# https://vincentarelbundock.github.io/modelsummary/reference/modelsummary.html
-modelsummary(postglm,exponentiate=TRUE,vcov=vcovHC(postglm, type="HC1"))
-myglm_ms <- modelsummary(postglm,
-                         vcov=vcovHC(postglm, type="HC1"),
-                         #estimate="{estimate} [{conf.low}, {conf.high}]",
-                         estimate="{estimate} {stars} [{conf.low}, {conf.high}]",
-                         #statistic="{p.value} {stars} [{conf.low}, {conf.high}]",
-                         statistic=NULL,
-                         output="gt",
-                         title="Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year")
-
-gt::gtsave(myglm_ms, file = file.path(here::here("output","tables"), "pracglm_submission_rob_logit.html"))
-
 
 ## close log connection
 sink()
