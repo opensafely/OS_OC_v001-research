@@ -341,7 +341,7 @@ study = StudyDefinition(
 
 # Depression (#4 prevalent on PAPI)
     history_depression=patients.with_these_clinical_events(
-        osteoarthritis_codes,
+        depression_codes,
         returning="binary_flag",
         on_or_before="index_date - 1 day",
         return_expectations={

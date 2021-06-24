@@ -256,6 +256,13 @@ if (flag_lmtestoperational){
   
 }
 
+myglm_gt <- gtsummary::tbl_regression(postglm,exponentiate=TRUE) %>% add_global_p() %>% as_gt() %>%
+ gt::tab_source_note(gt::md("*Practices with at least one eConsultation instance in 20/21, comparator to patients with GP consultations in-year*"))
+ #set_summ_defaults(digits = 2, pvals = FALSE, robust = "HC1")
+myglm_gt
+ 
+ gt::gtsave(myglm_gt, file = file.path(here::here("output","tables"), "pracglm_submission.html"))
+
 ## close log connection
 sink()
 
