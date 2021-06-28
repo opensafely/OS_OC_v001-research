@@ -10,6 +10,12 @@ oc_local_codes_snomed = codelist_from_csv(
     column = "code"
 )
 
+oc_local_codes_snomed_min = codelist_from_csv(
+    "codelists-local/martinaf-online-consultations-snomed-v01-28bba9bc_min.csv", 
+    system = "snomed", 
+    column = "code"
+)
+
 
 
 

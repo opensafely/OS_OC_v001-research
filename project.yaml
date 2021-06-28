@@ -5,6 +5,24 @@ expectations:
 
 actions:
 
+
+### Single 2-year activity query - compromise to cope with RAM. (no trendline)
+  generate_cohorts_bycode_emis:
+      run: cohortextractor:latest generate_cohort --study-definition study_definition_EMIS_bycode
+      outputs:
+        highly_sensitive:
+          cohort: output/emismeasures/input_EMIS_bycode.csv
+
+  run_model_bycode_emis:
+    run: r:latest analysis/EMIS06-bycode.R
+    needs: [generate_cohorts_bycode_emis]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-EMIS06-bycode.txt
+        tb01: output/tables/EMISsc06_tb01_nat.csv
+        fig03: output/plots/EMISsc06_fig03_pracnatcoverage.svg
+
+
 ### Monthly tallies.
   generate_cohorts_long_emis:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_EMISmeasures_bycode --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output/emismeasures

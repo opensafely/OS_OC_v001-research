@@ -96,7 +96,7 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    **loop_over_codes(oc_local_codes_snomed),
+    **loop_over_codes(oc_local_codes_snomed_min),
     
 )
 
@@ -113,107 +113,107 @@ measures = [
         denominator="population",
         group_by="practice"
     ),#1
-    Measure(
-        id="snomed_1090371000000106_practice",
-        numerator="snomed_1090371000000106",
-        denominator="population",
-        group_by="practice"
-    ),#2
-    Measure(
-        id="snomed_185320006_practice",
-        numerator="snomed_185320006",
-        denominator="population",
-        group_by="practice"
-    ),#3
-    Measure(
-        id="snomed_325871000000103_practice",
-        numerator="snomed_325871000000103",
-        denominator="population",
-        group_by="practice"
-    ),#4
-    Measure(
-        id="snomed_325901000000103_practice",
-        numerator="snomed_325901000000103",
-        denominator="population",
-        group_by="practice"
-    ),#5
-    Measure(
-        id="snomed_325911000000101_practice",
-        numerator="snomed_325911000000101",
-        denominator="population",
-        group_by="practice"
-    ),#6
-    Measure(
-        id="snomed_325951000000102_practice",
-        numerator="snomed_325951000000102",
-        denominator="population",
-        group_by="practice"
-    ),#7
-    Measure(
-        id="snomed_325981000000108_practice",
-        numerator="snomed_325981000000108",
-        denominator="population",
-        group_by="practice"
-    ),#8
-    Measure(
-        id="snomed_325991000000105_practice",
-        numerator="snomed_325991000000105",
-        denominator="population",
-        group_by="practice"
-    ),#9
-    Measure(
-        id="snomed_384131000000101_practice",
-        numerator="snomed_384131000000101",
-        denominator="population",
-        group_by="practice"
-    ),#10
-    Measure(
-        id="snomed_401271004_practice",
-        numerator="snomed_401271004",
-        denominator="population",
-        group_by="practice"
-    ),#11
-    Measure(
-        id="snomed_448337001_practice",
-        numerator="snomed_448337001",
-        denominator="population",
-        group_by="practice"
-    ),#12
-    Measure(
-        id="snomed_699249000_practice",
-        numerator="snomed_699249000",
-        denominator="population",
-        group_by="practice"
-    ),#13
-    Measure(
-        id="snomed_719407002_practice",
-        numerator="snomed_719407002",
-        denominator="population",
-        group_by="practice"
-    ),#14
-    Measure(
-        id="snomed_763184009_practice",
-        numerator="snomed_763184009",
-        denominator="population",
-        group_by="practice"
-    ),#15
-    Measure(
-        id="snomed_854891000000104_practice",
-        numerator="snomed_854891000000104",
-        denominator="population",
-        group_by="practice"
-    ),#16
-    Measure(
-        id="snomed_868184008_practice",
-        numerator="snomed_868184008",
-        denominator="population",
-        group_by="practice"
-    ),#17
-    Measure(
-        id="snomed_978871000000104_practice",
-        numerator="snomed_978871000000104",
-        denominator="population",
-        group_by="practice"
-    ),#18
+    # Measure(
+    #     id="snomed_1090371000000106_practice",
+    #     numerator="snomed_1090371000000106",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#2
+    # Measure(
+    #     id="snomed_185320006_practice",
+    #     numerator="snomed_185320006",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#3
+    # Measure(
+    #     id="snomed_325871000000103_practice",
+    #     numerator="snomed_325871000000103",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#4
+    # Measure(
+    #     id="snomed_325901000000103_practice",
+    #     numerator="snomed_325901000000103",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#5
+    # Measure(
+    #     id="snomed_325911000000101_practice",
+    #     numerator="snomed_325911000000101",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#6
+    # Measure(
+    #     id="snomed_325951000000102_practice",
+    #     numerator="snomed_325951000000102",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#7
+    # Measure(
+    #     id="snomed_325981000000108_practice",
+    #     numerator="snomed_325981000000108",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#8
+    # Measure(
+    #     id="snomed_325991000000105_practice",
+    #     numerator="snomed_325991000000105",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#9
+    # Measure(
+    #     id="snomed_384131000000101_practice",
+    #     numerator="snomed_384131000000101",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#10
+    # Measure(
+    #     id="snomed_401271004_practice",
+    #     numerator="snomed_401271004",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#11
+    # Measure(
+    #     id="snomed_448337001_practice",
+    #     numerator="snomed_448337001",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#12
+    # Measure(
+    #     id="snomed_699249000_practice",
+    #     numerator="snomed_699249000",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#13
+    # Measure(
+    #     id="snomed_719407002_practice",
+    #     numerator="snomed_719407002",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#14
+    # Measure(
+    #     id="snomed_763184009_practice",
+    #     numerator="snomed_763184009",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#15
+    # Measure(
+    #     id="snomed_854891000000104_practice",
+    #     numerator="snomed_854891000000104",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#16
+    # Measure(
+    #     id="snomed_868184008_practice",
+    #     numerator="snomed_868184008",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#17
+    # Measure(
+    #     id="snomed_978871000000104_practice",
+    #     numerator="snomed_978871000000104",
+    #     denominator="population",
+    #     group_by="practice"
+    # ),#18
 
 ]

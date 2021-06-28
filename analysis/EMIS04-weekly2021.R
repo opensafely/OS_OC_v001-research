@@ -54,7 +54,7 @@ print("Redactor defined")
 
 
 ### bring in names and shorthands for codes
-snomed_label=read.csv(here("codelists-local","martinaf-online-consultations-snomed-v01-28bba9bc_short.csv"))
+snomed_label=read.csv(here("codelists-local","martinaf-online-consultations-snomed-v01-28bba9bc_min_short.csv"))
 snomed_label <- cbind(codeid = rownames(snomed_label), snomed_label)
 rownames(snomed_label) <- NULL
 snomed_label <- bind_rows(snomed_label,tibble(codeid="OCall",code="All codes",term="All codes"))

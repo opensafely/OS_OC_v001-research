@@ -1,1 +1,2 @@
 [1] "directories cleared"
+[1] "Redactor defined"
