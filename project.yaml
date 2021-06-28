@@ -11,7 +11,7 @@ actions:
       run: cohortextractor:latest generate_cohort --study-definition study_definition_EMIS_bycode
       outputs:
         highly_sensitive:
-          cohort: output/emismeasures/input_EMIS_bycode.csv
+          cohort: output/input_EMIS_bycode.csv
 
   run_model_bycode_emis:
     run: r:latest analysis/EMIS06-bycode.R
