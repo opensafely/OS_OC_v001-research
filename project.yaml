@@ -19,7 +19,7 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/log-EMIS06-bycode.txt
-        tb01: output/tables/EMISsc06_tb01_nat.csv
+        #tb01: output/tables/EMISsc06_tb01_nat.csv
         tb02: output/tables/EMISsc06_tb01_nat_red2.csv
         fig03: output/plots/EMISsc06_fig03_pracnatcoverage.svg
 
