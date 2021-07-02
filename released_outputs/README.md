@@ -1,14 +1,15 @@
 # Table of contents
 
+* [EMISsc06_tb01_nat_red2.csv](EMISsc06_tb01_nat_red2.csv)
 * output
   * output/plots
     * [output/plots/plot_logquantiles_OC_OC10_practice.svg](output/plots/plot_logquantiles_OC_OC10_practice.svg)
     * [output/plots/plot_logquantiles_snomed_1068881000000101_practice.svg](output/plots/plot_logquantiles_snomed_1068881000000101_practice.svg)
     * [output/plots/plot_logquantiles_snomed_OCall_practice.svg](output/plots/plot_logquantiles_snomed_OCall_practice.svg)
-    * [output/plots/plot_quantiles_gpc_practice.svg](output/plots/plot_quantiles_gpc_practice.svg)
     * [output/plots/plot_quantiles_OC_OC10_practice.svg](output/plots/plot_quantiles_OC_OC10_practice.svg)
     * [output/plots/plot_quantiles_OC_XaXcK_practice.svg](output/plots/plot_quantiles_OC_XaXcK_practice.svg)
     * [output/plots/plot_quantiles_OC_Y22b4_practice.svg](output/plots/plot_quantiles_OC_Y22b4_practice.svg)
+    * [output/plots/plot_quantiles_gpc_practice.svg](output/plots/plot_quantiles_gpc_practice.svg)
     * [output/plots/plot_quantiles_snomed_1068881000000101_practice.svg](output/plots/plot_quantiles_snomed_1068881000000101_practice.svg)
     * [output/plots/plot_quantiles_snomed_OCall_practice.svg](output/plots/plot_quantiles_snomed_OCall_practice.svg)
     * [output/plots/sc03_fig01_nattrends.svg](output/plots/sc03_fig01_nattrends.svg)
