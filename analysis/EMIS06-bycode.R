@@ -142,9 +142,13 @@ df_summary_long <- df_summary_long %>% left_join(snomed_label,by=c("Code"="codei
 
 df_summary_long_s <- df_summary_long
 df_summary_long_s$Count <- redactor(df_summary_long_s$Count,threshold =6,e_overwrite=NA_integer_)
-df_summary_long_s <- df_summary_long_s %>% mutate(populationpracwithcode=ifelse(practicewithcode==1,NA_integer_,populationpracwithcode)) 
+df_summary_long_s <- df_summary_long_s %>% mutate(populationpracwithcode=ifelse(practicewithcode<5,NA_integer_,populationpracwithcode),
+                                                  practicecoverage=ifelse(practicewithcode<5,NA_integer_,practicecoverage),
+                                                  Count=ifelse(practicewithcode<5,NA_integer_,Count),
+                                                  practicewithcode=ifelse(practicewithcode<5,NA_integer_,practicewithcode)
+                                                  ) 
 print("national calc2")
-write.csv(df_summary_long_s,paste0(here::here("output","tables"),"/EMISsc06_tb01_nat.csv"))
+write.csv(df_summary_long_s,paste0(here::here("output","tables"),"/EMISsc06_tb01_nat_red2.csv"))
 print("national calc saved")
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
 

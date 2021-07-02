@@ -1,46 +1,57 @@
 [1] "directories cleared"
 [1] "Redactor defined"
 [38;5;246m# A tibble: 1 x 21[39m
-  practice snomed_OCall snomed_106888100~ snomed_109037100~ snomed_185320006 snomed_325871000~ snomed_325901000~ snomed_32591100~ snomed_32595100~
-     [3m[38;5;246m<dbl>[39m[23m        [3m[38;5;246m<dbl>[39m[23m             [3m[38;5;246m<dbl>[39m[23m             [3m[38;5;246m<dbl>[39m[23m            [3m[38;5;246m<dbl>[39m[23m             [3m[38;5;246m<dbl>[39m[23m             [3m[38;5;246m<dbl>[39m[23m            [3m[38;5;246m<dbl>[39m[23m            [3m[38;5;246m<dbl>[39m[23m
-[38;5;250m1[39m    [4m1[24m[4m3[24m836        [4m1[24m[4m2[24m552              [4m2[24m523              [4m2[24m515             [4m2[24m497              [4m2[24m523              [4m2[24m477             [4m2[24m463             [4m2[24m445
-[38;5;246m# ... with 12 more variables: snomed_325981000000108 <dbl>, snomed_325991000000105 <dbl>, snomed_384131000000101 <dbl>, snomed_401271004 <dbl>,[39m
-[38;5;246m#   snomed_448337001 <dbl>, snomed_699249000 <dbl>, snomed_719407002 <dbl>, snomed_763184009 <dbl>, snomed_854891000000104 <dbl>,[39m
-[38;5;246m#   snomed_868184008 <dbl>, snomed_978871000000104 <dbl>, population <dbl>[39m
-    practice    snomed_OCall    snomed_1068881000000101 snomed_1090371000000106 snomed_185320006 snomed_325871000000103 snomed_325901000000103
- Min.   : 23   Min.   :  0.00   Min.   : 0.00           Min.   : 0.00           Min.   : 0.00    Min.   : 0.00          Min.   : 0.00         
- 1st Qu.: 67   1st Qu.:  8.00   1st Qu.: 2.00           1st Qu.: 0.00           1st Qu.: 2.00    1st Qu.: 2.00          1st Qu.: 0.00         
- Median :101   Median : 50.00   Median :11.00           Median :12.00           Median :13.00    Median :11.00          Median :10.00         
- Mean   :101   Mean   : 91.62   Mean   :18.42           Mean   :18.36           Mean   :18.23    Mean   :18.42          Mean   :18.08         
- 3rd Qu.:135   3rd Qu.:159.00   3rd Qu.:32.00           3rd Qu.:35.00           3rd Qu.:32.00    3rd Qu.:35.00          3rd Qu.:33.00         
- Max.   :178   Max.   :292.00   Max.   :67.00           Max.   :72.00           Max.   :77.00    Max.   :60.00          Max.   :66.00         
- snomed_325911000000101 snomed_325951000000102 snomed_325981000000108 snomed_325991000000105 snomed_384131000000101 snomed_401271004
- Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00   
- 1st Qu.: 0.00          1st Qu.: 1.00          1st Qu.: 1.00          1st Qu.: 1.00          1st Qu.: 0.00          1st Qu.: 2.00   
- Median :12.00          Median :10.00          Median :11.00          Median :10.00          Median :11.00          Median :10.00   
- Mean   :17.98          Mean   :17.85          Mean   :18.72          Mean   :18.48          Mean   :18.36          Mean   :18.21   
- 3rd Qu.:30.00          3rd Qu.:32.00          3rd Qu.:34.00          3rd Qu.:34.00          3rd Qu.:32.00          3rd Qu.:33.00   
- Max.   :82.00          Max.   :76.00          Max.   :77.00          Max.   :72.00          Max.   :88.00          Max.   :73.00   
- snomed_448337001 snomed_699249000 snomed_719407002 snomed_763184009 snomed_854891000000104 snomed_868184008 snomed_978871000000104
- Min.   : 0.00    Min.   : 0.00    Min.   : 0.00    Min.   : 0.0     Min.   : 0.00          Min.   : 0.00    Min.   : 0.00         
- 1st Qu.: 0.00    1st Qu.: 2.00    1st Qu.: 2.00    1st Qu.: 0.0     1st Qu.: 2.00          1st Qu.: 0.00    1st Qu.: 1.00         
- Median :12.00    Median :11.00    Median :11.00    Median :11.0     Median :11.00          Median :11.00    Median :10.00         
- Mean   :18.45    Mean   :18.52    Mean   :18.28    Mean   :17.8     Mean   :18.78          Mean   :18.18    Mean   :18.22         
- 3rd Qu.:33.00    3rd Qu.:35.00    3rd Qu.:34.00    3rd Qu.:33.0     3rd Qu.:31.00          3rd Qu.:31.00    3rd Qu.:32.00         
- Max.   :62.00    Max.   :71.00    Max.   :66.00    Max.   :62.0     Max.   :68.00          Max.   :69.00    Max.   :70.00         
-   population        month          
- Min.   :  1.00   Length:137        
- 1st Qu.:  7.00   Class :character  
- Median : 44.00   Mode  :character  
- Mean   : 72.99                     
- 3rd Qu.:131.00                     
- Max.   :229.00                     
+  practice snomed_OCall snomed_1068881000~ snomed_1090371000~ snomed_185320006 snomed_325871000~ snomed_325901000~
+     [3m[38;5;246m<dbl>[39m[23m        [3m[38;5;246m<dbl>[39m[23m              [3m[38;5;246m<dbl>[39m[23m              [3m[38;5;246m<dbl>[39m[23m            [3m[38;5;246m<dbl>[39m[23m             [3m[38;5;246m<dbl>[39m[23m             [3m[38;5;246m<dbl>[39m[23m
+[38;5;250m1[39m    [4m1[24m[4m3[24m836        [4m1[24m[4m2[24m552               [4m2[24m523               [4m2[24m515             [4m2[24m497              [4m2[24m523              [4m2[24m477
+[38;5;246m# ... with 14 more variables: snomed_325911000000101 <dbl>, snomed_325951000000102 <dbl>,[39m
+[38;5;246m#   snomed_325981000000108 <dbl>, snomed_325991000000105 <dbl>, snomed_384131000000101 <dbl>,[39m
+[38;5;246m#   snomed_401271004 <dbl>, snomed_448337001 <dbl>, snomed_699249000 <dbl>, snomed_719407002 <dbl>,[39m
+[38;5;246m#   snomed_763184009 <dbl>, snomed_854891000000104 <dbl>, snomed_868184008 <dbl>, snomed_978871000000104 <dbl>,[39m
+[38;5;246m#   population <dbl>[39m
+    practice    snomed_OCall    snomed_1068881000000101 snomed_1090371000000106 snomed_185320006
+ Min.   : 23   Min.   :  0.00   Min.   : 0.00           Min.   : 0.00           Min.   : 0.00   
+ 1st Qu.: 67   1st Qu.:  8.00   1st Qu.: 2.00           1st Qu.: 0.00           1st Qu.: 2.00   
+ Median :101   Median : 50.00   Median :11.00           Median :12.00           Median :13.00   
+ Mean   :101   Mean   : 91.62   Mean   :18.42           Mean   :18.36           Mean   :18.23   
+ 3rd Qu.:135   3rd Qu.:159.00   3rd Qu.:32.00           3rd Qu.:35.00           3rd Qu.:32.00   
+ Max.   :178   Max.   :292.00   Max.   :67.00           Max.   :72.00           Max.   :77.00   
+ snomed_325871000000103 snomed_325901000000103 snomed_325911000000101 snomed_325951000000102
+ Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00         
+ 1st Qu.: 2.00          1st Qu.: 0.00          1st Qu.: 0.00          1st Qu.: 1.00         
+ Median :11.00          Median :10.00          Median :12.00          Median :10.00         
+ Mean   :18.42          Mean   :18.08          Mean   :17.98          Mean   :17.85         
+ 3rd Qu.:35.00          3rd Qu.:33.00          3rd Qu.:30.00          3rd Qu.:32.00         
+ Max.   :60.00          Max.   :66.00          Max.   :82.00          Max.   :76.00         
+ snomed_325981000000108 snomed_325991000000105 snomed_384131000000101 snomed_401271004 snomed_448337001
+ Min.   : 0.00          Min.   : 0.00          Min.   : 0.00          Min.   : 0.00    Min.   : 0.00   
+ 1st Qu.: 1.00          1st Qu.: 1.00          1st Qu.: 0.00          1st Qu.: 2.00    1st Qu.: 0.00   
+ Median :11.00          Median :10.00          Median :11.00          Median :10.00    Median :12.00   
+ Mean   :18.72          Mean   :18.48          Mean   :18.36          Mean   :18.21    Mean   :18.45   
+ 3rd Qu.:34.00          3rd Qu.:34.00          3rd Qu.:32.00          3rd Qu.:33.00    3rd Qu.:33.00   
+ Max.   :77.00          Max.   :72.00          Max.   :88.00          Max.   :73.00    Max.   :62.00   
+ snomed_699249000 snomed_719407002 snomed_763184009 snomed_854891000000104 snomed_868184008
+ Min.   : 0.00    Min.   : 0.00    Min.   : 0.0     Min.   : 0.00          Min.   : 0.00   
+ 1st Qu.: 2.00    1st Qu.: 2.00    1st Qu.: 0.0     1st Qu.: 2.00          1st Qu.: 0.00   
+ Median :11.00    Median :11.00    Median :11.0     Median :11.00          Median :11.00   
+ Mean   :18.52    Mean   :18.28    Mean   :17.8     Mean   :18.78          Mean   :18.18   
+ 3rd Qu.:35.00    3rd Qu.:34.00    3rd Qu.:33.0     3rd Qu.:31.00          3rd Qu.:31.00   
+ Max.   :71.00    Max.   :66.00    Max.   :62.0     Max.   :68.00          Max.   :69.00   
+ snomed_978871000000104   population        month          
+ Min.   : 0.00          Min.   :  1.00   Length:137        
+ 1st Qu.: 1.00          1st Qu.:  7.00   Class :character  
+ Median :10.00          Median : 44.00   Mode  :character  
+ Mean   :18.22          Mean   : 72.99                     
+ 3rd Qu.:32.00          3rd Qu.:131.00                     
+ Max.   :70.00          Max.   :229.00                     
 [38;5;246m# A tibble: 0 x 22[39m
-[38;5;246m# ... with 22 variables: practice <dbl>, snomed_OCall <dbl>, snomed_1068881000000101 <dbl>, snomed_1090371000000106 <dbl>,[39m
-[38;5;246m#   snomed_185320006 <dbl>, snomed_325871000000103 <dbl>, snomed_325901000000103 <dbl>, snomed_325911000000101 <dbl>,[39m
-[38;5;246m#   snomed_325951000000102 <dbl>, snomed_325981000000108 <dbl>, snomed_325991000000105 <dbl>, snomed_384131000000101 <dbl>,[39m
-[38;5;246m#   snomed_401271004 <dbl>, snomed_448337001 <dbl>, snomed_699249000 <dbl>, snomed_719407002 <dbl>, snomed_763184009 <dbl>,[39m
-[38;5;246m#   snomed_854891000000104 <dbl>, snomed_868184008 <dbl>, snomed_978871000000104 <dbl>, population <dbl>, month <chr>[39m
+[38;5;246m# ... with 22 variables: practice <dbl>, snomed_OCall <dbl>, snomed_1068881000000101 <dbl>,[39m
+[38;5;246m#   snomed_1090371000000106 <dbl>, snomed_185320006 <dbl>, snomed_325871000000103 <dbl>,[39m
+[38;5;246m#   snomed_325901000000103 <dbl>, snomed_325911000000101 <dbl>, snomed_325951000000102 <dbl>,[39m
+[38;5;246m#   snomed_325981000000108 <dbl>, snomed_325991000000105 <dbl>, snomed_384131000000101 <dbl>,[39m
+[38;5;246m#   snomed_401271004 <dbl>, snomed_448337001 <dbl>, snomed_699249000 <dbl>, snomed_719407002 <dbl>,[39m
+[38;5;246m#   snomed_763184009 <dbl>, snomed_854891000000104 <dbl>, snomed_868184008 <dbl>, snomed_978871000000104 <dbl>,[39m
+[38;5;246m#   population <dbl>, month <chr>[39m
 [1] "summary created -a"
 [1] "practice calc 1"
 [1] "practice calc 2"
