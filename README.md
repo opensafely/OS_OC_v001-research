@@ -48,4 +48,4 @@ read our current roadmap [here](ROADMAP.md).
 
 # Disclaimer
 
-This is not an official NHSEI or NHSX site but a repository of technical documents and ongoing work from the NHSX Analytics Unit, made for transparency, collaboration and discussion. The report, outputs and repository have been cleared for open dissemination by NHSEI. Howeber, the narrative include in the report is not necessarily representative of the views of NHSEI/NHSX and any content here should not be regarded as official lines in any form. For more information about NHSX or NHSEI DFPC please visit the official website and FutureNHS channels.
+This is not an official NHSEI or NHSX site but a repository of technical documents and ongoing work from the NHSX Analytics Unit, made for transparency, collaboration and discussion. The report, outputs and repository have been cleared for open dissemination by NHSEI. However, the narrative included in the report is not necessarily representative of the views of NHSEI/NHSX and any content here should not be regarded as official lines in any form. For more information about NHSX or NHSEI DFPC please visit the official website and FutureNHS channels.
