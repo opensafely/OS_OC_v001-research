@@ -20,7 +20,8 @@ The overview brief is in the [Documentation folder](./docs).
 This is the code and configuration for our report, _Primary care coding activity related to online consultations
 Exploratory analysis using OpenSAFELY_
 
-* The final report is [here](./docs), as _docs/Online consultations_v1.0_10Sep21_NHSEIapproved.pdf_ (approved by NHSEI IG) - an updated version of this report may still be included based on stakeholder feedback 
+* The final report is [here](./docs), as _docs/Online consultations_v1.0_10Sep21_NHSEIapproved.pdf_ (approved by NHSEI IG) - an updated version of this report may still be included based on stakeholder feedback
+* A blogpost on the experience of the pilot use of OpenSAFELY as an external contributor analyst, and highlights of key findings, can be found [here](https://nhsx.github.io/AnalyticsUnit/openSafely_onlineconsultations.html). 
 * Raw model outputs, including charts, crosstabs, etc, are in `released_analysis_results/`
 * If you are interested in how we defined our variables, take a look at the [study definition](analysis/study_definition.py); this is written in `python`, but non-programmers should be able to understand what is going on there
 * If you are interested in how we defined our code lists, look in the [codelists folder](./codelists/).
